@@ -1,5 +1,5 @@
 body {
-    background: url("https://www.toptal.com/designers/subtlepatterns/patterns/little_pluses.png") repeat;
+    background: url("https://www.toptal.com/designers/subtlepatterns/patterns/confectionary.png") repeat;
 }
 
 section {
@@ -16,6 +16,10 @@ section {
     width: 100%;
 }
 
+.foodTabBtn:hover{
+    box-shadow: 0 0 10px #008ae6;
+}
+
 .foodContainer{
     padding: 10px;
     width: 85%;
@@ -28,38 +32,54 @@ section {
 .profileBreak h4{
     margin: 0;
 }
+
 .foodContainer ul{
    list-style-type: none;
    margin: 0;
-   padding-left: 10px;
+    padding: 0;
+    background-color: #eaf7ff;
 }
+
 .foodContainer li{
-    padding: 0.15vw 0.2vw;
+    padding: 0.1vw 0 0.1vw 25px;
 }
 
 .foodContainer li:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: #ccebff;
 }
 
 .foodContainer li:hover{
-    background-color: #ffedb3;
+    background-color: #99d6ff;
 }
 
 nav{
-    box-shadow: 0 5px 4px #737373;
+    box-shadow: 0 5px 4px #cccccc;
+}
+
+.navbar{
+    background-color: #99ceff;
 }
 
 .nav{
-    width: 100%;
-    
+    width: 100%;  
 }
 
-.nav li{
-    transition: all 0.3s;
+.nav li a{
+    transition: all 0.15s;
+    color: black;
+    background-color: #99ceff;
 }
 
-.nav li:hover{
-    background-color: #ffedb3;
+.nav li a:hover{
+    background-color: #b3daff;
+}
+
+.nav .active a{
+    background-color: #66b5ff;
+}
+
+.nav .active a:hover{
+    background-color: #66b5ff;
 }
 
 #logo{
@@ -71,17 +91,30 @@ nav{
     display: inline;
 }
 
+.editBtn{
+    margin: 0 auto;
+}
+
+.foodListHeader{
+    border-right: 1px solid white;
+}
+
 .contentBox{
-    background-color: white;
+    background-color: #e6f3ff;
     padding: 10px;
     margin: 20px 0 0 0;
-    box-shadow: 6px 6px 4px #737373;
+    box-shadow: 6px 6px 4px #cccccc;
     border-radius: 5px;
 }
 
 @media (min-width: 768px){
     .nav li{
-        border-right: 1px solid black;
+        border-right: 1px solid white;
+    }
+    
+    .nav li:last-child{
+        border-right: none;
+        border-left: 1px solid white;
     }
 
     .logout{
@@ -90,7 +123,17 @@ nav{
     }
 }
 
-.foodTabBtn:hover{
-    background: #ccefff;
-    border-width: 0;
+@media (max-width: 767px){
+    .nav li{
+        border-bottom: 1px solid white;
+    }
+}
+
+.profileImg{
+    margin: 0 auto;
+}
+
+.userInfo h2{
+    margin: 15px;
+    border-bottom: 1px solid black;
 }
