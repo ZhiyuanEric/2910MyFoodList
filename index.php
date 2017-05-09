@@ -2,21 +2,12 @@
 <html lang="en">
 <head>
 	<title>FoodDoc</title>
-	<meta http-equiv="Content-Type" content="text/html"; charset=utf-8/>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html" charset=utf-8/>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	
-	<style>
-		a:link, a:visited, a:hover, a:active {
-			text-decoration: none;
-			color: black;
-		}
-		button {
-			color: black;
-		}
-	</style>
+	<link rel="stylesheet" href="css/default.css">
 </head>
 <body>
 	<div class="container">
@@ -29,21 +20,22 @@
 		</div>
 		<form name="form" method="post" action="connect.php">
 
-				<div class="form-group col-md-12 row">
+			<div class="form-group col-md-12 row">
 
-					<!--mobile / tablet view-->
-					<div class="visible-sm visible-xs">
-					<label class="col-xs-12" for="username">Username:</label>
-					</div>
-
-					<!--desktop view-->
-					<div class="hidden-sm hidden-xs">
-					<label style="text-align:right" class="col-md-4" for="username">Username:</label>
-					</div>
-
-					<div class="col-md-6 col-xs-12">
-					<input type="text" class="form-control" id="id" name="id" placeholder="Enter username"></div>
+				<!--mobile / tablet view-->
+				<div class="visible-sm visible-xs">
+				<label class="col-xs-12" for="username">Username:</label>
 				</div>
+
+				<!--desktop view-->
+				<div class="hidden-sm hidden-xs">
+				<label style="text-align:right" class="col-md-4" for="username">Username:</label>
+				</div>
+				
+				<div class="col-md-6 col-xs-12">
+				<input type="text" class="form-control" id="id" name="id" placeholder="Enter username"></div>
+				
+			</div>
 
 			<div class="form-group col-md-12 row">
 
@@ -59,7 +51,14 @@
 
 				<div class="col-md-6 col-xs-12">
 				<input type="password" class="form-control" id="pw" name="pw" placeholder="Enter password"></div>
-			</div>
+				
+			</div>			
+			
+			<?php
+			if (isset($_GET['error'])) {
+				echo '<p class="red row col-xs-11 col-xs-offset-1">Please do not leave fields blank.</p>';
+			}
+			?>
 
 			<!-- desktop -->
 			<div class="visible-lg visible-md row">
@@ -70,7 +69,7 @@
 					<button type="reset" value="Reset" class="btn btn-block">Reset</button>
 				</div>
 				<div class="col-md-2" >
-					<button type="button" class="btn btn-block"><a href="register.php">Create Account</a></button>
+					<a href="register.php"><button type="button" class="btn btn-block">Create Account</button></a>
 				</div>
 			</div>
 		
@@ -83,10 +82,14 @@
 					<button type="reset" value="Reset" class="btn btn-block">Reset</button>
 				</div>
 				<div style="margin-top:20px" class="col-xs-8 col-xs-offset-2 row" >
-					<button type="button" class="btn btn-block"><a href="register.php">Create Account</a></button>
+					<a href="register.php"><button type="button" class="btn btn-block">Create Account</button></a>
 				</div>
 			</div>
 		</form>
+		
+		<?php
+		
+		?>
 		
 		<footer class="col-xs-12">
 			<hr>
