@@ -28,7 +28,7 @@
                         <li class="active"><a href="#">Profile</a></li>
                         <li><a href="#">Group List</a></li>
                         <li><a href="#">Affiliated Sites</a></li>
-                        <li class="pull-right"><a href="logout.php">Logout</a></li>
+                        <li class="logout"><a href="logout.php">Logout</a></li>
                     </ul>
                 </div>
                 
@@ -38,13 +38,13 @@
 
     <main class="container">
         <section class="userInfo">
-            <div class="row">
+            <div class="row contentBox">
                 <h2>Name</h2>
                 <div class="col-xs-10">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facete M. Frater et T. Quamvis enim depravatae non sint, pravae tamen esse possunt. Sic enim censent, oportunitatis esse beate vivere. Habes, inquam, Cato, formam eorum, de quibus loquor, philosophorum. Quod iam a me expectare noli. Duo Reges: constructio interrete. Nec lapathi suavitatem acupenseri Galloni Laelius anteponebat, sed suavitatem ipsam neglegebat;</p>
                 </div>
                 <div class="col-xs-2 pull-right">
-                    <img src="images/default.jpg" width=128 height=128/>
+                    <img class="img-responsive" src="images/default.jpg" width=128 height=128/>
                     
                 </div>
             </div>
@@ -52,18 +52,20 @@
         
         <section class="foodListing">
 
-            <div class="row text-center profileBreak">
-                <div class="col-xs-9">
-                    <h4> FoodList </h4>
-                </div>
-                <div class="col-xs-3 ">
-                    <button>
-                        <a href="#" class="editBtn">Edit</a>
-                    </button>
+            <div class="contentBox">
+                <div class="row text-center profileBreak">
+                    <div class="col-xs-9">
+                        <h4> FoodList </h4>
+                    </div>
+                    <div class="col-xs-3 ">
+                        <button>
+                            <a href="#" class="editBtn">Edit</a>
+                        </button>
+                    </div>
                 </div>
             </div>
 
-            <div class="foodContainer">
+            <div class="foodContainer contentBox">
                 <button data-toggle="collapse" data-target="#like" class="foodTabBtn">Likes</button>
                 <div class="collapse" id="like">
                     <ul>
@@ -77,18 +79,18 @@
                     </ul>
                 </div>
             </div>
-            <div class="foodContainer">
+            <div class="foodContainer contentBox">
                 <button data-toggle="collapse" data-target="#dislike" class="foodTabBtn">Dislikes</button>
-                <div class="foodList collapse" id="dislike">
+                <div class="collapse" id="dislike">
                     <ul>
                         <li>sheep</li>
                         <li>fish</li>
                     </ul>
                 </div>
             </div>
-            <div class="foodContainer">
+            <div class="foodContainer contentBox">
                 <button data-toggle="collapse" data-target="#allergies" class="foodTabBtn">Allergies</button>
-                <div class="foodList collapse" id="allergies">
+                <div class="collapse" id="allergies">
                     <ul>
                         <li>peanuts</li>
                         <li>dairy</li>
