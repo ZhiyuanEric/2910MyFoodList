@@ -10,6 +10,13 @@
 	<link rel="stylesheet" href="css/login.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/header.css">
+	
+	<style>
+		div div {
+			margin: auto;
+		}
+		
+	</style>
 </head>
 <body background="images/bg.png">
 	<div class="container">
@@ -20,48 +27,47 @@
 				<hr>
 			</div>
 		</div>
-		<nav style="padding-bottom: 70px;">
+
 		<form name="form" method="post" action="connect.php">
+			
+			<div class="contentBox">
+				<div class="form-group col-md-12 row">
 
-			<div class="form-group col-md-12 row">
+					<!--mobile / tablet view-->
+					<div class="visible-sm visible-xs">
+					<label class="col-xs-12" for="username">Username:</label>
+					</div>
 
-				<!--mobile / tablet view-->
-				<div class="visible-sm visible-xs">
-				<label class="col-xs-12" for="username">Username:</label>
-				</div>
+					<!--desktop view-->
+					<div class="hidden-sm hidden-xs">
+					<label style="text-align:right" class="col-md-4" for="username">Username:</label>
+					</div>
 
-				<!--desktop view-->
-				<div class="hidden-sm hidden-xs">
-				<label style="text-align:right" class="col-md-4" for="username">Username:</label>
-				</div>
-				
-				<div class="col-md-6 col-xs-12">
-				<input type="text" class="form-control" id="id" name="id" placeholder="Enter username"></div>
-				
-			</div>
+					<div class="col-md-6 col-xs-12">
+					<input type="text" class="form-control" id="id" name="id" placeholder="Enter username"></div>
 
-			<div class="form-group col-md-12 row">
+					<!--mobile / tablet view-->
+					<div class="visible-sm visible-xs">
+					<label class="col-xs-12" for="password">Password:</label>
+					</div>
 
-				<!--mobile / tablet view-->
-				<div class="visible-sm visible-xs">
-				<label class="col-xs-12" for="password">Password:</label>
-				</div>
+					<!--desktop view-->
+					<div class="hidden-sm hidden-xs">
+					<label style="text-align:right" class="col-md-4" for="password">Password:</label>
+					</div>
 
-				<!--desktop view-->
-				<div class="hidden-sm hidden-xs">
-				<label style="text-align:right" class="col-md-4" for="password">Password:</label>
-				</div>
+					<div class="col-md-6 col-xs-12">
+					<input type="password" class="form-control" id="pw" name="pw" placeholder="Enter password"></div>
 
-				<div class="col-md-6 col-xs-12">
-				<input type="password" class="form-control" id="pw" name="pw" placeholder="Enter password"></div>
-				
-			</div>			
+				</div>			
 			
 			<?php
 			if (isset($_GET['error'])) {
 				echo '<p class="red row col-xs-11 col-xs-offset-1">Please do not leave fields blank.</p>';
 			}
 			?>
+			
+			</div>
 
 			<!-- desktop -->
 			<div class="visible-lg visible-md row">
@@ -94,6 +100,6 @@
 			<hr>
 			<p style="text-align:center">&copy Team 26</p>
 		</footer>
-		</nav>
+		
 	</div>
 </body>
