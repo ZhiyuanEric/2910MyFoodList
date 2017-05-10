@@ -1,6 +1,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <form name="form" method="post" action="register_finish.php">
-    Account：<input type="text" name="id" /> <br>
+    Account：<input type="text" name="user" /> <br>
     Password：<input type="password" name="pw" /> <br>
     Comfirm Password：<input type="password" name="pw2" /> <br>
     Likes：<input type="text" name="likes" /> <br>

@@ -3,7 +3,7 @@
 <?php
 include("mysql_connect.inc.php");
 
-$id = $_POST['id'];
+$user = $_POST['user'];
 $pw = $_POST['pw'];
 $pw2 = $_POST['pw2'];
 $likes = $_POST['likes'];
@@ -11,10 +11,10 @@ $dislikes = $_POST['dislikes'];
 $allergies = $_POST['allergies'];
 
 
-if($id != null && $pw != null && $pw2 != null && $pw == $pw2)//checking is there empty field and is the password the same
+if($user != null && $pw != null && $pw2 != null && $pw == $pw2)//checking is there empty field and is the password the same
 {
         
-        $sql = "insert into member_table (username, password, likes, dislikes, allergies) values ('$id', '$pw', '$likes', '$dislikes', '$allergies')";
+        $sql = "INSERT INTO Account (username, accPass) VALUES ('$user', '$pw');";
         if(mysql_query($sql))
         {
                 echo 'Registering succeed!';

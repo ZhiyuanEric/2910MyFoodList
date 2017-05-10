@@ -42,7 +42,7 @@
 					</div>
 
 					<div class="col-md-6 col-xs-12">
-					<input type="text" class="form-control" id="id" name="id" placeholder="Enter username"></div>
+					<input type="text" class="form-control" id="user" name="user" placeholder="Enter username"></div>
 				</div>
 
 			<div class="form-group col-md-12 row">
