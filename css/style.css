@@ -1,0 +1,18 @@
+body {
+    background: url("https://www.toptal.com/designers/subtlepatterns/patterns/confectionary.png") repeat;
+}
+
+.foodContainer li:nth-child(even) {
+    background-color: #ccebff;
+}
+
+.foodContainer li:hover{
+    background-color: #99d6ff;
+}
+.contentBox{
+    background-color: #e6f3ff;
+    padding: 10px;
+    margin: 20px 0 0 0;
+    box-shadow: 6px 6px 4px #cccccc;
+    border-radius: 5px;
+}
