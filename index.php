@@ -20,6 +20,7 @@
 				<hr>
 			</div>
 		</div>
+		<nav style="padding-bottom: 70px;">
 		<form name="form" method="post" action="connect.php">
 
 			<div class="form-group col-md-12 row">
@@ -88,14 +89,11 @@
 				</div>
 			</div>
 		</form>
-		
-		<?php
-		
-		?>
-		
+			
 		<footer class="col-xs-12">
 			<hr>
 			<p style="text-align:center">&copy Team 26</p>
 		</footer>
+		</nav>
 	</div>
 </body>

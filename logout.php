@@ -29,7 +29,7 @@ echo '<meta http-equiv=REFRESH CONTENT=1;url=index.php>';
                     <h1 class="title"> FoodDoc </h1>
                 </div>
             </div>
-            <div class="container">
+            <div>
                 <div class="navbar navbar-default">
                     <div class="container-fluid">
                         <ul class="nav navbar-nav">

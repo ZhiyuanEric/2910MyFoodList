@@ -16,9 +16,16 @@
 	<link rel="stylesheet" href="css/header.css">
 	
 	<style>
-		p {
+		h2 {
 			font-weight: bold;
 			text-align: center;
+			margin-top: 50px;
+		}
+		.red {
+			color: red;
+		}
+		.green {
+			color: green;
 		}
 	</style>
 </head>
@@ -30,7 +37,7 @@
                     <h1 class="title"> FoodDoc </h1>
                 </div>
             </div>
-            <div class="container">
+            <div>
                 <div class="navbar navbar-default">
                     <div class="container-fluid">
                         <ul class="nav navbar-nav">
@@ -58,12 +65,12 @@ if($id != null && $pw != null && $row[1] == $id && $row[2] == $pw)//to check is 
 {
         
         $_SESSION['username'] = $id;
-        echo '<p class="green">Logging in success</p>';
+        echo '<h2 class="green">Logging in success</h2>';
         echo '<meta http-equiv=REFRESH CONTENT=1;url=profile.php>';
 }
 else
 {
-        echo '<p class="red">Login failed!<p>';
+        echo '<h2 class="red">Login failed!<h2>';
         echo '<meta http-equiv=REFRESH CONTENT=1;url=index.php>';
 }
 ?>
