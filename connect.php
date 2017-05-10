@@ -50,7 +50,7 @@ if($id != null && $pw != null && $row[1] == $id && $row[2] == $pw)//to check is 
         
         $_SESSION['username'] = $id;
         echo '<p class="green">Logging in success</p>';
-        echo '<meta http-equiv=REFRESH CONTENT=1;url=member.php>';
+        echo '<meta http-equiv=REFRESH CONTENT=1;url=profile.php>';
 }
 else
 {
