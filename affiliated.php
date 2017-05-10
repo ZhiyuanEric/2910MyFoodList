@@ -9,12 +9,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<<<<<<< HEAD
     <link rel="stylesheet" href="css/header.css">
 	<link rel="stylesheet" href="css/style.css">
-=======
     <link rel="stylesheet" href="css/styles.css">
->>>>>>> develop
 </head>
     <body> 
         <header>
@@ -30,7 +27,7 @@
                 <div class="container">
                     <div class="container-fluid">
                     <ul class="nav navbar-nav">
-                        <li><a href="#">Profile</a></li>
+                        <li><a href="profile.php">Profile</a></li>
                         <li><a href="#">Group List</a></li>
                         <li class="active"><a href="#">Affiliated Sites</a></li>
                         <li class="logout"><a href="logout.php">Logout</a></li>

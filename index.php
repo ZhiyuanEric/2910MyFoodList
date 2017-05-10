@@ -9,11 +9,12 @@
 	
 	<link rel="stylesheet" href="css/login.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/header.css">
 </head>
 <body background="images/bg.png">
 	<div class="container">
-		<div class="row">
-			<div style="text-align:center; margin-top:50px" class="col-xs-12" id="header">
+		<div id ="logo" class="row">
+			<div class="col-xs-12" id="header">
 				<img src="images/logo.png">
 				<h1 style="display:inline">FoodDoc</h1>
 				<hr>
