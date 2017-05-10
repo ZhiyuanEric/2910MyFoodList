@@ -13,6 +13,7 @@
 	
 	<link rel="stylesheet" href="css/login.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/header.css">
 	
 	<style>
 		p {
@@ -22,16 +23,23 @@
 	</style>
 </head>
 <body>
-	<div class="container">
-		<div class="row">
-			<div style="text-align:center; margin-top:50px" class="col-xs-12" id="header">
-				<img src="images/logo.png">
-				<h1 style="display:inline">FoodDoc</h1>
-				<hr>
-			</div>
-		</div>
-	</div>
-</body>
+        <header>
+            <div id="logo" class="container">
+                <div class="col-xs-12">
+                    <img src="https://raw.githubusercontent.com/ZhiyuanEric/2910MyFoodList/Login-Page/images/logo.png">
+                    <h1 class="title"> FoodDoc </h1>
+                </div>
+            </div>
+            <div class="container">
+                <div class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <ul class="nav navbar-nav">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </body>
 </html>
 <?php
 
