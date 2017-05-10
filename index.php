@@ -8,8 +8,9 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	
 	<link rel="stylesheet" href="css/login.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body background="images/bg.png">
 	<div class="container">
 		<div class="row">
 			<div style="text-align:center; margin-top:50px" class="col-xs-12" id="header">
@@ -63,26 +64,26 @@
 			<!-- desktop -->
 			<div class="visible-lg visible-md row">
 				<div class="col-md-2 col-md-offset-3" >
-					<button type="submit" class="btn btn-block">Login</button>
+					<button type="submit" class="btn btn-block btn-primary">Login</button>
 				</div>
 				<div class="col-md-2" >
-					<button type="reset" value="Reset" class="btn btn-block">Reset</button>
+					<button type="reset" value="Reset" class="btn btn-block btn-primary">Reset</button>
 				</div>
 				<div class="col-md-2" >
-					<a href="register.php"><button type="button" class="btn btn-block">Create Account</button></a>
+					<a href="register.php"><button type="button" class="btn btn-block btn-primary">Create Account</button></a>
 				</div>
 			</div>
 		
 			<!-- mobile / tablet -->
 			<div class="hidden-lg hidden-md">
 				<div style="margin-top:20px" class="col-xs-8 col-xs-offset-2 row" >
-					<button type="submit" class="btn btn-block">Login</button>
+					<button type="submit" class="btn btn-block btn-primary">Login</button>
 				</div>
 				<div style="margin-top:20px" class="col-xs-8 col-xs-offset-2 row" >
-					<button type="reset" value="Reset" class="btn btn-block">Reset</button>
+					<button type="reset" value="Reset" class="btn btn-block btn-primary">Reset</button>
 				</div>
 				<div style="margin-top:20px" class="col-xs-8 col-xs-offset-2 row" >
-					<a href="register.php"><button type="button" class="btn btn-block">Create Account</button></a>
+					<a href="register.php"><button type="button" class="btn btn-block btn-primary">Create Account</button></a>
 				</div>
 			</div>
 		</form>
