@@ -41,7 +41,8 @@ CREATE TABLE IF NOT EXISTS Account(
     accNo       INT(6)          NOT NULL AUTO_INCREMENT,
     username    VARCHAR(30)     NOT NULL,
     accPass     VARCHAR(30)     NOT NULL,
-    PRIMARY KEY (accNo)
+    PRIMARY KEY (accNo),
+    CONSTRAINT uq_user UNIQUE (username)
 )ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
 CREATE TABLE IF NOT EXISTS Details(

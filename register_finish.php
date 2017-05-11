@@ -2,7 +2,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php
 include("mysql_connect.inc.php");
-$id = $_POST['id'];
+$user = $_POST['user'];
 $pw = $_POST['pw'];
 $pw2 = $_POST['pw2'];
 $likes = $_POST['likes'];
@@ -28,37 +28,58 @@ echo '<header>
             </div>
         </div>
     </header>';
-if($id != null && $pw != null && $pw2 != null && $pw == $pw2)//checking is there empty field and is the password the same
+if($user != null && $pw != null && $pw2 != null && $pw == $pw2)//checking is there empty field and is the password the same
 {
         
-        $sql = "insert into member_table (username, password, likes, dislikes, allergies) values ('$id', '$pw', '$likes', '$dislikes', '$allergies')";
-        if(mysql_query($sql))
-        {
-                echo '<main>
-                        <div class="register">
-                            Registration Success!
-                        </div> 
-                      </main>';
-                echo '<meta http-equiv=REFRESH CONTENT=2;url=index.php>';
+    $sql = "INSERT INTO Account (username, accPass) VALUES ('$user', '$pw');";
+
+    if(mysql_query($sql))
+    {
+        $userID = '';
+        // retreive user id
+        $sql = "SELECT a.accNo
+                FROM Account a
+                WHERE a.username IN ('$user');";
+    
+        $result = mysql_query($sql);
+        while($row = mysql_fetch_row($result)) {
+            $userID = $row[0];
         }
-        else
-        {
-                echo '<main>
-                          <div class="failed">
-                              Registration failed! Account already exist!
-                          </div>
-                      </main>';
-                echo '<meta http-equiv=REFRESH CONTENT=2;url=index.php>';
-        }
-}
-else
-{
+        
+        
+        // add the food
+        $sql = "INSERT INTO Preference VALUES ($userID, '$likes', 'like');";
+        mysql_query($sql);
+        $sql = "INSERT INTO Preference VALUES ($userID, '$dislikes', 'dislike');";
+        mysql_query($sql);
+        $sql = "INSERT INTO Preference VALUES ($userID, '$allergies', 'allergies');";
+        mysql_query($sql);
+
+        echo '<main>
+                <div class="register">
+                    Registration Success!
+                </div> 
+              </main>';
+        echo '<meta http-equiv=REFRESH CONTENT=2;url=index.php>';
+    }
+    else
+    {
         echo '<main>
                   <div class="failed">
-                      Registration failed. The passwords are different 
-                      and there are empty fields.
+                      Registration failed! Account already exist!
                   </div>
               </main>';
         echo '<meta http-equiv=REFRESH CONTENT=2;url=index.php>';
+    }
+}
+else
+{
+    echo '<main>
+              <div class="failed">
+                  Registration failed. The passwords are different 
+                  and there are empty fields.
+              </div>
+          </main>';
+    echo '<meta http-equiv=REFRESH CONTENT=2;url=index.php>';
 }
 ?>
