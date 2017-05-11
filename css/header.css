@@ -1,8 +1,3 @@
-body {
-    font-family: "Arial", "serif";
-    background: url("https://www.toptal.com/designers/subtlepatterns/patterns/confectionary.png") repeat;
-}
-
 nav{
     box-shadow: 0 5px 4px #cccccc;
 }
@@ -33,15 +28,6 @@ nav{
     background-color: #66b5ff;
 }
 
-#logo{
-    text-align: center;
-    padding: 20px 0;
-}
-
-.title{
-    display: inline;
-}
-
 @media (min-width: 768px){
     .nav li{
         border-right: 1px solid white;
@@ -56,4 +42,17 @@ nav{
         float: right !important;
         border-right-width: 0;
     }
+}
+
+@media (max-width: 767px){
+    .nav li{
+        border-bottom: 1px solid white;
+    }
+}
+#logo{
+    text-align: center;
+    padding: 20px 0;
+}
+.title{
+    display: inline;
 }

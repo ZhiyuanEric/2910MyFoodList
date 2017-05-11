@@ -17,7 +17,9 @@ echo '<meta http-equiv=REFRESH CONTENT=1;url=index.php>';
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         
-        <link rel="stylesheet" href="logout.css">
+		<link rel="stylesheet" href="css/logout.css">
+        <link rel="stylesheet" href="css/header.css">
+		<link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <header>
@@ -27,14 +29,14 @@ echo '<meta http-equiv=REFRESH CONTENT=1;url=index.php>';
                     <h1 class="title"> FoodDoc </h1>
                 </div>
             </div>
-            <nav class="container">
+            <div>
                 <div class="navbar navbar-default">
                     <div class="container-fluid">
                         <ul class="nav navbar-nav">
                         </ul>
                     </div>
                 </div>
-            </nav>
+            </div>
         </header>
         <main class="container">
             <div class="text-center msgBlock">

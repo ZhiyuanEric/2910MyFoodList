@@ -12,25 +12,41 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	
 	<link rel="stylesheet" href="css/login.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/header.css">
 	
 	<style>
-		p {
+		h2 {
 			font-weight: bold;
 			text-align: center;
+			margin-top: 50px;
+		}
+		.red {
+			color: red;
+		}
+		.green {
+			color: green;
 		}
 	</style>
 </head>
 <body>
-	<div class="container">
-		<div class="row">
-			<div style="text-align:center; margin-top:50px" class="col-xs-12" id="header">
-				<img src="images/logo.png">
-				<h1 style="display:inline">FoodDoc</h1>
-				<hr>
-			</div>
-		</div>
-	</div>
-</body>
+        <header>
+            <div id="logo" class="container">
+                <div class="col-xs-12">
+                    <img src="https://raw.githubusercontent.com/ZhiyuanEric/2910MyFoodList/Login-Page/images/logo.png">
+                    <h1 class="title"> FoodDoc </h1>
+                </div>
+            </div>
+            <div>
+                <div class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <ul class="nav navbar-nav">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </body>
 </html>
 <?php
 
@@ -49,12 +65,12 @@ if($id != null && $pw != null && $row[1] == $id && $row[2] == $pw)//to check is 
 {
         
         $_SESSION['username'] = $id;
-        echo '<p class="green">Logging in success</p>';
-        echo '<meta http-equiv=REFRESH CONTENT=1;url=member.php>';
+        echo '<h2 class="green">Logging in success</h2>';
+        echo '<meta http-equiv=REFRESH CONTENT=1;url=profile.php>';
 }
 else
 {
-        echo '<p class="red">Login failed!<p>';
+        echo '<h2 class="red">Login failed!<h2>';
         echo '<meta http-equiv=REFRESH CONTENT=1;url=index.php>';
 }
 ?>
