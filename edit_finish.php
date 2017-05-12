@@ -74,7 +74,7 @@ else{
                     changes are not saved
                 </div> 
               </main>';
-    //echo '<meta http-equiv=REFRESH CONTENT=2;url=profile.php>';
+    echo '<meta http-equiv=REFRESH CONTENT=2;url=profile.php>';
 
 
 
