@@ -28,15 +28,16 @@
 	<div class="container">
 		<div id ="logo" class="row">
 			<div class="col-xs-12" id="header">
-				<img src="images/logo.png">
-				<h1 style="display:inline">FoodDoc</h1>
+				<h1 style="display:inline">iPicky</h1>
 				<hr>
 			</div>
 		</div>
         
+        <h2 style="text-align:center">Registration</h2>
+        
     <form name="form" method="post" action="register_finish.php">
         
-        <div class="contentBox">
+        <div class="contentBox row">
             <div class="form-group col-md-12 row">
 
                     <!--mobile / tablet view-->
@@ -50,7 +51,10 @@
                 </div>
 
                 <div class="col-md-6 col-xs-12">
-                    <input type="text" class="form-control" id="id" name="id" placeholder="Used for login"></div>
+                    <input type="text" class="form-control" id="user" name="user" placeholder="Used for login"></div>
+            </div>
+            
+            <div class="form-group col-md-12 row">
 
                     <!--mobile / tablet view-->
                 <div class="visible-sm visible-xs">
@@ -64,6 +68,9 @@
 
                 <div class="col-md-6 col-xs-12">
                     <input type="password" class="form-control" id="pw" name="pw" size="20" placeholder="Setup your password"></div>
+            </div>
+            
+            <div class="form-group col-md-12 row">
 
                     <!--mobile / tablet view-->
                 <div class="visible-sm visible-xs">
@@ -78,6 +85,10 @@
                 <div class="col-md-6 col-xs-12">
                     <input type="password" class="form-control" id="pw2" name="pw2" placeholder="Confirm your password">
                 </div>
+                
+            </div>
+            
+            <div class="form-group col-md-12 row">
 
                     <!--mobile / tablet view-->
                 <div class="visible-sm visible-xs">
@@ -93,6 +104,9 @@
 
                 <div class="col-md-6 col-xs-12">
                     <input type="text" class="form-control" id="id" name="name" placeholder="Enter your name"></div>
+            </div>
+            
+            <div class="form-group col-md-12 row">
                 
                     <!--mobile / tablet view-->
                 <div class="visible-sm visible-xs">
@@ -108,6 +122,9 @@
 
                 <div class="col-md-6 col-xs-12">
                     <input type="text" class="form-control" id="id" name="bio" placeholder="Introduce your self"></div>
+            </div>
+            
+            <div class="form-group col-md-12 row">
 
                     <!--mobile / tablet view-->
                 <div class="visible-sm visible-xs">
@@ -123,6 +140,10 @@
 
                 <div class="col-md-6 col-xs-12">
                     <input type="text" class="form-control" id="likes" name="likes" placeholder="What you like"></div>
+                
+            </div>
+            
+            <div class="form-group col-md-12 row">
 
                     <!--mobile / tablet view-->
                 <div class="visible-sm visible-xs">
@@ -138,6 +159,10 @@
 
                 <div class="col-md-6 col-xs-12">
                     <input type="text" class="form-control" id="dislikes" name="dislikes" placeholder="what you dislike"></div>
+                
+            </div>
+            
+            <div class="form-group col-md-12 row">
 
                     <!--mobile / tablet view-->
                 <div class="visible-sm visible-xs">
@@ -155,7 +180,11 @@
                     <input type="text" class="form-control" id="allergies" name="allergies" placeholder="Some Allergies"></div>
             </div>
             
-            <p class="red">Please do not leave fields blank.</p>
+            <?php
+			if (isset($_GET['error'])) {
+				echo '<p class="red row col-xs-11 col-xs-offset-1">Please do not leave fields blank.</p>';
+			}
+			?>
 		</div>
         
         <!-- buttons desktop -->

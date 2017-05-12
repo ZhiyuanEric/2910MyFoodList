@@ -2,8 +2,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <?php
-unset($_SESSION['username']);
-echo '<meta http-equiv=REFRESH CONTENT=1;url=index.php>';
+unset($_SESSION['accNo']);
+echo '<meta http-equiv=REFRESH CONTENT=2;url=index.php>';
 ?>
 
 <!DOCTYPE html>
@@ -25,8 +25,7 @@ echo '<meta http-equiv=REFRESH CONTENT=1;url=index.php>';
         <header>
             <div id="logo" class="container">
                 <div class="col-xs-12">
-                    <img src="https://raw.githubusercontent.com/ZhiyuanEric/2910MyFoodList/Login-Page/images/logo.png">
-                    <h1 class="title"> FoodDoc </h1>
+                    <h1 class="title">iPicky</h1>
                 </div>
             </div>
             <div>

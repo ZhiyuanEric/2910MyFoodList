@@ -18,8 +18,7 @@
             <div class="container">
                 <div id="logo" class="container">
                     <div class="col-xs-12">
-                        <img src="https://raw.githubusercontent.com/ZhiyuanEric/2910MyFoodList/Login-Page/images/logo.png">
-                        <h1 class="title"> FoodDoc </h1>
+                        <h1 class="title">iPicky</h1>
                     </div>
                 </div>
             </div>
@@ -43,7 +42,7 @@
                 <div class="row contentBox">
 
                     <div class="col-xs-2 pull-left">
-                        <img class="img-responsive profileImg" src="images/default.jpg" width=128 height=128/>
+                        <img class="img-responsive profileImg" src="images/grocery.png" width=128 height=128/>
                     </div>
                     <div class="col-xs-10">
                         <h2>Grocery Buddy</h2>
@@ -58,7 +57,7 @@
                 <div class="row contentBox">
 
                     <div class="col-xs-2 pull-left">
-                        <img class="img-responsive profileImg" src="images/default.jpg" width=128 height=128/>
+                        <img class="img-responsive profileImg" src="images/waste.png" width=128 height=128/>
                     </div>
                     <div class="col-xs-10">
                         <h2>WasteNot WantNot</h2>
@@ -72,7 +71,7 @@
                 <div class="row contentBox">
 
                     <div class="col-xs-2 pull-left">
-                        <img class="img-responsive profileImg" src="images/default.jpg" width=128 height=128/>
+                        <a target="_blank" href="https://overcooked.ca"><img class="img-responsive profileImg" src="images/overcooked.png" width=128 height=128/></a>
                     </div>
                     <div class="col-xs-10">
                         <h2 href="www.Overcooked.ca">Overcooked.ca</h2>
