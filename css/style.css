@@ -1,18 +1,24 @@
 body {
-    background: url("https://www.toptal.com/designers/subtlepatterns/patterns/confectionary.png") repeat;
+    background: url(../images/restaurant2.png) repeat;
 }
 
 .foodContainer li:nth-child(even) {
-    background-color: #ccebff;
+    background-color: rgba(128, 199, 220, 0.25);
 }
 
 .foodContainer li:hover{
-    background-color: #99d6ff;
+    background-color: rgba(140, 199, 255, 0.5);
 }
 .contentBox{
-    background-color: #e6f3ff;
+    /*background-color: #e6f3ff;*/
+    background-color: rgba(204, 238, 255, 0.7);
     padding: 10px;
     margin: 20px 0 0 0;
-    box-shadow: 6px 6px 4px #cccccc;
+    box-shadow: 6px 6px 0px rgba(204, 238, 255, 0.3);
     border-radius: 5px;
+}
+
+h1, h2, h3, h4 {
+    text-align: center;
+    font-weight: bold;
 }

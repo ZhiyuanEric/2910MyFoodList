@@ -33,8 +33,7 @@
         <header>
             <div id="logo" class="container">
                 <div class="col-xs-12">
-                    <img src="https://raw.githubusercontent.com/ZhiyuanEric/2910MyFoodList/Login-Page/images/logo.png">
-                    <h1 class="title"> FoodDoc </h1>
+                    <h1 class="title">iPicky</h1>
                 </div>
             </div>
             <div>
@@ -51,21 +50,21 @@
 <?php
 
 include("mysql_connect.inc.php");
-$id = $_POST['id'];
+$user = $_POST['user'];
 $pw = $_POST['pw'];
-$sql = "SELECT * FROM member_table where username = '$id'";
+$sql = "SELECT * FROM account where username = '$user'";
 $result = mysql_query($sql);
 $row = @mysql_fetch_row($result);
 
-    if(empty($id) || empty($pw)) {
+    if(empty($user) || empty($pw)) {
 		header("Location:index.php?error=1"); die();
 	}
 
-if($id != null && $pw != null && $row[1] == $id && $row[2] == $pw)//to check is there empty slot and this member in the database
+if($user != null && $pw != null && $row[1] == $user && $row[2] == $pw)//to check is there empty slot and this member in the database
 {
         
-        $_SESSION['username'] = $id;
-        echo '<h2 class="green">Logging in success</h2>';
+        $_SESSION['accNo'] = $row[0];
+        echo '<h2 class="green">Login success</h2>';
         echo '<meta http-equiv=REFRESH CONTENT=1;url=profile.php>';
 }
 else

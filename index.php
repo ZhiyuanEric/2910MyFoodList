@@ -22,52 +22,57 @@
 	<div class="container">
 		<div id ="logo" class="row">
 			<div class="col-xs-12" id="header">
-				<img src="images/logo.png">
-				<h1 style="display:inline">FoodDoc</h1>
+				<h1 style="display:inline">iPicky</h1>
 				<hr>
 			</div>
 		</div>
-
+        
+        <h2 style="text-align:center">Login</h2>
+        
+        
 		<form name="form" method="post" action="connect.php">
-			
-			<div class="contentBox">
-				<div class="form-group col-md-12 row">
+            <div class="contentBox row">
+            <div class="form-group col-md-12 row">
 
-					<!--mobile / tablet view-->
-					<div class="visible-sm visible-xs">
-					<label class="col-xs-12" for="username">Username:</label>
-					</div>
+                <!--mobile / tablet view-->
+                <div class="visible-sm visible-xs">
+                <label class="col-xs-12" for="username">Username:</label>
+                </div>
 
-					<!--desktop view-->
-					<div class="hidden-sm hidden-xs">
-					<label style="text-align:right" class="col-md-4" for="username">Username:</label>
-					</div>
+                <!--desktop view-->
+                <div class="hidden-sm hidden-xs">
+                <label style="text-align:right" class="col-md-4" for="username">Username:</label>
+                </div>
 
-					<div class="col-md-6 col-xs-12">
-					<input type="text" class="form-control" id="id" name="id" placeholder="Enter username"></div>
+                <div class="col-md-6 col-xs-12">
+                <input type="text" class="form-control" id="user" name="user" placeholder="Enter username"></div>
 
-					<!--mobile / tablet view-->
-					<div class="visible-sm visible-xs">
-					<label class="col-xs-12" for="password">Password:</label>
-					</div>
+            </div>
 
-					<!--desktop view-->
-					<div class="hidden-sm hidden-xs">
-					<label style="text-align:right" class="col-md-4" for="password">Password:</label>
-					</div>
+            <div class="form-group col-md-12 row">
 
-					<div class="col-md-6 col-xs-12">
-					<input type="password" class="form-control" id="pw" name="pw" placeholder="Enter password"></div>
+                <!--mobile / tablet view-->
+                <div class="visible-sm visible-xs">
+                <label class="col-xs-12" for="password">Password:</label>
+                </div>
 
-				</div>			
+                <!--desktop view-->
+                <div class="hidden-sm hidden-xs">
+                <label style="text-align:right" class="col-md-4" for="password">Password:</label>
+                </div>
+
+                <div class="col-md-6 col-xs-12">
+                <input type="password" class="form-control" id="pw" name="pw" placeholder="Enter password"></div>
+
+            </div>			
 			
 			<?php
 			if (isset($_GET['error'])) {
 				echo '<p class="red row col-xs-11 col-xs-offset-1">Please do not leave fields blank.</p>';
 			}
 			?>
-			
-			</div>
+                
+            </div>
 
 			<!-- desktop -->
 			<div class="visible-lg visible-md row">
@@ -81,6 +86,7 @@
 					<a href="register.php"><button type="button" class="btn btn-block btn-primary">Create Account</button></a>
 				</div>
 			</div>
+            
 		
 			<!-- mobile / tablet -->
 			<div class="hidden-lg hidden-md">
@@ -94,6 +100,7 @@
 					<a href="register.php"><button type="button" class="btn btn-block btn-primary">Create Account</button></a>
 				</div>
 			</div>
+                
 		</form>
 			
 		<footer class="col-xs-12">
