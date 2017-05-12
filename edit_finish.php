@@ -41,22 +41,22 @@ $sql = "UPDATE details SET name= '$name', bio='$bio' WHERE accNO='$userID'";
 
 
 //$sql = "UPDATE preference SET likes= '$likes', dislike='$dislikes', allergies='$allergies'";
-mysql_query($sql);
-
-$sql = "UPDATE `preference` SET food='$likes' WHERE foodStatus='like' and accNo='$userID'";
-
-mysql_query($sql);
-
-
-
-$sql = "UPDATE `preference` SET food='$dislikes' WHERE foodStatus='dislike' and accNo='$userID'";
-
-mysql_query($sql);
-
-
-$sql = "UPDATE `preference` SET food='$allergies' WHERE foodStatus='allergies' and accNo='$userID'";
-
-mysql_query($sql);
+//mysql_query($sql);
+//
+//$sql = "UPDATE `preference` SET food='$likes' WHERE foodStatus='like' and accNo='$userID'";
+//
+//mysql_query($sql);
+//
+//
+//
+//$sql = "UPDATE `preference` SET food='$dislikes' WHERE foodStatus='dislike' and accNo='$userID'";
+//
+//mysql_query($sql);
+//
+//
+//$sql = "UPDATE `preference` SET food='$allergies' WHERE foodStatus='allergies' and accNo='$userID'";
+//
+//mysql_query($sql);
 
 
 if (mysql_query($sql)){
