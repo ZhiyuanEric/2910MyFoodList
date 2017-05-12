@@ -19,7 +19,7 @@ echo '<header>
         <div class="container">
             <div id="logo" class="container">
                 <div class="col-xs-12">
-                    <h1 class="title">iPicky</h1>
+                    <img src="images/logo.png">
                 </div>
             </div>
         </div>
