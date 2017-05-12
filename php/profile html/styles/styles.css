@@ -1,0 +1,139 @@
+body {
+    background: url("https://www.toptal.com/designers/subtlepatterns/patterns/confectionary.png") repeat;
+}
+
+section {
+    margin: 10px 0px 10px 0px;
+}
+
+.foodlist{
+    min-width: 1px;
+    margin: 10px 5% 0 5%;
+    width: 95%;
+}
+
+.foodTabBtn{
+    width: 100%;
+}
+
+.foodTabBtn:hover{
+    box-shadow: 0 0 10px #008ae6;
+}
+
+.foodContainer{
+    padding: 10px;
+    width: 85%;
+}
+
+.profileBreak div{
+    margin: 0;
+}
+
+.profileBreak h4{
+    margin: 0;
+}
+
+.foodContainer ul{
+   list-style-type: none;
+   margin: 0;
+    padding: 0;
+    background-color: #eaf7ff;
+}
+
+.foodContainer li{
+    padding: 0.1vw 0 0.1vw 25px;
+}
+
+.foodContainer li:nth-child(even) {
+    background-color: #ccebff;
+}
+
+.foodContainer li:hover{
+    background-color: #99d6ff;
+}
+
+nav{
+    box-shadow: 0 5px 4px #cccccc;
+}
+
+.navbar{
+    background-color: #99ceff;
+}
+
+.nav{
+    width: 100%;  
+}
+
+.nav li a{
+    transition: all 0.15s;
+    color: black;
+    background-color: #99ceff;
+}
+
+.nav li a:hover{
+    background-color: #b3daff;
+}
+
+.nav .active a{
+    background-color: #66b5ff;
+}
+
+.nav .active a:hover{
+    background-color: #66b5ff;
+}
+
+#logo{
+    text-align: center;
+    padding: 20px 0;
+}
+
+.title{
+    display: inline;
+}
+
+.editBtn{
+    margin: 0 auto;
+}
+
+.foodListHeader{
+    border-right: 1px solid white;
+}
+
+.contentBox{
+    background-color: #e6f3ff;
+    padding: 10px;
+    margin: 20px 0 0 0;
+    box-shadow: 6px 6px 4px #cccccc;
+    border-radius: 5px;
+}
+
+@media (min-width: 768px){
+    .nav li{
+        border-right: 1px solid white;
+    }
+    
+    .nav li:last-child{
+        border-right: none;
+        border-left: 1px solid white;
+    }
+
+    .logout{
+        float: right !important;
+        border-right-width: 0;
+    }
+}
+
+@media (max-width: 767px){
+    .nav li{
+        border-bottom: 1px solid white;
+    }
+}
+
+.profileImg{
+    margin: 0 auto;
+}
+
+.userInfo h2{
+    margin: 15px;
+    border-bottom: 1px solid black;
+}

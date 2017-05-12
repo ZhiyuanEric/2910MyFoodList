@@ -3,7 +3,7 @@
 
 $db_server = "localhost";
 
-$db_name = "2910db";
+$db_name = "fooddoc";
 
 $db_user = "root";
 

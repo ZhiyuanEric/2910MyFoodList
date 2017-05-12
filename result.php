@@ -28,9 +28,10 @@ echo '<header>
             <div class="container">
                 <div class="container-fluid">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Profile</a></li>
+                        <li class=""><a href="profile.php">Profile</a></li>
                         <li><a href="#">Group List</a></li>
                         <li><a href="affiliated.php">Affiliated Sites</a></li>
+                        
                         <li class="logout"><a href="logout.php">Logout</a></li>
                     </ul>
                 </div>
@@ -39,7 +40,7 @@ echo '<header>
         </nav>
     </header>';
 
-$accNo = $_SESSION['accNo'];
+$accNo = $_POST['search'];
 if($_SESSION['accNo'] != null)
 {
 
@@ -70,7 +71,6 @@ if($_SESSION['accNo'] != null)
     
     echo "$pBio";
     
-    
     echo '</p>
             </div>
             <div class="col-xs-2 pull-right">
@@ -87,9 +87,6 @@ if($_SESSION['accNo'] != null)
                     <h4> FoodList </h4>
                 </div>
                 <div class="col-xs-2">
-                    <button class="editBtn">
-                        <a href="edit.php">Edit</a>
-                    </button>
                 </div>
             </div>
         </div>

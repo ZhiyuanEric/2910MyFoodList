@@ -5,9 +5,14 @@ include("mysql_connect.inc.php");
 $user = $_POST['user'];
 $pw = $_POST['pw'];
 $pw2 = $_POST['pw2'];
+$name= $_POST['name'];
+$bio=$_POST['bio'];
 $likes = $_POST['likes'];
 $dislikes = $_POST['dislikes'];
 $allergies = $_POST['allergies'];
+
+
+
 echo '<title>Registeration Success</title> 
     <meta charset="utf-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,6 +23,9 @@ echo '<title>Registeration Success</title>
     <link rel="stylesheet" href="css/registerfinish.css">
 	<link rel="stylesheet" href="css/header.css">
 	<link rel="stylesheet" href="css/style.css">';
+
+
+
 echo '<header>
         <div class="container">
             <div id="logo" class="container">
@@ -28,6 +36,14 @@ echo '<header>
             </div>
         </div>
     </header>';
+
+
+
+
+
+
+
+
 if($user != null && $pw != null && $pw2 != null && $pw == $pw2)//checking is there empty field and is the password the same
 {
         
@@ -46,8 +62,12 @@ if($user != null && $pw != null && $pw2 != null && $pw == $pw2)//checking is the
             $userID = $row[0];
         }
         
+        $sql = "INSERT INTO details VALUES ($userID, $name , $bio , 'unknown');";
+        mysql_query($sql);
         
-        // add the food
+        
+        
+        
         $sql = "INSERT INTO Preference VALUES ($userID, '$likes', 'like');";
         mysql_query($sql);
         $sql = "INSERT INTO Preference VALUES ($userID, '$dislikes', 'dislike');";
