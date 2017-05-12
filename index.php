@@ -22,7 +22,7 @@
 	<div class="container">
 		<div id ="logo" class="row">
 			<div class="col-xs-12" id="header">
-				<h1 style="display:inline">iPicky</h1>
+                <img src="images/logo.png">
 				<hr>
 			</div>
 		</div>
