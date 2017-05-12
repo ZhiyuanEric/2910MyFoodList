@@ -14,32 +14,7 @@
 	<link rel="stylesheet" href="css/login.css">
 </head>
 <body>
-    <script>
-        function EntryChecking() {
-            document.writeln("<h1>" + errmsg + "</h1>" );
-            var check = 0;
-            var id = document.getElementById("user").value;
-            var pw = document.getElementById("pw").value;
-            var pw2 = document.getElementById("pw2").value;
-            var errmsg;
-            if (pw == null) {
-                errmsg = "Please create a Passward";
-            } else if (pw2 == null) {
-                errmsg = "Please confirm the Passward";
-            } else if (id == null) {
-                errmsg = "Please create an Username";
-            } else if (pw != pw2) {
-                errmsg = "Two passwards do not match";
-            }
-            
-            if (check == 0) {
-                document.writeln("<h1>" + errmsg + "</h1>" );
-            } else {
-                document.getElementById("1").type="submit";
-                document.getElementById("2").type="submit";
-            }
-        }
-    </script>
+
     <div class="container">
 		<div class="row">
 			<div style="text-align:center; margin-top:50px" class="col-xs-12" id="header">
@@ -167,7 +142,7 @@
         <!-- buttons desktop -->
 			<div class="visible-lg visible-md row">
 				<div class="col-md-2 col-md-offset-3" id="check" >
-					<button id = "1" type="button" class="btn btn-block" onclick="EntryChecking()">Submit</button>
+					<button id = "1" type="submit" class="btn btn-block" onclick="EntryChecking()">Submit</button>
 				</div>
 				<div class="col-md-2" >
 					<button type="reset" value="Reset" class="btn btn-block">Reset</button>
@@ -180,7 +155,7 @@
 			<!-- mobile / tablet -->
 			<div class="hidden-lg hidden-md">
 				<div style="margin-top:20px" class="col-xs-12" id="check">
-					<button id="2" type="button" onclick="EntryChecking()" class="btn btn-block">Submit</button>
+					<button id="2" type="submit" onclick="EntryChecking()" class="btn btn-block">Submit</button>
 				</div>
                 <div style="margin-top:20px" class="col-xs-12" >
 					<button type="reset" value="Reset" class="btn btn-block">Reset</button>
