@@ -42,7 +42,7 @@ if($user != null && $pw != null && $pw2 != null && $pw == $pw2)//checking is the
         
     $sql = "INSERT INTO Account (username, accPass) VALUES ('$user', '$pw');";
 
-    if(mysql_query($sql))
+    if(mysqli_query($db_link, $sql))
     {
         $userID = '';
         // retreive user id
@@ -50,23 +50,23 @@ if($user != null && $pw != null && $pw2 != null && $pw == $pw2)//checking is the
                 FROM Account a
                 WHERE a.username IN ('$user');";
     
-        $result = mysql_query($sql);
-        while($row = mysql_fetch_row($result)) {
+        $result = mysqli_query($db_link, $sql);
+        while($row = mysqli_fetch_row($result)) {
             $userID = $row[0];
         }
         
         // add the details
         $sql = "INSERT INTO details VALUES ($userID, '$name', '$bio', 'unknown');";
-        mysql_query($sql);
+        mysqli_query($db_link, $sql);
         
         
         // add the food
         $sql = "INSERT INTO Preference VALUES ($userID, '$likes', 'like');";
-        mysql_query($sql);
+        mysqli_query($db_link, $sql);
         $sql = "INSERT INTO Preference VALUES ($userID, '$dislikes', 'dislike');";
-        mysql_query($sql);
+        mysqli_query($db_link, $sql);
         $sql = "INSERT INTO Preference VALUES ($userID, '$allergies', 'allergies');";
-        mysql_query($sql);
+        mysqli_query($db_link, $sql);
 
         echo '<main>
                 <div class="register">

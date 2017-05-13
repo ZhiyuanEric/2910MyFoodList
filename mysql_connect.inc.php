@@ -9,11 +9,13 @@ $db_user = "root";
 
 $db_passwd = "";
 
-if(!@mysql_connect($db_server, $db_user, $db_passwd))
-        die("<p class=\"red\">Can not link to database for whatever reason</p>");
+$db_link = mysqli_connect($db_server, $db_user, $db_passwd);
 
-mysql_query("SET NAMES utf8");
+if(!$db_link)
+    die("<p class=\"red\">Can not link to database for whatever reason</p>");
 
-if(!@mysql_select_db($db_name))
-        die("<p class=\"red\">Can not access database<p>");
+mysqli_query($db_link, "SET NAMES utf8");
+
+if(!mysqli_select_db($db_link, $db_name))
+    die("<p class=\"red\">Can not access database<p>");
 ?>
