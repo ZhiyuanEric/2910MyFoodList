@@ -90,16 +90,16 @@ INSERT INTO Preference
     VALUES (63493, 'Salt', 'like');
     
 INSERT INTO Preference
-    VALUES (63493, 'Beef', 'dilike');
+    VALUES (63493, 'Beef', 'dislike');
 
 INSERT INTO Preference
-    VALUES (63493, 'Chicken', 'dilike');
+    VALUES (63493, 'Chicken', 'dislike');
     
 INSERT INTO Preference
-    VALUES (63493, 'Snake', 'dilike');
+    VALUES (63493, 'Snake', 'dislike');
     
 INSERT INTO Preference
-    VALUES (63493, 'Pork', 'dilike');
+    VALUES (63493, 'Pork', 'dislike');
     
 INSERT INTO Preference
     VALUES (63493, 'peanuts', 'allergies');
