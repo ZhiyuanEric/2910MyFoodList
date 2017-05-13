@@ -64,6 +64,7 @@ $resultAllergies = mysqli_query($db_link, $sql);
     <body>
         <!-- HEADER -->
         <header>
+            <!-- logo -->
             <div class="container">
                 <div id="logo" class="container">
                     <div class="col-xs-12">
@@ -71,6 +72,8 @@ $resultAllergies = mysqli_query($db_link, $sql);
                     </div>
                 </div>
             </div>
+            
+            <!-- nav bar -->
             <nav class="navbar">
                 <div class="container">
                     <div class="container-fluid">
@@ -81,7 +84,6 @@ $resultAllergies = mysqli_query($db_link, $sql);
                             <li class="logout"><a href="logout.php">Logout</a></li>
                         </ul>
                     </div>
-
                 </div>
             </nav>
         </header>
@@ -131,10 +133,10 @@ $resultAllergies = mysqli_query($db_link, $sql);
                     <button data-toggle="collapse" data-target="#like" class="foodTabBtn">Likes</button>
                     <div class="collapse" id="like">
                         <ul>
-                        <?php
-                            while ($row = mysqli_fetch_row($resultLike)) {
-                                 echo "<li>$row[0]</li>";
-                            }
+                            <?php
+                                while ($row = mysqli_fetch_row($resultLike)) {
+                                     echo "<li>$row[0]</li>";
+                                }
                             ?>
                         </ul>
                     </div>
