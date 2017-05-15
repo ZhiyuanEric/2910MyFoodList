@@ -53,8 +53,8 @@ include("mysql_connect.inc.php");
 $user = $_POST['user'];
 $pw = $_POST['pw'];
 $sql = "SELECT * FROM account where username = '$user'";
-$result = mysql_query($sql);
-$row = @mysql_fetch_row($result);
+$result = mysqli_query($db_link, $sql);
+$row = @mysqli_fetch_row($result);
 
     if(empty($user) || empty($pw)) {
 		header("Location:index.php?error=1"); die();
