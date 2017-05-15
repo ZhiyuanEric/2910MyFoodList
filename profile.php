@@ -46,48 +46,11 @@ $resultAllergies = mysqli_query($db_link, $sql);
 <!DOCTYPE HTML>
 <html>
     <!-- HEAD -->
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>My Profile</title> 
-        <meta charset="utf-8"> 
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-        <link rel="stylesheet" href="css/header.css">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/profile.css">
-    </head>
+	<?php include("include/head.inc"); ?>
+	
     <!-- body -->
     <body>
-        <!-- HEADER -->
-        <header>
-            <!-- logo -->
-            <div class="container">
-                <div id="logo" class="container">
-                    <div class="col-xs-12">
-                        <img src="images/logo.png">
-                    </div>
-                </div>
-            </div>
-            
-            <!-- nav bar -->
-            <nav class="navbar">
-                <div class="container">
-                    <div class="container-fluid">
-                        <ul class="nav navbar-nav">
-                            <li class="active"><a href="#">Profile</a></li>
-                            <li><a href="#">Group List</a></li>
-                            <li><a href="affiliated.php">Affiliated Sites</a></li>
-                            <li class="logout"><a href="logout.php">Logout</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>
-        <!-- END OF HEADER -->
+		<?php include("include/logged_in_header.inc"); ?>
 
         <?PHP
         if($_SESSION['accNo'] == null){
@@ -172,6 +135,12 @@ $resultAllergies = mysqli_query($db_link, $sql);
             </section>
             <!-- end of food listing section -->
         </main>
+		
+		<script>
+			$(document).ready(function(){
+				$(".nav li:nth-child(1)").addClass("active");
+			});
+		</script>
     </body>
     <!-- END OF PROFILE CONTENT -->
 </html>

@@ -4,34 +4,12 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<title>FoodDoc</title>
-	<meta http-equiv="Content-Type" content="text/html" charset=utf-8/>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	
-	<link rel="stylesheet" href="css/login.css">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/header.css">
-	
-	<style>
-		div div {
-			margin: auto;
-		}
-		
-	</style>
-</head>
+<?php include("include/head.inc"); ?>
     
 <body background="images/bg.png">
 
 	<div class="container">
-		<div id ="logo" class="row">
-			<div class="col-xs-12" id="header">
-                <img src="images/logo.png">
-				<hr>
-			</div>
-		</div>
+		<?php include("include/logged_out_header.inc"); ?>
         
         <h2 style="text-align:center">Registration</h2>
         
