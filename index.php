@@ -2,7 +2,6 @@
 <html lang="en">
 <?php include("include/head.inc"); ?>
 <body>
-	
 	<?php include("include/logged_out_header.inc"); ?>
 	
 	<div class="container">
