@@ -16,6 +16,14 @@
 					<li><a href="profile.php">Profile</a></li>
 					<li><a href="#">Group List</a></li>
 					<li><a href="affiliated.php">Affiliated Sites</a></li>
+                    <li class="searchBar">
+                        <div>
+                            <form name="form" method="post" action="result.php">
+                                <input class="searchField" type="text" name="search" /> 
+                                <input class="searchBtn" type="submit" name="button" value="Search" />
+                            </form>
+                        </div>
+                    </li>
 					<li class="logout"><a href="logout.php">Logout</a></li>
 				</ul>
 			</div>
