@@ -14,7 +14,7 @@
 			<div class="container-fluid">
 				<ul class="nav navbar-nav">
 					<li><a href="profile.php">Profile</a></li>
-					<li><a href="#">Group List</a></li>
+					<li><a href="merge.php">Group List</a></li>
 					<li><a href="affiliated.php">Affiliated Sites</a></li>
 					<li class="logout"><a href="logout.php">Logout</a></li>
 				</ul>
