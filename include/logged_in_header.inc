@@ -18,9 +18,9 @@
 					<li><a href="affiliated.php">Affiliated Sites</a></li>
                     <li class="searchBar">
                         <div>
-                            <form name="form" method="post" action="result.php">
-                                <input class="searchField" type="text" name="search" /> 
-                                <input class="searchBtn" type="submit" name="button" value="Search" />
+                            <form name="form" method="get" action="profile.php">
+                                <input class="searchField" type="text" name="user" /> 
+                                <input class="searchBtn" type="submit" value="Search" />
                             </form>
                         </div>
                     </li>
