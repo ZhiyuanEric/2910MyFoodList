@@ -1,5 +1,9 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
 main section{
-    padding: 20px 0;
+    padding: 3.5vw 0;
 }
 
 .dark-section{
@@ -9,4 +13,36 @@ main section{
 
 p {
     font-size: 20px;
+}
+
+.navbar{
+    padding: 0;
+    margin: 0;
+}
+
+.foodbg {
+    background-image: url("https://ak6.picdn.net/shutterstock/videos/18546728/thumb/9.jpg");
+    background-repeat: no-repeat;
+    
+    background-size: cover;
+    
+}
+
+.foodbg > div{
+    
+}
+
+.textBox{
+    background: white;
+    text-align: center;
+    padding 30px 15px;
+    min-height: 300px;
+}
+
+.textBox p{
+    text-align: left;
+}
+
+.endButton{
+    background: black;
 }
