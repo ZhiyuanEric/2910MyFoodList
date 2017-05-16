@@ -1,14 +1,7 @@
 <?php 
 session_start();
 include("mysql_connect.inc.php");
-
-$accNo = -1;
-
-if($_GET){
-    $accNo = $_GET['user'];
-} else if ($_SESSION) {
-        $accNo = $_SESSION['accNo'];
-}
+$accNo = $_POST['search'];
 
 // DB QUERIES
 
@@ -60,7 +53,7 @@ $resultAllergies = mysqli_query($db_link, $sql);
 		<?php include("include/logged_in_header.inc"); ?>
 
         <?PHP
-        if($accNo == -1){
+        if($_SESSION['accNo'] == null){
             echo '<h1 class="container">oops! some error just happened</h1>';
             echo '<meta http-equiv=REFRESH CONTENT=2;url=index.php>';
             exit();
