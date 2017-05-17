@@ -43,7 +43,7 @@
                 <div class="row contentBox">
 
                     <div class="col-xs-2 pull-left">
-                        <img class="img-responsive profileImg" src="images/default.jpg" width=128 height=128/>
+                        <img class="img-responsive profileImg" src="images/grocery.png" width=128 height=128/>
                     </div>
                     <div class="col-xs-10">
                         <h2>Grocery Buddy</h2>
@@ -58,7 +58,7 @@
                 <div class="row contentBox">
 
                     <div class="col-xs-2 pull-left">
-                        <img class="img-responsive profileImg" src="images/default.jpg" width=128 height=128/>
+                        <img class="img-responsive profileImg" src="images/waste.png" width=128 height=128/>
                     </div>
                     <div class="col-xs-10">
                         <h2>WasteNot WantNot</h2>
@@ -72,7 +72,7 @@
                 <div class="row contentBox">
 
                     <div class="col-xs-2 pull-left">
-                        <img class="img-responsive profileImg" src="images/default.jpg" width=128 height=128/>
+                        <img class="img-responsive profileImg" src="images/overcooked.png" width=128 height=128/>
                     </div>
                     <div class="col-xs-10">
                         <h2 href="www.Overcooked.ca">Overcooked.ca</h2>
