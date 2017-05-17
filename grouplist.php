@@ -3,8 +3,13 @@ include("mysql_connect.inc.php");
 
 $accNums = -1;
 
-if ($_GET) {
-    $accNums = $_GET['users'];
+if (isset($_GET['users'])) {
+    if(!empty($_GET['users'][0]))
+        $accNums = implode(', ', $_GET['users']);
+//    $accNumArray = $_GET['users'];
+//    foreach($accNumArray as &$accNum){
+//        $accNums .= ", $accNum";
+//    }
 }
 
 // DB QUERIES
@@ -45,12 +50,12 @@ $resultAllergies = mysqli_query($db_link, $sql);
 <html>
     <!-- HEAD -->
 	<?php include("include/head.inc"); ?>
-	
     <!-- body -->
     <body>
-		<?php include("include/logged_in_header.inc"); ?>
-
-
+        <head>
+            <?php include("include/logged_in_header.inc"); ?>
+            <link rel="stylesheet" href="css/grouplist.css">
+        </head>
         <!-- GROUP LISTING -->
         <main class="container">
             <div class="contentBox">
@@ -74,20 +79,30 @@ $resultAllergies = mysqli_query($db_link, $sql);
                 <div class="foodContainer contentBox">
                     <button data-toggle="collapse" data-target="#like" class="foodTabBtn">Likes</button>
                     <div class="collapse" id="like">
-                        <table>
-                            <tr>
-                                <th>Food</th>
-                                <th>People</th>
-                            </tr>
-                            <?php
-                                while ($row = mysqli_fetch_row($resultLike)) {
-                                     echo " <tr>
-                                                <td>$row[0]</td>
-                                                <td>$row[1]</td>
-                                            </tr>";
-                                }
-                            ?>
-                        </table>
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered">
+                                <colgroup>
+                                    <col class="colFood" />
+                                    <col class="colAmt" />
+                                </colgroup>
+                                <thread>
+                                    <tr>
+                                        <th>Food</th>
+                                        <th>People</th>
+                                    </tr>
+                                </thread>
+                                <tbody>
+                                <?php
+                                    while ($row = mysqli_fetch_row($resultLike)) {
+                                         echo " <tr>
+                                                    <td>$row[0]</td>
+                                                    <td>$row[1]</td>
+                                                </tr>";
+                                    }
+                                ?>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
                 
@@ -95,20 +110,30 @@ $resultAllergies = mysqli_query($db_link, $sql);
                 <div class="foodContainer contentBox">
                     <button data-toggle="collapse" data-target="#dislike" class="foodTabBtn">Dislikes</button>
                     <div class="collapse" id="dislike">
-                        <table>
-                            <tr>
-                                <th>Food</th>
-                                <th>People</th>
-                            </tr>
-                            <?php
-                                while ($row = mysqli_fetch_row($resultDislike)) {
-                                     echo " <tr>
-                                                <td>$row[0]</td>
-                                                <td>$row[1]</td>
-                                            </tr>";
-                                }
-                            ?>
-                        </table>
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered">
+                                <colgroup>
+                                    <col class="colFood" />
+                                    <col class="colAmt" />
+                                </colgroup>
+                                <thread>
+                                    <tr>
+                                        <th>Food</th>
+                                        <th>People</th>
+                                    </tr>
+                                </thread>
+                                <tbody>
+                                <?php
+                                    while ($row = mysqli_fetch_row($resultDislike)) {
+                                         echo " <tr>
+                                                    <td>$row[0]</td>
+                                                    <td>$row[1]</td>
+                                                </tr>";
+                                    }
+                                ?>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
                 
@@ -116,20 +141,30 @@ $resultAllergies = mysqli_query($db_link, $sql);
                 <div class="foodContainer contentBox">
                     <button data-toggle="collapse" data-target="#allergies" class="foodTabBtn">Allergies</button>
                     <div class="collapse" id="allergies">
-                        <table>
-                            <tr>
-                                <th>Food</th>
-                                <th>People</th>
-                            </tr>
-                            <?php
-                                while ($row = mysqli_fetch_row($resultAllergies)) {
-                                     echo " <tr>
-                                                <td>$row[0]</td>
-                                                <td>$row[1]</td>
-                                            </tr>";
-                                }
-                            ?>
-                        </table>
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered">
+                                <colgroup>
+                                    <col class="colFood" />
+                                    <col class="colAmt" />
+                                </colgroup>
+                                <thread>
+                                    <tr>
+                                        <th>Food</th>
+                                        <th>People</th>
+                                    </tr>
+                                </thread>
+                                <tbody>
+                                <?php
+                                    while ($row = mysqli_fetch_row($resultAllergies)) {
+                                         echo " <tr>
+                                                    <td>$row[0]</td>
+                                                    <td>$row[1]</td>
+                                                </tr>";
+                                    }
+                                ?>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -138,7 +173,7 @@ $resultAllergies = mysqli_query($db_link, $sql);
 		
 		<script>
 			$(document).ready(function(){
-				$(".nav li:nth-child(1)").addClass("active");
+				$(".nav li:nth-child(2)").addClass("active");
 			});
 		</script>
     </body>
