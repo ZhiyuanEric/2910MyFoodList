@@ -1,0 +1,17 @@
+a:link, a:visited, a:hover, a:active {
+	text-decoration: none;
+	color: black;
+}
+button {
+	color: black;
+}
+.red {
+	color: red;
+	text-align: center;
+}
+
+body .container form .contentBox {
+	width: 60%;
+    min-height: 85px;
+    margin: 5px auto 30px auto;
+}

@@ -1,21 +1,21 @@
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
 <?php
 
 $db_server = "localhost";
 
-$db_name = "mydb";
+$db_name = "2910db";
 
 $db_user = "root";
 
 $db_passwd = "";
 
-if(!@mysql_connect($db_server, $db_user, $db_passwd))
-        die("Can not link to database for whatever reason");
+$db_link = mysqli_connect($db_server, $db_user, $db_passwd);
 
+if(!$db_link)
+    die("<p class=\"red\">Can not link to database for whatever reason</p>");
 
-mysql_query("SET NAMES utf8");
+mysqli_query($db_link, "SET NAMES utf8");
 
-
-if(!@mysql_select_db($db_name))
-        die("Can not access database");
-?> 
+if(!mysqli_select_db($db_link, $db_name))
+    die("<p class=\"red\">Can not access database<p>");
+?>

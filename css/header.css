@@ -1,0 +1,47 @@
+/* Nav bar related */
+
+
+/* screen related */
+
+@media (min-width: 768px){
+    .nav li{
+        border-right: 1px solid white;
+    }
+    
+    .nav li:last-child{
+        border-right: none;
+        border-left: 1px solid white;
+    }
+
+    .logout{
+        border-right-width: 0;
+    }
+}
+
+@media (max-width: 767px){
+    .nav li{
+        border-bottom: 1px solid white;
+    }
+}
+
+
+/* logo related */
+.logo{
+    opacity: 0.8;
+    transition: all 0.3s;
+}
+
+.logoItem{
+    margin-top: -9px;
+}
+
+.navbar-brand .logoWord{
+    display: inline-block;
+    font-family: papyrus;
+    font-size: 24px;
+    color: white;
+}
+
+.logo:hover{
+    opacity: 1.0;
+}
