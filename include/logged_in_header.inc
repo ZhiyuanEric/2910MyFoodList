@@ -12,7 +12,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span> 
                 </button>
-                <a class="navbar-brand" href="home.php"><img src="images/logoOnly.png" width="90px" height="90px" class="logo" /></a>
+                <div class="navbar-brand">
+                    <a href="home.php" class="logo">
+                        <img src="images/logoOnlyCropped.png" width="50px" height="40px" class="logoItem" />
+                        <span class="logoWord logoItem"> iPicky</span>
+                        <!-- <img src="images/logoWordOnly.png" height="40px" class="logo logoWord" /> -->
+                    </a>
+                </div>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">

@@ -75,6 +75,17 @@ nav{
     transition: all 0.3s;
 }
 
+.logoItem{
+    margin-top: -9px;
+}
+
+.navbar-brand .logoWord{
+    display: inline-block;
+    font-family: papyrus;
+    font-size: 24px;
+    color: white;
+}
+
 .logo:hover{
     opacity: 1.0;
 }

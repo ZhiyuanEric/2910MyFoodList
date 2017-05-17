@@ -21,7 +21,13 @@
                 <div class="container row">
                     <div class="col-md-8"></div>
                     <div class="textBox col-md-4">
-                        <h1 class="easterEggBox"><span class="easterEgg">Waste Less</span> Food</h1>
+                        <h1 class="easterEggBox">
+                            <span class="easterEgg">
+                                <span class="easterEggFade">Waste Less</span>
+                                <span class="easterEggAppear">More</span>
+                            </span>
+                            <span>Food</span>
+                        </h1>
                         <div>
                             <p class="foodText">
                                 To better determine your food preferences so that you will be more aware of what you need and what you don't need.

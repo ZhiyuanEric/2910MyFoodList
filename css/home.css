@@ -37,6 +37,16 @@ p {
     
 }
 
+footer a{
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+footer a:hover{
+    text-decoration: none;
+    color: #ff3333;
+}
+
 .textBox{
     background: rgba(255, 255, 255, .8);
     text-align: center;
@@ -121,9 +131,26 @@ footer{
     transition: all 0.4s;
 }
 
-.easterEggBox:hover .easterEgg{
+.easterEggFade{
+    opacity: 1;
+    font-size: inherit;
+    transition: all 0.4s;
+}
+
+.easterEggAppear{
+    opacity: 0;
+    font-size: 1px;
+    transition: all 0.4s;
+}
+
+.easterEggBox:hover .easterEgg .easterEggFade{
     font-size: 1px;
     opacity: 0;
+}
+
+.easterEggBox:hover .easterEgg .easterEggAppear{
+    opacity: 1;
+    font-size: inherit;
 }
 
 .aboutUs{
