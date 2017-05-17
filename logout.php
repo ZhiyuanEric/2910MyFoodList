@@ -3,6 +3,7 @@
 
 <?php
 unset($_SESSION['accNo']);
+session_destroy();
 echo '<meta http-equiv=REFRESH CONTENT=2;url=home.php>';
 ?>
 

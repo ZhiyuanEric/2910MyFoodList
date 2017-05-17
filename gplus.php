@@ -5,8 +5,6 @@ const CLIENT_ID = '200741670689-aogb5u0rqvst0dsmrfi87efeut2092mg.apps.googleuser
 const CLIENT_SECRET = 'tOr41fmVRjKnEJGeGx6n0XcX';
 const REDIRECT_URI = 'http://awong6201.000webhostapp.com/connect.php';
 
-session_start();
-
 $client = new Google_Client();
 $client->setClientId(CLIENT_ID);
 $client->setClientSecret(CLIENT_SECRET);
