@@ -49,7 +49,7 @@ section {
     display: inline;
 }
 
-.centerBtn{
+.editBtn{
     margin: 0 auto;
 }
 
@@ -61,7 +61,7 @@ section {
     margin: 0 auto;
 }
 
-.nameSection{
-    margin: 0 15px 10px;
+.userInfo h2{
+    margin: 15px;
     border-bottom: 1px solid black;
 }
