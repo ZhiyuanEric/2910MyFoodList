@@ -9,7 +9,7 @@
 <body background="images/bg.png">
 
 	<div class="container">
-		<?php include("include/logged_out_header.inc"); ?>
+		<?php include("include/logged_in_header.inc"); ?>
         
         <h2 style="text-align:center">Registration</h2>
         

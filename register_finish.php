@@ -12,31 +12,8 @@ $dislikes = $_POST['dislikes'];
 $allergies = $_POST['allergies'];
 
 
-echo '<title>Registeration Success</title> 
-    <meta charset="utf-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="css/registerfinish.css">
-	<link rel="stylesheet" href="css/header.css">
-	<link rel="stylesheet" href="css/style.css">';
-echo '<header>
-        <div class="container">
-            <div id="logo" class="container">
-                <div class="col-xs-12">
-                    <img src="images/logo.png">
-                </div>
-            </div>
-        </div>
-        <div class="navbar navbar-default">
-                    <div class="container-fluid">
-                        <ul class="nav navbar-nav">
-                        </ul>
-                    </div>
-                </div>
-    </header>';
+include("include/head.inc");
+include("include/logged_in_header.inc");
 if($user != null && $pw != null && $pw2 != null && $pw == $pw2)//checking is there empty field and is the password the same
 {
         

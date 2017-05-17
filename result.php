@@ -1,13 +1,10 @@
 <?php 
 session_start();
 include("mysql_connect.inc.php");
-$accNo = -1;
-if($_GET){
-    $accNo = $_GET['user'];
-} else if ($_SESSION) {
-        $accNo = $_SESSION['accNo'];
-}
+$accNo = $_POST['search'];
+
 // DB QUERIES
+
 // profile name and bio
 $sql = "SELECT d.name, d.bio
         FROM Details d
@@ -19,23 +16,29 @@ while ($row = mysqli_fetch_row($result)) {
     $pName = $row[0];
     $pBio = $row[1];
 }
+
 // food listing - like
 $sql = "SELECT p.food
         FROM Preference p
         WHERE p.foodStatus = 'like'
             AND p.accNo = $accNo;";
+
 $resultLike = mysqli_query($db_link, $sql);
+
 // food listing - dislike
 $sql = "SELECT p.food
         FROM Preference p
         WHERE p.foodStatus = 'dislike'
             AND p.accNo = $accNo;";
+
 $resultDislike = mysqli_query($db_link, $sql);
+
 // food listing - allergies
 $sql = "SELECT p.food
         FROM Preference p
         WHERE p.foodStatus = 'allergies'
             AND p.accNo = $accNo;";
+
 $resultAllergies = mysqli_query($db_link, $sql);
 ?>
 
@@ -50,7 +53,7 @@ $resultAllergies = mysqli_query($db_link, $sql);
 		<?php include("include/logged_in_header.inc"); ?>
 
         <?PHP
-        if($accNo == -1){
+        if($_SESSION['accNo'] == null){
             echo '<h1 class="container">oops! some error just happened</h1>';
             echo '<meta http-equiv=REFRESH CONTENT=2;url=index.php>';
             exit();
