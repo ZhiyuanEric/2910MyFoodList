@@ -12,7 +12,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span> 
                 </button>
-                <a class="navbar-brand" href="home.php"><img src="images/logo.png" width="50px" height="50px" class="logo" /></a>
+                <a class="navbar-brand" href="home.php"><img src="images/logoOnly.png" width="90px" height="90px" class="logo" /></a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
