@@ -3,14 +3,14 @@
 
 <?php
 unset($_SESSION['accNo']);
-echo '<meta http-equiv=REFRESH CONTENT=2;url=index.php>';
+echo '<meta http-equiv=REFRESH CONTENT=2;url=home.php>';
 ?>
 
 <!DOCTYPE html>
 <html>
     <?php include("include/head.inc"); ?>
     <body>
-		<?php include("include/logged_out_header.inc"); ?>
+		<?php include("include/logged_in_header.inc"); ?>
         <div>
 			<div class="navbar navbar-default">
 				<div class="container-fluid">

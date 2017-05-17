@@ -7,7 +7,7 @@
 
 <?php include("include/head.inc"); ?>
 <body>
-    <?php include("include/logged_out_header.inc"); ?>
+    <?php include("include/logged_in_header.inc"); ?>
 </body>
 </html>
 <?php

@@ -1,47 +1,5 @@
 /* Nav bar related */
 
-nav{
-    box-shadow: 0 5px 0px rgba(204, 238, 255, 0.3);
-}
-
-.navbar{
-    background-color: #99ceff;
-}
-
-.nav{
-    width: 100%;  
-}
-
-.nav li{
-    padding: 0;
-}
-
-.nav li a{
-    transition: all 0.15s;
-    color: black;
-    background-color: #99ceff;
-}
-
-.nav li a:hover{
-    background-color: #b3daff;
-}
-
-.nav .active a{
-    background-color: #66b5ff;
-}
-
-.nav .active a:hover{
-    background-color: #66b5ff;
-}
-
-.nav li .btn{
-    padding: 9px 12px;
-}
-
-.nav li .input-group{
-    width: 100%;
-}
-
 
 /* screen related */
 
@@ -68,11 +26,22 @@ nav{
 
 
 /* logo related */
-
-#logo{
-    text-align: center;
-    padding: 20px 0;
+.logo{
+    opacity: 0.8;
+    transition: all 0.3s;
 }
-.title{
-    display: inline;
+
+.logoItem{
+    margin-top: -9px;
+}
+
+.navbar-brand .logoWord{
+    display: inline-block;
+    font-family: papyrus;
+    font-size: 24px;
+    color: white;
+}
+
+.logo:hover{
+    opacity: 1.0;
 }

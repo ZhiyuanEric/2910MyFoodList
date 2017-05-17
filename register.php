@@ -6,10 +6,11 @@
 <html lang="en">
 <?php include("include/head.inc"); ?>
     
-<body background="images/bg.png">
+<body>
+    
+    <?php include("include/logged_in_header.inc"); ?>
 
 	<div class="container">
-		<?php include("include/logged_out_header.inc"); ?>
         
         <h2 style="text-align:center">Registration</h2>
         
@@ -81,20 +82,20 @@
                 </div>
 
                 <div class="col-md-6 col-xs-12">
-                    <input type="text" class="form-control" id="id" name="name" placeholder="Enter your name"></div>
+                    <input type="text" class="form-control" id="id" name="name" placeholder="Enter your full name"></div>
             </div>
             
             <div class="form-group col-md-12 row">
                 
                     <!--mobile / tablet view-->
                 <div class="visible-sm visible-xs">
-                    <label class="col-xs-12" for="intro">Self Intro:</label>
+                    <label class="col-xs-12" for="intro">Introduce yourself:</label>
                 </div>
 
                     <!--desktop view-->
                 <div class="hidden-sm hidden-xs">
                     <label style="text-align:right" class="col-md-4" for="intro">
-                        Self Intro:
+                        Introduce yourself:
                     </label>
                 </div>
 
@@ -136,7 +137,7 @@
                 </div>
 
                 <div class="col-md-6 col-xs-12">
-                    <input type="text" class="form-control" id="dislikes" name="dislikes" placeholder="what you dislike"></div>
+                    <input type="text" class="form-control" id="dislikes" name="dislikes" placeholder="What you dislike"></div>
                 
             </div>
             
@@ -155,7 +156,7 @@
                 </div>
 
                 <div class="col-md-6 col-xs-12">
-                    <input type="text" class="form-control" id="allergies" name="allergies" placeholder="Some Allergies"></div>
+                    <input type="text" class="form-control" id="allergies" name="allergies" placeholder="List Some of your Allergies"></div>
             </div>
             
             <?php
