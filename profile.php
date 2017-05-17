@@ -63,13 +63,22 @@ $resultAllergies = mysqli_query($db_link, $sql);
         <!-- PROFILE CONTENT -->
         <main class="container">
             <section class="userInfo">
-                <div class="row contentBox">
-                    <h2> <?PHP echo "$pName"?> </h2>
-                    <div class="col-xs-10">
-                        <p> <?PHP echo "$pBio"?> </p>
+                <div class="contentBox">
+                    <div class="row nameSection">
+                        <div class="col-xs-10">
+                            <h2> <?PHP echo "$pName"?> </h2>
+                        </div>
+                        <div class="col-xs-2">
+                            <button onClick="session_add_id()" class="centerBtn">Add</button>
+                        </div>
                     </div>
-                    <div class="col-xs-2 pull-right">
-                        <img class="img-responsive profileImg" src="images/default.jpg" width=128 height=128/>
+                    <div class="row">
+                        <div class="col-xs-10">
+                            <p> <?PHP echo "$pBio"?> </p>
+                        </div>
+                        <div class="col-xs-2 pull-right">
+                            <img class="img-responsive profileImg" src="images/default.jpg" width=128 height=128/>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -82,7 +91,7 @@ $resultAllergies = mysqli_query($db_link, $sql);
                             <h4> Food List </h4>
                         </div>
                         <div class="col-xs-2">
-                            <button class="editBtn">
+                            <button class="centerBtn">
                                 <a href="#">Edit</a>
                             </button>
                         </div>
@@ -143,4 +152,13 @@ $resultAllergies = mysqli_query($db_link, $sql);
 		</script>
     </body>
     <!-- END OF PROFILE CONTENT -->
+    
+    
+    <!-- SCRIPTS -->
+    <script>
+    function session_add_id{
+        <?php echo "$.post("userIds.php",{accNo : $accNo});"; ?>
+    }    
+    
+    </script>
 </html>
