@@ -52,6 +52,7 @@ p {
 
 .endBlock{
     background: black;
+    border-bottom: 3px solid white;
 }
 
 .endButton{
@@ -123,3 +124,8 @@ footer{
     font-size: 1px;
     opacity: 0;
 }
+
+.aboutUs{
+    color: white;
+}
+
