@@ -10,7 +10,6 @@
         <!-- from inc file -->
         <link rel="stylesheet" href="css/header.css">
         <link rel="stylesheet" href="css/style.css">
-        
         <link rel="stylesheet" href="css/home.css">
     </head>
     
@@ -75,7 +74,7 @@
                         <h2>About Us</h2>
                         <br />
                         <p>
-                            This website was created by a team of 6 developers for our Comp 2910 Projects course.  Our main goal in this project is to bring awareness to how much food one can potentially waste.  Through our web application, our intended idea is to combine several people's preferences together to see how a meal could be prepared.
+                            This website was created by a team of 6 developers for our Comp 2910 Projects course.  Our main goal in this project is to bring awareness to how much food one can potentially waste.  Through our web application, our intended idea is to combine several people's preferences together to see how a meal could be better prepared.
                         </p>
                         <br />
                         <p>
@@ -93,7 +92,7 @@
                     <div class="footerBox col-md-6">
                         <p>&copy; Team 26</p>
                         <p>
-                            <a href="#">Contact Us</a> | <a href="affiliated.php">Affiliates</a> | <a href="#">Members Login</a> | <a href="#">Register</a>
+                            <a href="#">Contact Us</a> | <a href="affiliated.php">Affiliate Sites</a> | <a href="index.php">Members Login</a> | <a href="register.php">Register</a>
                         </p>
                     </div>
                     <div class="col-md-3"></div>
