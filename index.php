@@ -85,12 +85,6 @@
 		<div style="text-align:center; margin: 20px 0px 0px 0px" class="col-xs-12 row">
 			<?php include("gplus.php"); ?>
         </div>
-
-		<footer class="col-xs-12">
-			<hr>
-			<p style="text-align:center">&copy Team 26</p>
-		</footer>
-
+<?php include("include/footer.inc") ?>
 	</div>
-
 </body>

@@ -1,12 +1,12 @@
+
 <?php session_start(); ?>
 
-<!DOCTYPE
-
-html>
+<!DOCTYPE html>
 <html>
     <head>
         <title>iPicky - Home</title>
         <meta http-equiv="Content-Type" content="text/html" charset=utf-8/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" /> 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -15,6 +15,7 @@ html>
         <link rel="stylesheet" href="css/header.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/home.css">
+        <link rel="stylesheet" href="css/footer.css">
     </head>
     
     <body>
@@ -70,8 +71,8 @@ html>
                     <div class="row endButton">
                         <div class="col-md-4"></div>
                         <div class="col-md-4">
-                            <button class="btn btn-primary btn-lg btn-block registerBtn" type="button">Register</button> 
-                            <button class="btn btn-secondary btn-sm btn-block haveAccBtn" type="button">Already have an account?</button>
+                            <button class="btn btn-primary btn-lg btn-block registerBtn" type="button" onclick="location.href='register.php';">Register</button> 
+                            <button class="btn btn-secondary btn-sm btn-block haveAccBtn" type="button" onclick="location.href='index.php';">Already have an account?</button>
                         </div>
                         <div class="col-md-4"></div>
                     </div>
@@ -95,24 +96,7 @@ html>
             </section>
         </main>
         
-        <footer>
-            <div class="container footerThings">
-                <div class="row">
-                    <div class="col-md-3"></div>
-                    <div class="footerBox col-md-6">
-                        <p>&copy; Team 26</p>
-                        <p>
-                            <a href="#">Contact Us</a> | <a href="affiliated.php">Affiliate Sites</a> | <a href="index.php">Members Login</a> | <a href="register.php">Register</a>
-                        </p>
-                    </div>
-                    <div class="col-md-3"></div>
-                </div>
-            </div>
-        </footer>
-    
-    
-    
-    
-    
+        <?php include("include/footer.inc") ?>
+        
     </body>
 </html>

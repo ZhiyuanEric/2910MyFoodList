@@ -49,7 +49,7 @@ $resultAllergies = mysqli_query($db_link, $sql);
 ?>
 
 
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
     <!-- HEAD -->
 	<?php include("include/head.inc"); ?>
@@ -149,4 +149,5 @@ $resultAllergies = mysqli_query($db_link, $sql);
 		</script>
     </body>
     <!-- END OF PROFILE CONTENT -->
+    <?php include("include/footer.inc") ?>
 </html>

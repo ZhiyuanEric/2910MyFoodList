@@ -1,0 +1,51 @@
+
+
+body {
+    position: relative;
+    height: 100%;
+    min-height: 100%;
+
+}
+
+/**
+ * Footer Styles
+ */
+
+.copyRight{
+    color: white;
+}
+
+footer {
+    clear: both;
+    position: relative;
+    z-index: 10;
+    height: 3em;
+    margin-top: -3em;
+    background-color: black;
+    border-top: 3px solid white;
+    text-align: center;
+}
+
+footer .row{
+    background-color: black;
+}
+
+.footerBox{
+    background-color: black;
+    padding: 10px;
+    margin: 20px 3px 3px 0;
+}
+
+footer a{
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+footer a:hover{
+    text-decoration: none;
+    color: #ff3333;
+}
+
+body > div, body > main{
+    margin-bottom: 60px;
+}
