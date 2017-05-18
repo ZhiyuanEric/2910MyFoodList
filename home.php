@@ -69,8 +69,8 @@
                     <div class="row endButton">
                         <div class="col-md-4"></div>
                         <div class="col-md-4">
-                            <button class="btn btn-primary btn-lg btn-block registerBtn" type="button">Register</button> 
-                            <button class="btn btn-secondary btn-sm btn-block haveAccBtn" type="button">Already have an account?</button>
+                            <button class="btn btn-primary btn-lg btn-block registerBtn" type="button" onclick="location.href='register.php';">Register</button> 
+                            <button class="btn btn-secondary btn-sm btn-block haveAccBtn" type="button" onclick="location.href='index.php';">Already have an account?</button>
                         </div>
                         <div class="col-md-4"></div>
                     </div>
