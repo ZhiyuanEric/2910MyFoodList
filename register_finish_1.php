@@ -6,6 +6,9 @@ $user = $_POST['user'];
 $pw = $_POST['pw'];
 $pw2 = $_POST['pw2'];
 
+$pw = md5($pw);
+$pw2 = md5($pw2);
+
 $_SESSION['user'] = $user;
 $_SESSION['pw'] = $pw;
 
