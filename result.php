@@ -19,8 +19,8 @@ $result = mysqli_query($db_link, $sql);
 $sql = "SELECT COUNT(*) amt
         FROM Details
         WHERE name LIKE '%$name%';";
-
-$resultCount = mysqli_fetch_row(mysqli_query($db_link, $sql))[0];
+$row = mysqli_fetch_row(mysqli_query($db_link, $sql));
+$resultCount = $row[0];
 ?>
 
 
