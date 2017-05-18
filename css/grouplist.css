@@ -1,0 +1,15 @@
+.colFood{
+    width: 75%;
+}
+
+.colAmt{
+    width: 25%;
+}
+
+.foodcontainer{
+    width: 100%;
+}
+
+.foodListHeader{
+    border: none;
+}
