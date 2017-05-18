@@ -5,10 +5,6 @@ a:link, a:visited, a:hover, a:active {
 button {
 	color: black;
 }
-.red {
-	color: red;
-	text-align: center;
-}
 
 body .container form .contentBox {
 	width: 60%;

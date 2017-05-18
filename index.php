@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php include("include/head.inc"); session_start();?>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 <body>
 	<?php include("include/logged_in_header.inc"); ?>
 
@@ -8,8 +10,7 @@
 
         <h2 style="text-align:center">Login</h2>
 
-
-		<form name="form" method="post" action="connect.php?reg=1">
+		<form name="form" method="post">
             <div class="contentBox row">
             	<div class="form-group col-md-12 row">
 
@@ -45,18 +46,20 @@
 
             	</div>
 
-			<?php
-			if (isset($_GET['error'])) {
-				echo '<p class="red row col-xs-11 col-xs-offset-1">Please do not leave fields blank.</p>';
-			}
-			?>
+				<div style="text-align:center" id="error" class="col-xs-12 row"></div>
+
+				<?php
+				if (isset($_GET['error'])) {
+					echo '<p class="red row col-xs-11 col-xs-offset-1">Please do not leave fields blank.</p>';
+				}
+				?>
 
             </div>
 
 			<!-- desktop -->
 			<div class="visible-lg visible-md row">
 				<div class="col-md-2 col-md-offset-3" >
-					<button type="submit" class="btn btn-block btn-primary">Login</button>
+					<button id="submit" type="submit" class="btn btn-block btn-primary">Login</button>
 				</div>
 				<div class="col-md-2" >
 					<button type="reset" value="Reset" class="btn btn-block btn-primary">Reset</button>
@@ -70,7 +73,7 @@
 			<!-- mobile / tablet -->
 			<div class="hidden-lg hidden-md">
 				<div style="margin-top:20px" class="col-xs-8 col-xs-offset-2 row" >
-					<button type="submit" class="btn btn-block btn-primary">Login</button>
+					<button id="submit" type="submit" class="btn btn-block btn-primary">Login</button>
 				</div>
 				<div style="margin-top:20px" class="col-xs-8 col-xs-offset-2 row" >
 					<button type="reset" value="Reset" class="btn btn-block btn-primary">Reset</button>
@@ -82,7 +85,7 @@
 
 		</form>
 
-		<div style="text-align:center; margin: 20px 0px 0px 0px" class="col-xs-12 row">
+		<div id='gplus' style="text-align:center; margin: 20px 0px 0px 0px" class="col-xs-12 row">
 			<?php include("gplus.php"); ?>
         </div>
 
@@ -94,3 +97,37 @@
 	</div>
 
 </body>
+<script type="text/javascript">
+	$(document).ready(function() {
+
+		$('form').submit(function() {
+			event.preventDefault();
+
+			var user = $('#user').val();
+			var pw = $('#pw').val();
+
+			if (user != '' && pw != '') {
+				$.ajax({
+					url: "connect.php?reg=1",
+					type: "POST",
+					data: {user:user, pw:pw},
+					cache: false,
+					beforeSend:function() {
+						$('#submit').html("Connecting...");
+					},
+					success: function(data) {
+						if (data == user) {
+							window.location.href = 'profile.php';
+						} else {
+							$('#submit').html("Login");
+							$('#error').html('<span class="red">Username or Password is incorrect</span>');
+						}
+					}
+
+				});
+			} else {
+				$('#error').html('<span class="red">Please do not leave fields blank</span>');
+			}
+		});
+	});
+</script>

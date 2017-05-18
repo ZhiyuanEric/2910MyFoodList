@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 include("mysql_connect.inc.php");
 
@@ -21,9 +21,11 @@ $pName = 'n/a';
 $pBio = 'n/a';
 
 $result = mysqli_query($db_link, $sql);
+if ($result != null) {
 while ($row = mysqli_fetch_row($result)) {
     $pName = $row[0];
     $pBio = $row[1];
+}
 }
 
 // food listing - like
@@ -53,7 +55,7 @@ $resultAllergies = mysqli_query($db_link, $sql);
 <html>
     <!-- HEAD -->
 	<?php include("include/head.inc"); ?>
-	
+
     <!-- body -->
     <body>
 		<?php include("include/logged_in_header.inc"); ?>
@@ -96,7 +98,7 @@ $resultAllergies = mysqli_query($db_link, $sql);
                 </div>
 
                 <!-- THE ACTUALL LISTING PART :) -->
-                
+
                 <!-- Listing for Like -->
                 <div class="foodContainer contentBox">
                     <button data-toggle="collapse" data-target="#like" class="foodTabBtn">Likes</button>
@@ -110,7 +112,7 @@ $resultAllergies = mysqli_query($db_link, $sql);
                         </ul>
                     </div>
                 </div>
-                
+
                 <!-- Listing for dislike -->
                 <div class="foodContainer contentBox">
                     <button data-toggle="collapse" data-target="#dislike" class="foodTabBtn">Dislikes</button>
@@ -124,7 +126,7 @@ $resultAllergies = mysqli_query($db_link, $sql);
                         </ul>
                     </div>
                 </div>
-                
+
                 <!-- Listing for allergies -->
                 <div class="foodContainer contentBox">
                     <button data-toggle="collapse" data-target="#allergies" class="foodTabBtn">Allergies</button>
@@ -141,7 +143,7 @@ $resultAllergies = mysqli_query($db_link, $sql);
             </section>
             <!-- end of food listing section -->
         </main>
-		
+
 		<script>
 			$(document).ready(function(){
 				$(".nav li:nth-child(1)").addClass("active");

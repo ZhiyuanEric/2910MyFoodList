@@ -1,10 +1,18 @@
 <?php
 	session_start();
 ?>
+
+<html lang="en">
+
+<?//php include("include/head.inc"); ?>
+<body>
+    <?//php include("include/logged_out_header.inc"); ?>
+</body>
+</html>
 <?php
 
 if (!isset($_GET['reg'])) {
-	include("gplus.php");
+	//include("gplus.php");
 }
 
 include("mysql_connect.inc.php");
@@ -21,6 +29,12 @@ if (isset($_SESSION['user']) && isset($_SESSION['name']) && isset($_SESSION['ema
 $sql = "SELECT * FROM Account where username = '$user'";
 $result = mysqli_query($db_link, $sql);
 $row = mysqli_fetch_row($result);
+
+
+/*
+    if(empty($user) || empty($pw)) {
+		header("Location:index.php?error=1"); die();
+	}*/
 
 //If google account doesn't exist in database
 if (($row[1] != $user) && isset($_SESSION['user']) && isset($_SESSION['name']) && isset($_SESSION['email'])) {
@@ -42,18 +56,11 @@ if (($row[1] != $user) && isset($_SESSION['user']) && isset($_SESSION['name']) &
 	$sql = "INSERT INTO Details VALUES ($userID, '$name', '$email', 'unknown');";
 	mysqli_query($db_link, $sql);
 }
-
-//If google user is signing in
-if (!isset($_GET['reg']) && $row[1] == $user && $row[2] == $pw) {
-	$_SESSION['accNo'] = $row[0];
-	header("Location:profile.php"); die();
-}
-
-//If regular user is signing in
+/*
 if ($row[1] == $user && $row[2] == $pw) {
-	$_SESSION['accNo'] = $row[0];
-	echo $user;
-}
+	$data = 'success';
+	echo $data;
+}*/
 
 /*
 if($user != null && $pw != null && $row[1] == $user && $row[2] == $pw)//to check is there empty slot and this member in the database
