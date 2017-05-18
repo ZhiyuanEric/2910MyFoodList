@@ -21,14 +21,9 @@
         </main>
     </body>
     
-    <!-- scripts -->
-    
-    <?php
+    <script>
     // see that page for src
     // https://bootsnipp.com/snippets/featured/dynamic-form-fields-add-amp-remove-bs3
-    ?>
-    
-    <script>
     $(function() {
         $(document).on('click', '.btn-add', function(e) {
             e.preventDefault();
