@@ -12,7 +12,6 @@
                     <a href="home.php" class="logo">
                         <img src="images/logoOnlyCropped.png" width="50px" height="40px" class="logoItem" />
                         <span class="logoWord logoItem"> iPicky</span>
-                        <!-- <img src="images/logoWordOnly.png" height="40px" class="logo logoWord" /> -->
                     </a>
                 </div>
             </div>

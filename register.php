@@ -192,9 +192,8 @@
 			</div>
 		</form>
         
-		<footer class="col-xs-12">
-			<hr>
-			<p style="text-align:center">&copy Team 26</p>
-		</footer>
     </div>
+    
+    <?php include("include/footer.inc") ?>
+    
 </body>

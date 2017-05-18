@@ -67,6 +67,5 @@ else
 {
         echo '<h2 class="red">Login failed!<h2>';
         echo '<meta http-equiv=REFRESH CONTENT=1;url=index.php>';
-
 }*/
 ?>
