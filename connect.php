@@ -8,8 +8,8 @@
 <?php include("include/head.inc"); ?>
 <body>
     <?php include("include/logged_in_header.inc"); ?>
-</body>
-</html>
+    <div>
+
 <?php
 
 include("mysql_connect.inc.php");
@@ -35,4 +35,11 @@ else
         echo '<h2 class="red">Login failed!<h2>';
         echo '<meta http-equiv=REFRESH CONTENT=1;url=index.php>';
 }
+
 ?>
+        </div>
+    <?php include("include/footer.inc") ?>
+    
+    </body>
+    
+</html>
