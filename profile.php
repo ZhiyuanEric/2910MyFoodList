@@ -7,6 +7,7 @@ if($_GET){
 } else if ($_SESSION) {
         $accNo = $_SESSION['accNo'];
 }
+
 // DB QUERIES
 // profile name and bio
 $sql = "SELECT d.name, d.bio
@@ -19,18 +20,21 @@ while ($row = mysqli_fetch_row($result)) {
     $pName = $row[0];
     $pBio = $row[1];
 }
+
 // food listing - like
 $sql = "SELECT p.food
         FROM Preference p
         WHERE p.foodStatus = 'like'
             AND p.accNo = $accNo;";
 $resultLike = mysqli_query($db_link, $sql);
+
 // food listing - dislike
 $sql = "SELECT p.food
         FROM Preference p
         WHERE p.foodStatus = 'dislike'
             AND p.accNo = $accNo;";
 $resultDislike = mysqli_query($db_link, $sql);
+
 // food listing - allergies
 $sql = "SELECT p.food
         FROM Preference p
@@ -40,7 +44,7 @@ $resultAllergies = mysqli_query($db_link, $sql);
 ?>
 
 
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
     <!-- HEAD -->
 	<?php include("include/head.inc"); ?>
