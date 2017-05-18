@@ -22,7 +22,7 @@
                     <li><a href="#">Group Listing</a></li>
                 </ul>
                 <?php
-                /*
+                
                 if(isset($_SESSION['accNo'])) {
                     echo '<form class="navbar-form navbar-left" name="form" method="get" action="profile.php">
                              <div class="form-group">
@@ -40,7 +40,7 @@
                     } else {
                         echo '<li><a href="profile.php"><span class="glyphicon glyphicon-user"></span> My Profile</a></li>
                               <li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>';
-                    }*/
+                    }
                     ?>
                 </ul>
             </div>
