@@ -65,3 +65,7 @@ section {
     margin: 15px;
     border-bottom: 1px solid black;
 }
+
+#profileName{
+    text-align: left;
+}

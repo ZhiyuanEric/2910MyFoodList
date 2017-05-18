@@ -72,7 +72,7 @@ $resultAllergies = mysqli_query($db_link, $sql);
         <main class="container">
             <section class="userInfo">
                 <div class="row contentBox">
-                    <h2> <?PHP echo "$pName"?> </h2>
+                    <h2 id="profileName"> <?PHP echo "$pName"?> </h2>
                     <div class="col-xs-10">
                         <p> <?PHP echo "$pBio"?> </p>
                     </div>
