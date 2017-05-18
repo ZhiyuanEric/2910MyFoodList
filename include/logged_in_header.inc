@@ -23,7 +23,7 @@
                 <?php
                 
                 if(isset($_SESSION['accNo'])) {
-                    echo '<form class="navbar-form navbar-left" name="form" method="get" action="profile.php">
+                    echo '<form class="navbar-form navbar-left" name="form" method="get" action="result.php">
                              <div class="form-group">
                                  <input type="text" class="form-control" placeholder="Search" name="user">
                              </div>
