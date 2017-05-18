@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php include("include/head.inc"); ?>
+<?php include("include/head.inc"); session_start();?>
 <body>
 	<?php include("include/logged_in_header.inc"); ?>
-	
+
 	<div class="container">
-        
+
         <h2 style="text-align:center">Login</h2>
-        
-        
-		<form name="form" method="post" action="connect.php">
+
+
+		<form name="form" method="post" action="connect.php?reg=1">
             <div class="contentBox row">
             	<div class="form-group col-md-12 row">
 
@@ -43,14 +43,14 @@
 					<div class="col-md-6 col-xs-12">
 					<input type="password" class="form-control" id="pw" name="pw" placeholder="Enter password"></div>
 
-            	</div>			
-			
+            	</div>
+
 			<?php
 			if (isset($_GET['error'])) {
 				echo '<p class="red row col-xs-11 col-xs-offset-1">Please do not leave fields blank.</p>';
 			}
 			?>
-                
+
             </div>
 
 			<!-- desktop -->
@@ -65,8 +65,8 @@
 					<a href="register.php"><button type="button" class="btn btn-block btn-primary">Create Account</button></a>
 				</div>
 			</div>
-            
-		
+
+
 			<!-- mobile / tablet -->
 			<div class="hidden-lg hidden-md">
 				<div style="margin-top:20px" class="col-xs-8 col-xs-offset-2 row" >
@@ -79,11 +79,12 @@
 					<a href="register.php"><button type="button" class="btn btn-block btn-primary">Create Account</button></a>
 				</div>
 			</div>
-                
+
 		</form>
-		
+
+		<div style="text-align:center; margin: 20px 0px 0px 0px" class="col-xs-12 row">
+			<?php include("gplus.php"); ?>
+        </div>
+<?php include("include/footer.inc") ?>
 	</div>
-    
-    <?php include("include/footer.inc") ?>
-	
 </body>

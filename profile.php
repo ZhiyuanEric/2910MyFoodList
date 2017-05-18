@@ -1,20 +1,25 @@
 <?php 
 session_start();
 include("mysql_connect.inc.php");
+
 $accNo = -1;
+
 if($_GET){
     $accNo = $_GET['user'];
 } else if ($_SESSION) {
-        $accNo = $_SESSION['accNo'];
+    $accNo = $_SESSION['accNo'];
 }
 
 // DB QUERIES
+
 // profile name and bio
 $sql = "SELECT d.name, d.bio
         FROM Details d
         WHERE d.accNo = $accNo;";
+
 $pName = 'n/a';
 $pBio = 'n/a';
+
 $result = mysqli_query($db_link, $sql);
 while ($row = mysqli_fetch_row($result)) {
     $pName = $row[0];

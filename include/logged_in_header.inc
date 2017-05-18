@@ -1,16 +1,12 @@
 <header>
-
-
 	<!-- nav bar -->
-
-    
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                    <span class="icon-bar"></span> 
+                    <span class="icon-bar"></span>
                 </button>
                 <div class="navbar-brand">
                     <a href="home.php" class="logo">
@@ -25,6 +21,7 @@
                     <li><a href="#">Group Listing</a></li>
                 </ul>
                 <?php
+                
                 if(isset($_SESSION['accNo'])) {
                     echo '<form class="navbar-form navbar-left" name="form" method="get" action="profile.php">
                              <div class="form-group">
