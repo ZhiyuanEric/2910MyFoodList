@@ -69,80 +69,90 @@ $resultAllergies = mysqli_query($db_link, $sql);
         ?>
 
         <!-- PROFILE CONTENT -->
-        <main class="container">
-            <section class="userInfo">
-                <div class="row contentBox">
-                    <h2 id="profileName"> <?PHP echo "$pName"?> </h2>
-                    <div class="col-xs-10">
-                        <p> <?PHP echo "$pBio"?> </p>
-                    </div>
-                    <div class="col-xs-2 pull-right">
-                        <img class="img-responsive profileImg" src="images/default.jpg" width=128 height=128/>
-                    </div>
-                </div>
-            </section>
-
-            <!-- FOOD LISTING -->
-            <section class="foodListing">
-                <div class="contentBox">
-                    <div class="row text-center profileBreak">
-                        <div class="col-xs-10 foodListHeader">
-                            <h4> Food List </h4>
+        
+        <main>
+            <div class="container">
+                <div class="row">
+                    <!-- profile details -->
+                    <section class="contentBox col-md-4" id="profileOuter">
+                        <div class="row" id="profileUpper">
+                            <div class="col-xs-4">
+                                <img class="profileImg" src="images/default.jpg" width="128" height="128/">
+                            </div>
+                            <div class="col-xs-8">
+                                <p id="profileName">
+                                    <?php echo "$pName"; ?>
+                                </p>
+                                <button class="btn btn-default">Edit</button>
+                            </div>
                         </div>
-                        <div class="col-xs-2">
-                            <button class="editBtn">
-                                <a href="#">Edit</a>
-                            </button>
+                        <div id="profileLower">
+                            <p class="profileDesc">
+                                <?php echo "$pBio"; ?>
+                            </p>
                         </div>
-                    </div>
-                </div>
+                    </section>
 
-                <!-- THE ACTUALL LISTING PART :) -->
-
-                <!-- Listing for Like -->
-                <div class="foodContainer contentBox">
-                    <button data-toggle="collapse" data-target="#like" class="foodTabBtn">Likes</button>
-                    <div class="collapse" id="like">
-                        <ul>
-                            <?php
-                                while ($row = mysqli_fetch_row($resultLike)) {
-                                     echo "<li>$row[0]</li>";
-                                }
-                            ?>
-                        </ul>
-                    </div>
+                    <!-- food listing -->
+                    <section class="col-md-8">
+                        <div class="contentBox">
+                            <div class="row foodListHeader">
+                                <h2> Food Preferences </h2>
+                            </div>
+                            <div class="foodList">
+                                
+                                <!-- likes -->
+                                <div class="foodListSection">
+                                    <button class="foodBtn btn btn-default" data-toggle="collapse" data-target="#like">Foods I like</button>
+                                    <div id="like" class="collapse">
+                                        <ul class="list-group">
+                                            <?php
+                                            while ($row = mysqli_fetch_row($resultLike)) {
+                                                 echo "<li class=\"list-group-item\">$row[0]</li>";
+                                            }
+                                            ?>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <!-- dislikes -->
+                                <div class="foodListSection">
+                                    <button class="foodBtn btn btn-default" data-toggle="collapse" data-target="#dislike">Foods I don't like</button>
+                                    <div id="dislike" class="collapse">
+                                        <ul class="list-group">
+                                            <?php
+                                            while ($row = mysqli_fetch_row($resultDislike)) {
+                                                 echo "<li class=\"list-group-item\">$row[0]</li>";
+                                            }
+                                            ?>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <!-- allergies -->
+                                <div class="foodListSection">
+                                    <button class="foodBtn btn btn-default" data-toggle="collapse" data-target="#allergies">Foods I'm allergic to</button>
+                                    <div id="allergies" class="collapse">
+                                        <ul class="list-group">
+                                            <?php
+                                            while ($row = mysqli_fetch_row($resultAllergies)) {
+                                                 echo "<li class=\"list-group-item\">$row[0]</li>";
+                                            }
+                                            ?>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
-
-                <!-- Listing for dislike -->
-                <div class="foodContainer contentBox">
-                    <button data-toggle="collapse" data-target="#dislike" class="foodTabBtn">Dislikes</button>
-                    <div class="collapse" id="dislike">
-                        <ul>
-                           <?php
-                            while ($row = mysqli_fetch_row($resultDislike)) {
-                                 echo "<li>$row[0]</li>";
-                            }
-                            ?>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Listing for allergies -->
-                <div class="foodContainer contentBox">
-                    <button data-toggle="collapse" data-target="#allergies" class="foodTabBtn">Allergies</button>
-                    <div class="collapse" id="allergies">
-                        <ul>
-                            <?php
-                            while ($row = mysqli_fetch_row($resultAllergies)) {
-                                 echo "<li>$row[0]</li>";
-                            }
-                            ?>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-            <!-- end of food listing section -->
+            </div>
         </main>
+        
+        
+        <!-- end of profile content -->
+        
+        <!-- scripts -->
 
 		<script>
 			$(document).ready(function(){
