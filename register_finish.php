@@ -33,7 +33,7 @@ if($user != null && $pw != null && $pw2 != null && $pw == $pw2)//checking is the
         }
         
         // add the details
-        $sql = "INSERT INTO details VALUES ($userID, '$name', '$bio', 'unknown');";
+        $sql = "INSERT INTO Details VALUES ($userID, '$name', '$bio', 'unknown');";
         mysqli_query($db_link, $sql);
         
         
