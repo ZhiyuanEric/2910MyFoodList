@@ -54,5 +54,7 @@
 				$(".nav li:nth-child(3)").addClass("active");
 			});
 		</script>
+        
+        <?php include("include/footer.inc") ?>
     </body> 
 </html>
