@@ -30,8 +30,8 @@ section {
 }
 
 .foodContainer ul{
-   list-style-type: none;
-   margin: 0;
+    list-style-type: none;
+    margin: 0;
     padding: 0;
     background-color: rgba(153, 220, 200, 0.25);
 }
@@ -64,4 +64,8 @@ section {
 .userInfo h2{
     margin: 15px;
     border-bottom: 1px solid black;
+}
+
+#profileName{
+    text-align: left;
 }

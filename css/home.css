@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url(../images/strawberry.jpg) repeat;
+}
+
+main section{
+    padding: 3.5vw 0;
+    margin: 0;
+}
+
+.dark-section{
+    background: black;
+    color: white;
+    border-top: 3px solid white;
+}
+
+p {
+    font-size: 20px;
+}
+
+.navbar{
+    padding: 0;
+    margin: 0;
+}
+
+.stepBG {
+    background-image: url("http://bgfons.com/upload/strawberry_texture2589.jpg");
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    padding: 200px 0;
+}
+
+.foodbg {
+    background-image: url("https://ak6.picdn.net/shutterstock/videos/18546728/thumb/9.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+footer a{
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+footer a:hover{
+    text-decoration: none;
+    color: #ff3333;
+}
+
+.textBox{
+    background: rgba(255, 255, 255, .8);
+    text-align: center;
+    padding: 30px 15px;
+    min-height: 300px;
+    padding-top: 40px;
+    box-shadow: 5px 5px 8px #555;
+    border-radius: 60px;
+}
+
+.textBox p{
+    text-align: left;
+}
+
+.endBlock{
+    background: black;
+    border-bottom: 3px solid white;
+}
+
+.endButton{
+    margin-top: 50px;
+}
+
+.registerBtn{
+    background-color: green;
+    transition: all 0.3s;
+}
+
+.registerBtn:hover{
+    background-color: #6699ff;
+}
+
+.haveAccBtn{
+    font-size: 18px;
+}
+
+.stepBG p{
+    margin: 30px 0;
+}
+
+.stepText{
+    padding: 10px 40px;
+}
+
+.stepBG h1{
+    padding: 50px 0 0 0;
+}
+
+.foodText{
+    padding-top: 20px;
+    padding-left: 18px;
+}
+
+.easterEgg{
+    transition: all 0.4s;
+}
+
+.easterEggFade{
+    opacity: 1;
+    font-size: inherit;
+    transition: all 0.4s;
+}
+
+.easterEggAppear{
+    opacity: 0;
+    font-size: 1px;
+    transition: all 0.4s;
+}
+
+.easterEggBox:hover .easterEgg .easterEggFade{
+    font-size: 1px;
+    opacity: 0;
+}
+
+.easterEggBox:hover .easterEgg .easterEggAppear{
+    opacity: 1;
+    font-size: inherit;
+}
+
+.aboutUs{
+    color: white;
+}
+
+main{
+    padding-bottom: 125px;
+}
+

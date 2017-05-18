@@ -1,32 +1,7 @@
-nav{
-    box-shadow: 0 5px 0px rgba(204, 238, 255, 0.3);
-}
+/* Nav bar related */
 
-.navbar{
-    background-color: #99ceff;
-}
 
-.nav{
-    width: 100%;  
-}
-
-.nav li a{
-    transition: all 0.15s;
-    color: black;
-    background-color: #99ceff;
-}
-
-.nav li a:hover{
-    background-color: #b3daff;
-}
-
-.nav .active a{
-    background-color: #66b5ff;
-}
-
-.nav .active a:hover{
-    background-color: #66b5ff;
-}
+/* screen related */
 
 @media (min-width: 768px){
     .nav li{
@@ -39,7 +14,6 @@ nav{
     }
 
     .logout{
-        float: right !important;
         border-right-width: 0;
     }
 }
@@ -49,10 +23,40 @@ nav{
         border-bottom: 1px solid white;
     }
 }
-#logo{
-    text-align: center;
-    padding: 20px 0;
+
+@media (min-width: 768px) and (max-width: 830px) {
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+    .navbar-collapse.collapse.in {
+        display: block !important;
+    }
+    .navbar-header .collapse, .navbar-toggle {
+        display:block !important;
+    }
+    .navbar-header {
+        float:none;
+    }
 }
-.title{
-    display: inline;
+
+
+/* logo related */
+.logo{
+    opacity: 0.8;
+    transition: all 0.3s;
+}
+
+.logoItem{
+    margin-top: -9px;
+}
+
+.navbar-brand .logoWord{
+    display: inline-block;
+    font-family: papyrus;
+    font-size: 24px;
+    color: white;
+}
+
+.logo:hover{
+    opacity: 1.0;
 }
