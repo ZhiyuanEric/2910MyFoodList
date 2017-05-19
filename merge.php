@@ -21,9 +21,6 @@
                 </form>
             </div>
         </main>
-        
-        <?php include("include/footer.inc"); ?>
-        
     </body>
     
     <script>
