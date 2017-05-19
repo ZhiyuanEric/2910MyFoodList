@@ -172,7 +172,9 @@ $resultAllergies = mysqli_query($db_link, $sql);
             </div>
       </main>
         <!-- end of profile content -->
-
+        
+        <?php include("include/footer.inc"); ?>
+        
         <!-- scripts -->
 		<script>
 			$(document).ready(function(){
