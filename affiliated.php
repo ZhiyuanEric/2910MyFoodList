@@ -1,8 +1,6 @@
 <!DOCTYPE html> 
 <html lang="en">
-    <head>
-        <?php include("include/head.inc"); ?>
-    </head>
+<?php include("include/head.inc"); ?>
     <body> 
 		<?php include("include/logged_in_header.inc"); ?>
 		
@@ -14,7 +12,8 @@
                         <img class="img-responsive profileImg" src="images/grocery.png" width=128 height=128/>
                     </div>
                     <div class="col-xs-10">
-                        <h2>Grocery Buddy</h2>
+                        <p class="titles" >Grocery Buddy</p>
+                        <hr/>
                         <p>Grocery Buddy tracks your shopping list and keeps track of how much of a food product you have, and the item's current shelf life represented as an expiration bar</p>
                     </div>
 
@@ -29,7 +28,8 @@
                         <img class="img-responsive profileImg" src="images/waste.png" width=128 height=128/>
                     </div>
                     <div class="col-xs-10">
-                        <h2>WasteNot WantNot</h2>
+                        <p class="titles" >WasteNot WantNot</p>
+                        <hr/>
                         <p>Meal planner app designed to help users reduce the amount they waste by helping them with portion sizes and a stat tracker graph for wasted amounts</p>
                     </div>     
                 </div>
@@ -43,7 +43,8 @@
                         <a target="_blank" href="https://overcooked.ca"><img class="img-responsive profileImg" src="images/overcooked.png" width=128 height=128/></a>
                     </div>
                     <div class="col-xs-10">
-                        <h2 href="www.Overcooked.ca">Overcooked.ca</h2>
+                        <p class="titles" href="www.Overcooked.ca">Overcooked.ca</p>
+                        <hr/>
                         <p>An app for businesses, farmers, grocery stores, or anyone to post their surplus foods to help connect charities and hungry mouths.</p>
                     </div>
 
@@ -56,7 +57,5 @@
 				$(".nav li:nth-child(3)").addClass("active");
 			});
 		</script>
-        
-        <?php include("include/footer.inc") ?>
     </body> 
 </html>

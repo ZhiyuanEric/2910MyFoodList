@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <?php include("include/head.inc"); ?>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    </head>
-
-
+<?php include("include/head.inc"); ?>
 <body>
 	<?php include("include/logged_in_header.inc"); ?>
 
@@ -13,7 +8,8 @@
 
         <h2 style="text-align:center">Login</h2>
 
-		<form name="form" method="post">
+
+		<form name="form" method="post" action="connect.php?reg=1">
             <div class="contentBox row">
             	<div class="form-group col-md-12 row">
 
@@ -49,26 +45,24 @@
 
             	</div>
 
-				<div style="text-align:center" id="error" class="col-xs-12 row"></div>
-
-				<?php
-				if (isset($_GET['error'])) {
-					echo '<p class="red row col-xs-11 col-xs-offset-1">Please do not leave fields blank.</p>';
-				}
-				?>
+			<?php
+			if (isset($_GET['error'])) {
+				echo '<p class="red row col-xs-11 col-xs-offset-1">Please do not leave fields blank.</p>';
+			}
+			?>
 
             </div>
 
 			<!-- desktop -->
 			<div class="visible-lg visible-md row">
 				<div class="col-md-2 col-md-offset-3" >
-					<button id="submit" type="submit" class="btn btn-block btn-primary">Login</button>
+					<button type="submit" class="btn btn-block" onmouseover="this.style.color='green';" onmouseout="this.style.color='white';">Login</button>
 				</div>
 				<div class="col-md-2" >
-					<button type="reset" value="Reset" class="btn btn-block btn-primary">Reset</button>
+					<button type="reset" value="Reset" class="btn btn-block" onmouseover="this.style.color='green';" onmouseout="this.style.color='white';">Reset</button>
 				</div>
 				<div class="col-md-2" >
-					<a href="register.php"><button type="button" class="btn btn-block btn-primary">Create Account</button></a>
+					<a href="register.php"><button type="button" class="btn btn-block" onmouseover="this.style.color='green';" onmouseout="this.style.color='white';">Create Account</button></a>
 				</div>
 			</div>
 
@@ -76,23 +70,27 @@
 			<!-- mobile / tablet -->
 			<div class="hidden-lg hidden-md">
 				<div style="margin-top:20px" class="col-xs-8 col-xs-offset-2 row" >
-					<button id="submit" type="submit" class="btn btn-block btn-primary">Login</button>
+					<button type="submit" class="btn btn-block" onmouseover="this.style.color='green';" onmouseout="this.style.color='white';">Login</button>
 				</div>
 				<div style="margin-top:20px" class="col-xs-8 col-xs-offset-2 row" >
-					<button type="reset" value="Reset" class="btn btn-block btn-primary">Reset</button>
+					<button type="reset" value="Reset" class="btn btn-block" onmouseover="this.style.color='green';" onmouseout="this.style.color='white';">Reset</button>
 				</div>
 				<div style="margin-top:20px" class="col-xs-8 col-xs-offset-2 row" >
-					<a href="register.php"><button type="button" class="btn btn-block btn-primary">Create Account</button></a>
+					<a href="register.php"><button type="button" class="btn btn-block" onmouseover="this.style.color='green';" onmouseout="this.style.color='white';">Create Account</button></a>
 				</div>
 			</div>
 
 		</form>
 
-		<div id='gplus' style="text-align:center; margin: 20px 0px 0px 0px" class="col-xs-12 row">
+		<div style="text-align:center; margin: 20px 0px 0px 0px" class="col-xs-12 row">
 			<?php include("gplus.php"); ?>
         </div>
 
+		<footer class="col-xs-12">
+			<hr>
+			<p style="text-align:center">&copy Team 26</p>
+		</footer>
+
 	</div>
-    <?php include("include/footer.inc") ?>
+
 </body>
-<script src="js/login.js"></script>

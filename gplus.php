@@ -3,7 +3,9 @@
 require_once('gplus-lib/vendor/autoload.php');
 const CLIENT_ID = '200741670689-aogb5u0rqvst0dsmrfi87efeut2092mg.apps.googleusercontent.com';
 const CLIENT_SECRET = 'tOr41fmVRjKnEJGeGx6n0XcX';
-const REDIRECT_URI = 'http://ipicky.000webhostapp.com/connect.php';
+const REDIRECT_URI = 'http://awong6201.000webhostapp.com/connect.php';
+
+session_start();
 
 $client = new Google_Client();
 $client->setClientId(CLIENT_ID);
@@ -49,7 +51,7 @@ if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
     <?php
 
           if (isset($authUrl)) {
-              echo "<a id='gplus' class='login' href='" . $authUrl . "'><img src='gplus-lib/signin_button.png' height='50px'/></a>";
+              echo "<a class='login' href='" . $authUrl . "'><img src='gplus-lib/signin_button.png' height='50px'/></a>";
           }
     ?>
 </div>

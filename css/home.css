@@ -5,7 +5,6 @@ body {
 
 main section{
     padding: 3.5vw 0;
-    margin: 0;
 }
 
 .dark-section{
@@ -33,6 +32,7 @@ p {
 .foodbg {
     background-image: url("https://ak6.picdn.net/shutterstock/videos/18546728/thumb/9.jpg");
     background-repeat: no-repeat;
+    
     background-size: cover;
     
 }
@@ -83,6 +83,33 @@ footer a:hover{
     font-size: 18px;
 }
 
+.footerThings{
+    text-align: center;
+    color: white;
+}
+
+footer {
+    border-top: 3px solid darkgrey;
+    padding-top: 20px;
+    width: 100%;
+    margin: 100px 0 0 0;
+}
+
+.footerBox{
+    /*background-color: rgba(204, 238, 255, .9);*/
+    background-color: black;
+    
+    padding: 10px;
+    margin: 20px 3px 3px 0;
+    /*
+    box-shadow: 6px 6px 0px rgba(204, 238, 255, 0.3);
+    border-radius: 5px;*/
+}
+
+footer{
+    background: black;
+}
+
 .stepBG p{
     margin: 30px 0;
 }
@@ -129,33 +156,4 @@ footer a:hover{
 .aboutUs{
     color: white;
 }
-
-main{
-    padding-bottom: 125px;
-}
-
-/* Easter egg for rain on home page css3 */
-
-.drop {
-    background:-webkit-gradient(linear,0% 0%,0% 100%, from(rgba(13,52,58,1) ), to(rgba(255,255,255,0.6))  );
-    background: -moz-linear-gradient(top, rgba(13,52,58,1) 0%, rgba(255,255,255,.6) 100%);
-    width: 1px;
-    height: 40px;
-    position: absolute;
-    bottom:200px;
-    -webkit-animation: fall .63s linear infinite;
-    -moz-animation: fall .63s linear infinite;
-  
-}
-
-/* animate the drops*/
-@-webkit-keyframes fall {
-	to {margin-top:900px;}
-}
-@-moz-keyframes fall {
-	to {margin-top:900px;}
-}
-
-
-
 

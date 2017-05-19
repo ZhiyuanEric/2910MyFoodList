@@ -1,6 +1,15 @@
 <?php
 	session_start();
+
 ?>
+
+<html lang="en">
+
+<?php include("include/head.inc"); ?>
+<body>
+    <?php include("include/logged_in_header.inc"); ?>
+</body>
+</html>
 <?php
 
 if (!isset($_GET['reg'])) {
@@ -18,12 +27,16 @@ if (isset($_SESSION['user']) && isset($_SESSION['name']) && isset($_SESSION['ema
 	$user = $_POST['user'];
 	$pw = $_POST['pw'];
 }
-$pw = md5($pw);
-$sql = "SELECT * FROM Account where username = '$user'";
-$result = mysqli_query($db_link, $sql);
-$row = mysqli_fetch_row($result);
 
-//If google account doesn't exist in database
+$sql = "SELECT * FROM account where username = '$user'";
+$result = mysqli_query($db_link, $sql);
+$row = @mysqli_fetch_row($result);
+
+    if(empty($user) || empty($pw)) {
+		header("Location:index.php?error=1"); die();
+	}
+
+//if Google account doesn't exist in database
 if (($row[1] != $user) && isset($_SESSION['user']) && isset($_SESSION['name']) && isset($_SESSION['email'])) {
 
 	$sql = "INSERT INTO Account (username, accPass) VALUES ('$user', '$pw');";
@@ -44,29 +57,16 @@ if (($row[1] != $user) && isset($_SESSION['user']) && isset($_SESSION['name']) &
 	mysqli_query($db_link, $sql);
 }
 
-//If google user is signing in
-if (!isset($_GET['reg']) && $row[1] == $user && $row[2] == $pw) {
-	$_SESSION['accNo'] = $row[0];
-	header("Location:profile.php"); die();
-}
-
-//If regular user is signing in
-if ($row[1] == $user && $row[2] == $pw) {
-	$_SESSION['accNo'] = $row[0];
-	echo $user;
-}
-
-/*
 if($user != null && $pw != null && $row[1] == $user && $row[2] == $pw)//to check is there empty slot and this member in the database
 {
 
-		$_SESSION['accNo'] = $row[0];
-		echo '<h2 class="green">Login success</h2>';
-		echo '<meta http-equiv=REFRESH CONTENT=1;url=profile.php>';
+        $_SESSION['accNo'] = $row[0];
+        echo '<h2 class="green">Login success</h2>';
+        echo '<meta http-equiv=REFRESH CONTENT=1;url=profile.php>';
 }
 else
 {
         echo '<h2 class="red">Login failed!<h2>';
         echo '<meta http-equiv=REFRESH CONTENT=1;url=index.php>';
-}*/
+}
 ?>

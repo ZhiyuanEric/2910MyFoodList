@@ -1,8 +1,9 @@
+<meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
 <?php
 
 $db_server = "localhost";
 
-$db_name = "2910db";
+$db_name = "mydb";
 
 $db_user = "root";
 

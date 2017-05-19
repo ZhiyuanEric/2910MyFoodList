@@ -1,21 +1,30 @@
-
 <?php session_start(); ?>
 
-<!DOCTYPE html>
+<!DOCTYPE
+
+html>
 <html>
     <head>
-        <?php include("include/head.inc"); ?>
+        <title>iPicky - Home</title>
+        <meta http-equiv="Content-Type" content="text/html" charset=utf-8/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <!-- from inc file -->
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/home.css">
     </head>
-
-    <body class="rain">
-
+    
+    <body>
         <?php include("include/logged_in_header.inc"); ?>
         
         <main>
             <section class="foodbg">
-                <div class="container">
-                    <div class="textBox col-md-offset-8 col-md-4">
+                <div class="container row">
+                    <div class="col-md-8"></div>
+                    <div class="textBox col-md-4">
                         <h1 class="easterEggBox">
                             <span class="easterEgg">
                                 <span class="easterEggFade">Waste Less</span>
@@ -41,14 +50,14 @@
                     </p>
                 </div>
             </section>
-
+            
             <section class="stepBG">
                 <div class="container">
                     <div class="textBox">
                         <h1>What do I need to do?</h1>
                         <div class="stepText">
                             <p>
-                                1. Create your very own lists of food preferences based on likes, dislikes, and any food allergies.
+                                1. Create your very own lists of food preferences based on likes, dislikes, and any food allergies. 
                             </p>
                             <p>
                                 2. Combine your list with your friends list so you can see what everyone's preferences are.
@@ -57,26 +66,25 @@
                                 3. Log in or Create an account to know exactly what to parepare for when you want to cook for a group of people.
                             </p>
                         </div>
-                    </div>
+                    </div> 
                     <div class="row endButton">
                         <div class="col-md-4"></div>
                         <div class="col-md-4">
-                            <button class="btn btn-primary btn-lg btn-block registerBtn" type="button" onclick="location.href='register.php';">Register</button> 
-                            <button class="btn btn-secondary btn-sm btn-block haveAccBtn" type="button" onclick="location.href='index.php';">Already have an account?</button>
+                            <button class="btn btn-primary btn-lg btn-block registerBtn" type="button">Register</button> 
+                            <button class="btn btn-secondary btn-sm btn-block haveAccBtn" type="button">Already have an account?</button>
                         </div>
                         <div class="col-md-4"></div>
                     </div>
                 </div>
             </section>
-
+                        
             <section class="endBlock">
                 <div class="container">
-                    <canvas id="canvas" style="position : absolute; top : 0px; left : 0px;"></canvas>
                     <div class="aboutUs">
                         <h2>About Us</h2>
                         <br />
                         <p>
-                            This website was created by a team of 6 developers for our Comp 2910 Projects course.  Our main goal in this project is to bring awareness to how much food one can potentially waste in <span id="easterRain">Metro Vancouver</span>.  Through our web application, our intended idea is to combine several people's preferences together to see how a meal can be better prepared.
+                            This website was created by a team of 6 developers for our Comp 2910 Projects course.  Our main goal in this project is to bring awareness to how much food one can potentially waste.  Through our web application, our intended idea is to combine several people's preferences together to see how a meal could be better prepared.
                         </p>
                         <br />
                         <p>
@@ -87,16 +95,24 @@
             </section>
         </main>
         
-        <?php include("include/footer.inc") ?>
-        
-        <script src="js/rain.js"></script>
-        
-        
-        <script>
-            $("#easterRain").click(function(){
-                $("#easterRain").text("Metro Raincouver");
-                createRain();
-            });
-        </script>
+        <footer>
+            <div class="container footerThings">
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="footerBox col-md-6">
+                        <p>&copy; Team 26</p>
+                        <p>
+                            <a href="#">Contact Us</a> | <a href="affiliated.php">Affiliate Sites</a> | <a href="index.php">Members Login</a> | <a href="register.php">Register</a>
+                        </p>
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
+            </div>
+        </footer>
+    
+    
+    
+    
+    
     </body>
 </html>

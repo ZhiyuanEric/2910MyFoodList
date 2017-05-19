@@ -1,5 +1,6 @@
 body {
-    background: url(../images/restaurant2.png) repeat;
+    background: url(../images/strawberry.jpg) repeat;
+    color: white;
 }
 
 .foodContainer li:nth-child(even) {
@@ -11,31 +12,28 @@ body {
 }
 .contentBox{
     /*background-color: #e6f3ff;*/
-    background-color: rgba(204, 238, 255, 0.7);
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 10px;
     margin: 20px 0 0 0;
     box-shadow: 6px 6px 0px rgba(204, 238, 255, 0.3);
-    border-radius: 5px;
+    border-radius: .5px;
 }
 
 h1, h2, h3, h4 {
     text-align: center;
     font-weight: bold;
 }
-
 h1 {
     display: inline;
 }
-
 .red {
 	color: red;
 }
-
 .green {
 	color: green;
 }
 
-/* scaling font stuff
+/* scaling font stuff 
  * https://v4-alpha.getbootstrap.com/content/typography/
  */
 
@@ -59,4 +57,26 @@ html {
   html {
     font-size: 28px;
   }
+}
+
+button {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    margin: 20px 0 0 0;
+    box-shadow: 6px 6px 0px rgba(204, 238, 255, 0.3);
+    border-radius: .5px;
+    color: white;
+    
+}
+
+.titles{
+    font-size:30px;
+    text-align: center;
+    font-weight: bold;
+    margin: auto;
+}
+
+hr{
+    border-width: thin;
+    margin: auto;
 }

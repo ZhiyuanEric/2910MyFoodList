@@ -3,24 +3,21 @@
 
 <?php
 unset($_SESSION['accNo']);
-session_destroy();
 echo '<meta http-equiv=REFRESH CONTENT=2;url=home.php>';
 ?>
 
 <!DOCTYPE html>
 <html>
-    <head>
-        <?php include("include/head.inc"); ?>
-    </head>
+    <?php include("include/head.inc"); ?>
     <body>
 		<?php include("include/logged_in_header.inc"); ?>
         <div>
-			<!--<div class="navbar navbar-default">-->
+			<div class="navbar navbar-default">
 				<div class="container-fluid">
 					<ul class="nav navbar-nav">
 					</ul>
 				</div>
-			<!--</div>-->
+			</div>
         </div>
         <main class="container">
             <div class="text-center msgBlock">
@@ -29,7 +26,4 @@ echo '<meta http-equiv=REFRESH CONTENT=2;url=home.php>';
             </div>
         </main>
     </body>
-    
-    <?php include("include/footer.inc") ?>
-    
 </html>

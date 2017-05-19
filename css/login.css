@@ -2,11 +2,9 @@ a:link, a:visited, a:hover, a:active {
 	text-decoration: none;
 	color: black;
 }
-
 button {
 	color: black;
 }
-
 .red {
 	color: red;
 	text-align: center;
