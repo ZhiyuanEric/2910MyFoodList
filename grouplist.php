@@ -1,4 +1,5 @@
 <?php 
+session_start();
 include("mysql_connect.inc.php");
 
 $accNums = -1;
