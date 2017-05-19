@@ -1,5 +1,5 @@
 <footer>
-    <div class="row">
+    <div style="margin:0 0 0 0;" class="row">
         <div class="col-md-3"></div>
         <div class="col-md-6 footerBox">
             <p class="copyRight">&copy; Team 26</p>

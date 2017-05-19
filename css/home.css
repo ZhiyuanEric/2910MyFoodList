@@ -24,7 +24,8 @@ p {
 }
 
 .stepBG {
-    background-image: url("http://bgfons.com/upload/strawberry_texture2589.jpg");
+    /*background-image: url("http://bgfons.com/upload/strawberry_texture2589.jpg");*/
+	background-image: url(../images/strawberryblur.jpg);
     border-top: 3px solid white;
     border-bottom: 3px solid white;
     padding: 200px 0;

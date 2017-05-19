@@ -2,6 +2,7 @@ function editing() {
     var hid = document.getElementsByClassName("hiddens");
     for (var i = 0; i < hid.length; i++) {
         hid[i].style = "";
+		$(hid[i]).fadeIn();
     }
     $('.list-group-item').each(function() {
         $(this).addClass('col-xs-10');

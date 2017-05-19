@@ -82,7 +82,10 @@ $resultAllergies = mysqli_query($db_link, $sql);
                                 <p id="profileName">
                                     <?php echo "$pName"; ?>
                                 </p>
-                                <button onclick="editing()" class="btn btn-default editBtn">Edit</button>
+								<?php if (isset($_SESSION['accNo']) && $_SESSION['accNo'] == $accNo) {
+									echo '<button onclick="editing()" class="btn btn-default editBtn">Edit</button>';
+								}
+                               	?>
                             </div>
                         </div>
                         <div id="profileLower">
@@ -164,7 +167,7 @@ $resultAllergies = mysqli_query($db_link, $sql);
                                     </div>
                                 </div>
 
-                                <div class="hiddens row" style="display:none;">
+                                <div class="hiddens" style="display:none;">
                                   <button class="btn btn-default" type="submit">Submit</button>
                                 </div>
                                 </form>
