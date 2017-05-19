@@ -1,20 +1,8 @@
-/* footer pusher */
-html, body {
-    height: 100%;
-}
-
-body > div, body > main{
-    min-height: 100%;
-    padding-bottom: 125px;
-}
-
-
-footer{
+body {
     position: relative;
-    margin-top: -125px;
-    height: 125px;
-    clear:both;
-    padding-top:20px;
+    height: 100%;
+    min-height: 100%;
+
 }
 
 /**
@@ -43,7 +31,7 @@ footer .row{
 .footerBox{
     background-color: black;
     padding: 10px;
-    margin: 20px 3px 3px 0;
+    margin: 20px 0px 3px 0;
 }
 
 footer a{
@@ -56,3 +44,6 @@ footer a:hover{
     color: #ff3333;
 }
 
+body > div, body > main{
+    margin-bottom: 60px;
+}

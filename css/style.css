@@ -35,6 +35,11 @@ h1 {
 	color: green;
 }
 
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
 /* scaling font stuff
  * https://v4-alpha.getbootstrap.com/content/typography/
  */

@@ -48,24 +48,11 @@ $sql = "SELECT p.food
 $resultAllergies = mysqli_query($db_link, $sql);
 ?>
 
-<script>
-    function editing() {
-        var hid = document.getElementsByClassName("hiddens");
-        for (var i = 0; i < hid.length; i++) {
-            hid[i].style = "";
-        }
-
-    }
-</script>
-
 <!DOCTYPE HTML>
 <html>
     <!-- HEAD -->
-    <head>
-        <?php include("include/head.inc"); ?>
-        <link rel="stylesheet" href="css/profile.css" />
-    </head>
-        
+	<?php include("include/head.inc"); ?>
+
     <!-- body -->
     <body>
 		<?php include("include/logged_in_header.inc"); ?>
@@ -87,10 +74,10 @@ $resultAllergies = mysqli_query($db_link, $sql);
                     <!-- profile details -->
                     <section class="contentBox col-md-4" id="profileOuter">
                         <div class="row" id="profileUpper">
-                            <div class="col-xs-5">
+                            <div id="imgdiv" class="col-xs-5 col-sm-3 col-md-6 col-lg-5">
                                 <img class="profileImg" src="images/default.jpg" width="128" height="128">
                             </div>
-                            <div class="col-xs-7">
+                            <div id="namediv" class="col-xs-7 col-sm-9 col-md-6 col-lg-7">
                                 <p id="profileName">
                                     <?php echo "$pName"; ?>
                                 </p>
@@ -114,58 +101,70 @@ $resultAllergies = mysqli_query($db_link, $sql);
 
                                 <!-- likes -->
                                 <form name="form" method="post">
-                                <div class="foodListSection">
+                                <div class="foodListSection row">
                                     <button type="button" class="foodBtn btn btn-default" data-toggle="collapse" data-target="#like">Foods I like</button>
                                     <div id="like" class="collapse">
-                                        <ul class="list-group">
+                                        <ul id="likesList" class="list-group">
                                             <?php
                                             while ($row = mysqli_fetch_row($resultLike)) {
-                                                 echo "<li class=\"list-group-item\">$row[0]</li>";
+                                                echo "<div class=\"row likesDiv\">";
+                                                echo "<li class=\"list-group-item\">$row[0]</li>";
+                                                echo "</div>";
                                             }
                                             ?>
-                                            <li id="hidden" class="hiddens" style="display:none">
-                                                <input type="text" class="form-control" id="likes" name="likes" placeholder="More Likes">
-                                            </li>
+                                        <li id="likesHidden" class="hiddens" style="display:none">
+                                            <input type="text" class="col-xs-11 list-group-item" id="likes" name="likes" placeholder="More Likes">
+                                            <button style="margin-bottom:10px;" type="button" id="moreLikes" class="btn btn-primary col-xs-1">+</button>
+                                            <div style="text-align:center" id="likesError" class="col-xs-12 row"></div>
+                                        </li>
                                         </ul>
                                    </div>
                                 </div>
 
                                 <!-- dislikes -->
-                                <div class="foodListSection">
+                                <div class="foodListSection row">
                                     <button type="button" class="foodBtn btn btn-default" data-toggle="collapse" data-target="#dislike">Foods I don't like</button>
                                     <div id="dislike" class="collapse">
-                                        <ul class="list-group">
+                                        <ul id="dislikesList" class="list-group">
                                             <?php
                                             while ($row = mysqli_fetch_row($resultDislike)) {
+                                                 echo "<div class=\"row dislikesDiv\">";
                                                  echo "<li class=\"list-group-item\">$row[0]</li>";
+                                                 echo "</div>";
                                             }
                                             ?>
-                                            <li id="hidden" class="hiddens" style="display:none">
-                                                <input type="text" class="form-control" id="dislikes" name="dislikes" placeholder="More Dislikes">
+                                            <li id="dislikesHidden" class="hiddens" style="display:none">
+                                                <input type="text" class="col-xs-11 list-group-item" id="dislikes" name="dislikes" placeholder="More Dislikes">
+                                                <button style="margin-bottom:10px;" type="button" id="moreDislikes" class="btn btn-primary col-xs-1">+</button>
+                                                <div style="text-align:center" id="dislikesError" class="col-xs-12 row"></div>
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
 
                                 <!-- allergies -->
-                                <div class="foodListSection">
-                                    <button type="button" class="foodBtn btn btn-default" data-toggle="collapse" data-target="#allergies">Foods I'm allergic to</button>
-                                    <div id="allergies" class="collapse">
-                                        <ul class="list-group">
+                                <div class="foodListSection row">
+                                    <button type="button" class="foodBtn btn btn-default" data-toggle="collapse" data-target="#allergy">Foods I'm allergic to</button>
+                                    <div id="allergy" class="collapse">
+                                        <ul id="allergiesList" class="list-group">
                                             <?php
                                             while ($row = mysqli_fetch_row($resultAllergies)) {
+                                                 echo "<div class=\"row allergiesDiv\">";
                                                  echo "<li class=\"list-group-item\">$row[0]</li>";
+                                                 echo "</div>";
                                             }
                                             ?>
-                                              <li id="hidden" class="hiddens" style="display:none">
-                                                  <input type="text" class="form-control" id="allergies" name="allergies" placeholder="More Allergies">
-                                              </li>
+                                          <li id="allergiesHidden" class="hiddens" style="display:none">
+                                              <input type="text" class="col-xs-11 list-group-item" id="allergies" name="allergies" placeholder="More Allergies">
+                                              <button type="button" id="moreAllergies" class="btn btn-primary col-xs-1">+</button>
+                                              <div style="text-align:center" id="allergiesError" class="col-xs-12 row"></div>
+                                          </li>
                                         </ul>
                                     </div>
                                 </div>
 
-                                <div class = "hiddens" style = "display: none">
-                                  <button type="submit">Submit</button>
+                                <div class="hiddens row" style="display:none;">
+                                  <button class="btn btn-default" type="submit">Submit</button>
                                 </div>
                                 </form>
                             </div>
@@ -175,15 +174,11 @@ $resultAllergies = mysqli_query($db_link, $sql);
             </div>
       </main>
         <!-- end of profile content -->
-        
-        <?php include("include/footer.inc"); ?>
-        
+
+            <?php include("include/footer.inc"); ?>
+
         <!-- scripts -->
-		<script>
-			$(document).ready(function(){
-				$(".nav li:nth-child(1)").addClass("active");
-			});
-		</script>
+        <script src="js/profile.js"></script>
     </body>
     <!-- END OF PROFILE CONTENT -->
 </html>
