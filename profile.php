@@ -84,10 +84,10 @@ $resultAllergies = mysqli_query($db_link, $sql);
                     <!-- profile details -->
                     <section class="contentBox col-md-4" id="profileOuter">
                         <div class="row" id="profileUpper">
-                            <div class="col-xs-5">
+                            <div id="imgdiv" class="col-xs-5 col-sm-3 col-md-6 col-lg-5">
                                 <img class="profileImg" src="images/default.jpg" width="128" height="128">
                             </div>
-                            <div class="col-xs-7">
+                            <div id="namediv" class="col-xs-7 col-sm-9 col-md-6 col-lg-7">
                                 <p id="profileName">
                                     <?php echo "$pName"; ?>
                                 </p>
@@ -173,10 +173,22 @@ $resultAllergies = mysqli_query($db_link, $sql);
       </main>
         <!-- end of profile content -->
 
+            <?php include("include/footer.inc"); ?>
+
         <!-- scripts -->
 		<script>
 			$(document).ready(function(){
 				$(".nav li:nth-child(1)").addClass("active");
+
+                //If the screen is 380px or smaller, reduce image size to 96x96
+                var mq = window.matchMedia( "(max-width: 380px)" );
+                if (mq.matches) {
+                    $('.profileImg').width(96);
+                    $('.profileImg').height(96);
+                } else {
+                    $('.profileImg').width(128);
+                    $('.profileImg').height(128);
+                }
 			});
 		</script>
     </body>
