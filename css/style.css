@@ -1,0 +1,62 @@
+body {
+    background: url(../images/restaurant2.png) repeat;
+}
+
+.foodContainer li:nth-child(even) {
+    background-color: rgba(128, 199, 220, 0.25);
+}
+
+.foodContainer li:hover{
+    background-color: rgba(140, 199, 255, 0.5);
+}
+.contentBox{
+    /*background-color: #e6f3ff;*/
+    background-color: rgba(204, 238, 255, 0.7);
+    padding: 10px;
+    margin: 20px 0 0 0;
+    box-shadow: 6px 6px 0px rgba(204, 238, 255, 0.3);
+    border-radius: 5px;
+}
+
+h1, h2, h3, h4 {
+    text-align: center;
+    font-weight: bold;
+}
+
+h1 {
+    display: inline;
+}
+
+.red {
+	color: red;
+}
+
+.green {
+	color: green;
+}
+
+/* scaling font stuff
+ * https://v4-alpha.getbootstrap.com/content/typography/
+ */
+
+html {
+  font-size: 14px;
+}
+
+@include media-breakpoint-up(sm) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  html {
+    font-size: 20px;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  html {
+    font-size: 28px;
+  }
+}
