@@ -18,7 +18,7 @@
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
                     <li><a href="home.php">Home</a></li>
-                    <li><a href="#">Group Listing</a></li>
+                    <li><a href="merge.php">Group Listing</a></li>
                 </ul>
                 <?php
                 
