@@ -1,4 +1,4 @@
-var nbDrop = 200; 
+var nbDrop = 800; 
 
 // function to generate a random number range.
 function randRange( minNum, maxNum) {
