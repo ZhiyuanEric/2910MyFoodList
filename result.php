@@ -27,8 +27,11 @@ $resultCount = $row[0];
 <!DOCTYPE HTML>
 <html>
     <!-- HEAD -->
-	<?php include("include/head.inc"); ?>
-    <link rel="stylesheet" href="css/result.css">
+    <head>
+        <?php include("include/head.inc"); ?>
+        <link rel="stylesheet" href="css/result.css">
+    </head>
+    
 	
     <!-- body -->
     <body>

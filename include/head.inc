@@ -1,4 +1,3 @@
-<head>
 	<meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
 	<!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" /> 
@@ -11,6 +10,4 @@
 
 	<link rel="stylesheet" href="css/header.css" />
 	<link rel="stylesheet" href="css/style.css" />
-	<link rel="stylesheet" href="css/profile.css" />
     <link rel="stylesheet" href="css/footer.css" />
-</head>

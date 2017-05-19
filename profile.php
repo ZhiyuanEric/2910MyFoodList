@@ -61,8 +61,11 @@ $resultAllergies = mysqli_query($db_link, $sql);
 <!DOCTYPE HTML>
 <html>
     <!-- HEAD -->
-	<?php include("include/head.inc"); ?>
-
+    <head>
+        <?php include("include/head.inc"); ?>
+        <link rel="stylesheet" href="css/profile.css" />
+    </head>
+        
     <!-- body -->
     <body>
 		<?php include("include/logged_in_header.inc"); ?>
@@ -120,9 +123,9 @@ $resultAllergies = mysqli_query($db_link, $sql);
                                                  echo "<li class=\"list-group-item\">$row[0]</li>";
                                             }
                                             ?>
-                                        <li id="hidden" class="hiddens" style="display:none">
-                                            <input type="text" class="form-control" id="likes" name="likes" placeholder="More Likes">
-                                        </li>
+                                            <li id="hidden" class="hiddens" style="display:none">
+                                                <input type="text" class="form-control" id="likes" name="likes" placeholder="More Likes">
+                                            </li>
                                         </ul>
                                    </div>
                                 </div>
@@ -154,9 +157,9 @@ $resultAllergies = mysqli_query($db_link, $sql);
                                                  echo "<li class=\"list-group-item\">$row[0]</li>";
                                             }
                                             ?>
-                                          <li id="hidden" class="hiddens" style="display:none">
-                                              <input type="text" class="form-control" id="allergies" name="allergies" placeholder="More Allergies">
-                                          </li>
+                                              <li id="hidden" class="hiddens" style="display:none">
+                                                  <input type="text" class="form-control" id="allergies" name="allergies" placeholder="More Allergies">
+                                              </li>
                                         </ul>
                                     </div>
                                 </div>

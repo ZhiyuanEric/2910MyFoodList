@@ -3,9 +3,11 @@
 
 <!DOCTYPE html>
 <html>
-    <?php include('include/head.inc'); ?>
+    <head>
+        <?php include("include/head.inc"); ?>
+        <link rel="stylesheet" href="css/home.css">
+    </head>
 
-    <link rel="stylesheet" href="css/home.css">
     <body>
         <?php include("include/logged_in_header.inc"); ?>
 
