@@ -8,7 +8,7 @@
 
 <body>
 
-    <?php include("include/logged_in_header.inc"); ?>
+    <?php include("include/header.inc"); ?>
 
 	<div class="container">
 

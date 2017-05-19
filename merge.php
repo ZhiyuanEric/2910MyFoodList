@@ -6,7 +6,7 @@
         <?php include("include/head.inc"); ?>
     </head>
     <body>
-        <?php include("include/logged_in_header.inc"); ?>
+        <?php include("include/header.inc"); ?>
         <main class="container">
             <div class="contentBox controls">
                 <form name="form" method="get" action="grouplist.php">
@@ -17,15 +17,15 @@
                             <button class="btn btn-success btn-add" type="button"><span class="glyphicon glyphicon-plus"></span></button>
                         </span>
                     </div>
-                    
+
                 </form>
             </div>
         </main>
-        
+
         <?php include("include/footer.inc"); ?>
-        
+
     </body>
-    
+
     <script>
     // see that page for src
     // https://bootsnipp.com/snippets/featured/dynamic-form-fields-add-amp-remove-bs3
@@ -50,7 +50,7 @@
         });
     });
     </script>
-    
+
     <script>
         $(document).ready(function(){
             $(".nav li:nth-child(2)").addClass("active");

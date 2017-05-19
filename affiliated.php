@@ -1,11 +1,11 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <?php include("include/head.inc"); ?>
     </head>
-    <body> 
-		<?php include("include/logged_in_header.inc"); ?>
-		
+    <body>
+		<?php include("include/header.inc"); ?>
+
         <main class="container">
             <section class="userInfo">
                 <div class="row contentBox">
@@ -20,8 +20,8 @@
 
                 </div>
             </section>
-            
-            
+
+
             <section class="userInfo">
                 <div class="row contentBox">
 
@@ -31,11 +31,11 @@
                     <div class="col-xs-10">
                         <h2>WasteNot WantNot</h2>
                         <p>Meal planner app designed to help users reduce the amount they waste by helping them with portion sizes and a stat tracker graph for wasted amounts</p>
-                    </div>     
+                    </div>
                 </div>
             </section>
-            
-            
+
+
             <section class="userInfo">
                 <div class="row contentBox">
 
@@ -56,7 +56,7 @@
 				$(".nav li:nth-child(3)").addClass("active");
 			});
 		</script>
-        
+
         <?php include("include/footer.inc") ?>
-    </body> 
+    </body>
 </html>

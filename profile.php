@@ -56,7 +56,7 @@ $resultAllergies = mysqli_query($db_link, $sql);
 
     <!-- body -->
     <body>
-		<?php include("include/logged_in_header.inc"); ?>
+		<?php include("include/header.inc"); ?>
 
         <?PHP
         if($accNo == -1){

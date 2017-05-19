@@ -9,7 +9,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <div class="navbar-brand">
-                    <a href="home.php" class="logo">
+                    <a href="index.php" class="logo">
                         <img src="images/logoOnlyCropped.png" width="50px" height="40px" class="logoItem" />
                         <span class="logoWord logoItem"> iPicky</span>
                     </a>
@@ -17,11 +17,11 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li><a href="home.php">Home</a></li>
+                    <li><a href="index.php">Home</a></li>
                     <li><a href="merge.php">Group Listing</a></li>
                 </ul>
                 <?php
-                
+
                 if(isset($_SESSION['accNo'])) {
                     echo '<form class="navbar-form navbar-left" name="form" method="get" action="result.php">
                              <div class="form-group">
@@ -35,7 +35,7 @@
                     <?php
                     if(!isset($_SESSION['accNo'])) {
                         echo '<li><a href="register.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                              <li><a href="index.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>';
+                              <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>';
                     } else {
                         echo '<li><a href="profile.php"><span class="glyphicon glyphicon-user"></span> My Profile</a></li>
                               <li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>';

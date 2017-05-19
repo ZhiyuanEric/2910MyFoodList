@@ -1,5 +1,8 @@
 <?php
 
+/*
+    Code credits to: https://www.youtube.com/watch?v=-65R420rIUA, https://github.com/packetcode/google-login
+*/
 require_once('gplus-lib/vendor/autoload.php');
 const CLIENT_ID = '200741670689-aogb5u0rqvst0dsmrfi87efeut2092mg.apps.googleusercontent.com';
 const CLIENT_SECRET = 'tOr41fmVRjKnEJGeGx6n0XcX';
