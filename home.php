@@ -6,9 +6,9 @@
     <?php include('include/head.inc'); ?>
 
     <link rel="stylesheet" href="css/home.css">
-    <body>
+    <body class="rain">
         <?php include("include/logged_in_header.inc"); ?>
-
+        
         <main>
             <section class="foodbg">
                 <div class="container">
@@ -68,11 +68,12 @@
 
             <section class="endBlock">
                 <div class="container">
+                    <canvas id="canvas" style="position : absolute; top : 0px; left : 0px;"></canvas>
                     <div class="aboutUs">
                         <h2>About Us</h2>
                         <br />
                         <p>
-                            This website was created by a team of 6 developers for our Comp 2910 Projects course.  Our main goal in this project is to bring awareness to how much food one can potentially waste.  Through our web application, our intended idea is to combine several people's preferences together to see how a meal could be better prepared.
+                            This website was created by a team of 6 developers for our Comp 2910 Projects course.  Our main goal in this project is to bring awareness to how much food one can potentially waste in <span id="easterRain">Metro Vancouver</span>.  Through our web application, our intended idea is to combine several people's preferences together to see how a meal can be better prepared.
                         </p>
                         <br />
                         <p>
@@ -84,5 +85,15 @@
         </main>
         
         <?php include("include/footer.inc") ?>
+        
+        <script src="js/rain.js"></script>
+        
+        
+        <script>
+            $("#easterRain").click(function(){
+                $("#easterRain").text("Metro Raincouver");
+                createRain();
+            });
+        </script>
     </body>
 </html>
