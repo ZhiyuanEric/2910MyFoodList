@@ -1,71 +1,59 @@
-section {
-    margin: 10px 0px 10px 0px;
-}
+/* PROFILE STYLING */
 
-.foodlist{
-    min-width: 1px;
-    margin: 10px 5% 0 5%;
-    width: 95%;
-}
-
-.foodTabBtn{
-    width: 100%;
-}
-
-.foodTabBtn:hover{
-    box-shadow: 0 0 10px #008ae6;
-}
-
-.foodContainer{
+.contentBox{
     padding: 10px;
-    width: 85%;
 }
 
-.profileBreak div{
-    margin: 0;
+#profileOuter{
+    padding: 20px;
 }
 
-.profileBreak h4{
-    margin: 0;
-}
-
-.foodContainer ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    background-color: rgba(153, 220, 200, 0.25);
-}
-
-.foodContainer li{
-    padding: 0.1vw 0 0.1vw 25px;
-}
-
-#logo{
-    text-align: center;
-    padding: 20px 0;
-}
-
-.title{
-    display: inline;
-}
-
-.editBtn{
-    margin: 0 auto;
-}
-
-.foodListHeader{
-    border-right: 1px solid white;
+#profileLower{
+    border-top: 1px solid black;
 }
 
 .profileImg{
+    width: 100%;
+    height: 100%;
     margin: 0 auto;
 }
 
-.userInfo h2{
-    margin: 15px;
-    border-bottom: 1px solid black;
+@media (min-width: 480px) and (max-width: 991px){
+    .profileImg{
+        width: 128px;
+        height: 128px;
+    }
+}
+
+#profileUpper, #profileLower{
+    padding: 5px;
 }
 
 #profileName{
+    font-size: 20px;
+    font-weight: 800;
+    overflow: hidden;
     text-align: left;
+}
+
+.foodListingHeader div{
+    padding: 20px;
+}
+
+.foodListHeader h2{
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+}
+
+.foodListEdit{
+    border-left: 1px solid black;
+}
+
+.foodListSection{
+    margin: 15px 20px;
+}
+
+.foodBtn{
+    width: 100%;
 }

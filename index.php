@@ -88,7 +88,8 @@
 		<div id='gplus' style="text-align:center; margin: 20px 0px 0px 0px" class="col-xs-12 row">
 			<?php include("gplus.php"); ?>
         </div>
-<?php include("include/footer.inc") ?>
+
 	</div>
+    <?php include("include/footer.inc") ?>
 </body>
 <script src="js/login.js"></script>
