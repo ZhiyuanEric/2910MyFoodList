@@ -1,6 +1,8 @@
 <!DOCTYPE html> 
 <html lang="en">
-<?php include("include/head.inc"); ?>
+    <head>
+        <?php include("include/head.inc"); ?>
+    </head>
     <body> 
 		<?php include("include/logged_in_header.inc"); ?>
 		

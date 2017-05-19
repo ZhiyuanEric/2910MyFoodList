@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php include("include/head.inc"); session_start();?>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <head>
+        <?php include("include/head.inc"); ?>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+
 
 <body>
 	<?php include("include/logged_in_header.inc"); ?>

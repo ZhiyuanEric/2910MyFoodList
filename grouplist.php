@@ -49,7 +49,9 @@ $resultAllergies = mysqli_query($db_link, $sql);
 <!DOCTYPE HTML>
 <html>
     <!-- HEAD -->
-	<?php include("include/head.inc"); ?>
+    <head>
+        <?php include("include/head.inc"); ?>
+    </head>
     <!-- body -->
     <body>
         <head>
