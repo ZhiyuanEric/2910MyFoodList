@@ -18,6 +18,7 @@ if (isset($_SESSION['user']) && isset($_SESSION['name']) && isset($_SESSION['ema
 	$user = $_POST['user'];
 	$pw = $_POST['pw'];
 }
+$pw = md5($pw);
 $sql = "SELECT * FROM Account where username = '$user'";
 $result = mysqli_query($db_link, $sql);
 $row = mysqli_fetch_row($result);
