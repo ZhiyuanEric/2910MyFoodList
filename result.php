@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 include("mysql_connect.inc.php");
 
@@ -31,18 +31,18 @@ $resultCount = $row[0];
         <?php include("include/head.inc"); ?>
         <link rel="stylesheet" href="css/result.css">
     </head>
-    
-	
+
+
     <!-- body -->
     <body>
         <!-- header -->
-        <?php include("include/logged_in_header.inc"); ?>
-        
+        <?php include("include/header.inc"); ?>
+
         <!-- result listing  -->
         <main>
             <div class="container">
                 <ul class="list-group">
-                    <?php 
+                    <?php
                     echo "<li class=\"list-group-item active\">Result: $resultCount found</li>";
                     while ($row = mysqli_fetch_row($result)) {
                         echo "<li><a href=\"profile.php?user=$row[0]\" class=\"list-group-item list-group-item-action\">$row[1]</a></li>";
@@ -52,10 +52,10 @@ $resultCount = $row[0];
             </div>
         </main>
         <!-- end of result listing -->
-        
+
         <!-- footer -->
         <!-- <?php include("include/footer.inc"); ?> -->
-        
+
     </body>
-    
+
 </html>

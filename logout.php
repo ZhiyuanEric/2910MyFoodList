@@ -13,7 +13,7 @@ echo '<meta http-equiv=REFRESH CONTENT=2;url=home.php>';
         <?php include("include/head.inc"); ?>
     </head>
     <body>
-		<?php include("include/logged_in_header.inc"); ?>
+		<?php include("include/header.inc"); ?>
         <div>
 			<!--<div class="navbar navbar-default">-->
 				<div class="container-fluid">
@@ -29,7 +29,7 @@ echo '<meta http-equiv=REFRESH CONTENT=2;url=home.php>';
             </div>
         </main>
     </body>
-    
+
     <?php include("include/footer.inc") ?>
-    
+
 </html>
