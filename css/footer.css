@@ -37,6 +37,7 @@ footer {
     background-color: black;
     border-top: 3px solid white;
     text-align: center;
+    margin-top: 60px;
 }
 
 footer .row{
