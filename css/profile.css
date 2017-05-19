@@ -60,10 +60,3 @@
     font-weight: 600;
 }
 
-li {
-    list-style: none;
-}
-
-li .btn, div .btn {
-    padding-bottom: 12px;
-}

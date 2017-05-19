@@ -50,7 +50,9 @@ $resultAllergies = mysqli_query($db_link, $sql);
 <!DOCTYPE HTML>
 <html>
     <!-- HEAD -->
-	<?php include("include/head.inc"); ?>
+    <head>
+        <?php include("include/head.inc"); ?>
+    </head>
     <!-- body -->
     <body>
         <head>
@@ -172,6 +174,8 @@ $resultAllergies = mysqli_query($db_link, $sql);
             <!-- end of food listing section -->
         </main>
 		
+        <?php include("include/footer.inc"); ?>
+        
 		<script>
 			$(document).ready(function(){
 				$(".nav li:nth-child(2)").addClass("active");
