@@ -59,4 +59,13 @@
     background-color: #00ccff;
     font-weight: 600;
 }
+.btn .btn-primary .btn-warning {
+    padding: 12px 12px;
+}
+li {
+    list-style: none;
+}
 
+li .btn, div .btn {
+    padding-bottom: 12px;
+}
