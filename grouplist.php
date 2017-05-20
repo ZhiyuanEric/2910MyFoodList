@@ -52,11 +52,12 @@ $resultAllergies = mysqli_query($db_link, $sql);
     <!-- HEAD -->
     <head>
         <?php include("include/head.inc"); ?>
+        <link rel="stylesheet" href="css/footerpush.css" />
     </head>
     <!-- body -->
     <body>
         <head>
-            <?php include("include/logged_in_header.inc"); ?>
+            <?php include("include/header.inc"); ?>
             <link rel="stylesheet" href="css/grouplist.css">
         </head>
         <!-- GROUP LISTING -->

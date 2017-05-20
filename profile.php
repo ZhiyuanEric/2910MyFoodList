@@ -51,8 +51,11 @@ $resultAllergies = mysqli_query($db_link, $sql);
 <!DOCTYPE HTML>
 <html>
     <!-- HEAD -->
-	<?php include("include/head.inc"); ?>
-    <link rel="stylesheet" href="css/profile.css" />
+    <head>
+        <?php include("include/head.inc"); ?>
+        <link rel="stylesheet" href="css/profile.css" />
+        <link rel="stylesheet" href="css/footerpush.css" />
+    </head>
 
     <!-- body -->
     <body>
@@ -83,7 +86,7 @@ $resultAllergies = mysqli_query($db_link, $sql);
                                     <?php echo "$pName"; ?>
                                 </p>
 								<?php if (isset($_SESSION['accNo']) && $_SESSION['accNo'] == $accNo) {
-									echo '<button onclick="editing()" class="btn btn-default editBtn">Edit</button>';
+									echo '<button onclick="editing()" class="btn editBtn">Edit</button>';
 								}
                                	?>
                             </div>
@@ -106,7 +109,7 @@ $resultAllergies = mysqli_query($db_link, $sql);
                                 <!-- likes -->
                                 <form name="form" method="post">
                                 <div class="foodListSection row">
-                                    <button type="button" class="foodBtn btn btn-default" data-toggle="collapse" data-target="#like">Foods I like</button>
+                                    <button type="button" class="foodBtn btn" data-toggle="collapse" data-target="#like">Foods I like</button>
                                     <div id="like" class="collapse">
                                         <ul id="likesList" class="list-group">
                                             <?php
@@ -127,7 +130,7 @@ $resultAllergies = mysqli_query($db_link, $sql);
 
                                 <!-- dislikes -->
                                 <div class="foodListSection row">
-                                    <button type="button" class="foodBtn btn btn-default" data-toggle="collapse" data-target="#dislike">Foods I don't like</button>
+                                    <button type="button" class="foodBtn btn" data-toggle="collapse" data-target="#dislike">Foods I don't like</button>
                                     <div id="dislike" class="collapse">
                                         <ul id="dislikesList" class="list-group">
                                             <?php
@@ -148,7 +151,7 @@ $resultAllergies = mysqli_query($db_link, $sql);
 
                                 <!-- allergies -->
                                 <div class="foodListSection row">
-                                    <button type="button" class="foodBtn btn btn-default" data-toggle="collapse" data-target="#allergy">Foods I'm allergic to</button>
+                                    <button type="button" class="foodBtn btn" data-toggle="collapse" data-target="#allergy">Foods I'm allergic to</button>
                                     <div id="allergy" class="collapse">
                                         <ul id="allergiesList" class="list-group">
                                             <?php
