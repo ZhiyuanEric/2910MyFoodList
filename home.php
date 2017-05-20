@@ -10,7 +10,7 @@
 
     <body class="rain">
 
-        <?php include("include/logged_in_header.inc"); ?>
+        <?php include("include/header.inc"); ?>
         
         <main>
             <section class="foodbg">
