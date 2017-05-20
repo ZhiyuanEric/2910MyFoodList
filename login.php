@@ -10,6 +10,7 @@
 <html lang="en">
     <head>
         <?php include("include/head.inc"); ?>
+        <link rel="stylesheet" href="css/footerpush.css" />
     </head>
 <body>
 	<?php include("include/header.inc"); ?>

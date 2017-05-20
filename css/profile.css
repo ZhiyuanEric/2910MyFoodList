@@ -56,12 +56,13 @@
 
 .foodBtn{
     width: 100%;
-    background-color: #00ccff;
     font-weight: 600;
 }
+
 .btn .btn-primary .btn-warning {
     padding: 12px 12px;
 }
+
 li {
     list-style: none;
 }
