@@ -5,6 +5,7 @@
     <head>
         <?php include("include/head.inc"); ?>
         <link rel="stylesheet" href="css/footerpush.css" />
+        <link rel="stylesheet" href="css/register.css" />
     </head>
 
 <body>
@@ -13,12 +14,14 @@
 
 	<div class="container">
 
-        <h2 id="title" style="text-align:center">Registration</h2>
+        
 
     <form name="form" method="post">
-
+        
         <div class="contentBox row">
-
+            <div class="page-header">
+                    <h1>Register</h1>
+                </div>
             <div id="part1">
 
             <div class="form-group col-md-12 row">
