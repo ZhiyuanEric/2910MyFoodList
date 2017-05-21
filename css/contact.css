@@ -32,3 +32,7 @@ input[type=text], input[type=email] {
   border: 1px solid #bbb;
 }
 
+.error {
+    color: #FF0000;
+}
+
