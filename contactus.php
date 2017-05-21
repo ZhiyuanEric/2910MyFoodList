@@ -11,9 +11,13 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     
     <link rel="stylesheet" type="text/css" href="css/contact.css">
+    <link rel="stylesheet" href="css/header.css" />
+	<link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/footer.css" />
     
 </head>
 <body>
+    <?php include("include/logged_in_header.inc"); ?>
     <div class="container">
         <div class="content-box">
             <form action="#" method="POST">
@@ -48,5 +52,6 @@
             </form>
         </div>
     </div>
+    <?php include("include/footer.inc") ?>
 </body>
 </html>
