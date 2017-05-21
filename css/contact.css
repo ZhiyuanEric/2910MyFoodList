@@ -1,3 +1,4 @@
+/*
 h1 {
     margin-bottom: 30px;
 }
@@ -16,10 +17,10 @@ textarea {
     background-color: #f8f8f8;
     resize: none;
 }
-
+*/
 .content-box {
     border: 2px solid black;
-    margin: 0 200px 0 200px;
+    padding: 25px;
 }
 
 input[type=text], input[type=email] {
@@ -30,3 +31,4 @@ input[type=text], input[type=email] {
   line-height: 40px; font-size: 17px;
   border: 1px solid #bbb;
 }
+
