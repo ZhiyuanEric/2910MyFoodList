@@ -207,9 +207,6 @@ $resultAllergies = mysqli_query($db_link, $sql);
 		
         <?php include("include/footer.inc"); ?>
         
-		<script>
-            <-- zzz -->
-		</script>
     </body>
     <!-- END OF PROFILE CONTENT -->
 </html>
