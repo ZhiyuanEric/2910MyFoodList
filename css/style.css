@@ -2,13 +2,7 @@ body {
     background: url(../images/restaurant2.png) repeat;
 }
 
-.foodContainer li:nth-child(even) {
-    background-color: rgba(128, 199, 220, 0.25);
-}
 
-.foodContainer li:hover{
-    background-color: rgba(140, 199, 255, 0.5);
-}
 .contentBox{
     /*background-color: #e6f3ff;*/
     background-color: rgba(204, 238, 255, 0.7);
