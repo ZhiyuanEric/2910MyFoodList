@@ -4,7 +4,7 @@
 <?php
 unset($_SESSION['accNo']);
 session_destroy();
-echo '<meta http-equiv=REFRESH CONTENT=2;url=home.php>';
+echo '<meta http-equiv=REFRESH CONTENT=2;url=index.php>';
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +24,7 @@ echo '<meta http-equiv=REFRESH CONTENT=2;url=home.php>';
 			<!--</div>-->
         </div>
         <main class="container">
-            <div class="text-center msgBlock">
+            <div class="text-center contentBox">
                 <h2> Logged out</h2>
                 <h4> You'll be redirected to login</h4>
             </div>

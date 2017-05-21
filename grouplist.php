@@ -5,15 +5,22 @@ include("mysql_connect.inc.php");
 $accNums = -1;
 
 if (isset($_GET['users'])) {
-    if(!empty($_GET['users'][0]))
-        $accNums = implode(', ', $_GET['users']);
-//    $accNumArray = $_GET['users'];
-//    foreach($accNumArray as &$accNum){
-//        $accNums .= ", $accNum";
-//    }
+//    if(!empty($_GET['users'][0]))
+//        $accNums = implode(', ', $_GET['users']);
+    $accNumArray = $_GET['users'];
+    foreach($accNumArray as &$accNum){
+        if(!empty($accNum))
+            $accNums .= ", $accNum";
+    }
 }
 
 // DB QUERIES
+
+// all names
+$sql = "SELECT accNo, name
+        FROM Details
+        WHERE accNo IN ($accNums);";
+$resultName = mysqli_query($db_link, $sql);
 
 // food listing - like
 $sql = "SELECT food, COUNT(*) amt
@@ -62,17 +69,29 @@ $resultAllergies = mysqli_query($db_link, $sql);
         </head>
         <!-- GROUP LISTING -->
         <main class="container">
-            <div class="contentBox">
-                <h2> GROUP LIST </h2>
-            </div>
+                
 
             <!-- FOOD LISTING -->
             <section class="foodListing">
                 <div class="contentBox">
-                    <div class="text-center profileBreak">
-                        <div class="foodListHeader">
-                            <h4> Food List </h4>
-                            <?php echo "<p>$accNums</p>"; ?>
+                    <div class="page-header">
+                        <h2> Group List </h2>
+                    </div>
+                    
+                    <div class="panel-group">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <button type="button" class="btn btn-primary btn-block btn-sm" data-toggle="collapse" data-target="#people">People</button>
+                            </div>
+                            <div id="people" class="collapse">
+                                <div class="panel-body">
+                                <?php
+                                while ($row = mysqli_fetch_row($resultName)) {
+                                    echo "<a href=\"profile.php?user=$row[0]\" class=\"btn btn-default btn-sm\">$row[1]</a>, ";
+                                }
+                                ?>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -81,94 +100,106 @@ $resultAllergies = mysqli_query($db_link, $sql);
                 
                 <!-- Listing for Like -->
                 <div class="foodContainer contentBox">
-                    <button data-toggle="collapse" data-target="#like" class="foodTabBtn">Likes</button>
-                    <div class="collapse" id="like">
-                        <div class="table-responsive">
-                            <table class="table table-striped table-bordered">
-                                <colgroup>
-                                    <col class="colFood" />
-                                    <col class="colAmt" />
-                                </colgroup>
-                                <thread>
-                                    <tr>
-                                        <th>Food</th>
-                                        <th>People</th>
-                                    </tr>
-                                </thread>
-                                <tbody>
-                                <?php
-                                    while ($row = mysqli_fetch_row($resultLike)) {
-                                         echo " <tr>
-                                                    <td>$row[0]</td>
-                                                    <td>$row[1]</td>
-                                                </tr>";
-                                    }
-                                ?>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+                    <button type="button" class="btn btn-primary btn-block" data-toggle="collapse" data-target="#like">Foods we like</button>
+                    <div id="like" class="collapse">
+                        <ul id="likesList" class="list-group">
+                            
+                            <li class="list-group-item disabled">
+                                <div class="row">
+                                    <div class="col-xs-8 foodName">
+                                        Food Name
+                                    </div>
+                                    <div class="col-xs-4">
+                                        People
+                                    </div>
+                                </div>
+                            </li>
+                            
+                            <?php
+                            while ($row = mysqli_fetch_row($resultLike)) {
+                                echo " <li class=\"list-group-item\">
+                                        <div class=\"row\">
+                                            <div class=\"col-xs-8\">
+                                                $row[0]
+                                            </div>
+                                            <div class=\"col-xs-4\">
+                                                $row[1]
+                                            </div>
+                                        </div>
+                                    </li>";
+                            }
+                            ?>
+                        </ul>
+                   </div>
                 </div>
                 
                 <!-- Listing for dislike -->
                 <div class="foodContainer contentBox">
-                    <button data-toggle="collapse" data-target="#dislike" class="foodTabBtn">Dislikes</button>
+                    <button type="button" class="btn btn-primary btn-block" data-toggle="collapse" data-target="#dislike">Foods we dislike</button>
                     <div class="collapse" id="dislike">
-                        <div class="table-responsive">
-                            <table class="table table-striped table-bordered">
-                                <colgroup>
-                                    <col class="colFood" />
-                                    <col class="colAmt" />
-                                </colgroup>
-                                <thread>
-                                    <tr>
-                                        <th>Food</th>
-                                        <th>People</th>
-                                    </tr>
-                                </thread>
-                                <tbody>
-                                <?php
-                                    while ($row = mysqli_fetch_row($resultDislike)) {
-                                         echo " <tr>
-                                                    <td>$row[0]</td>
-                                                    <td>$row[1]</td>
-                                                </tr>";
-                                    }
-                                ?>
-                                </tbody>
-                            </table>
-                        </div>
+                        <ul id="likesList" class="list-group">
+                            
+                            <li class="list-group-item disabled">
+                                <div class="row">
+                                    <div class="col-xs-8 foodName">
+                                        Food Name
+                                    </div>
+                                    <div class="col-xs-4">
+                                        People
+                                    </div>
+                                </div>
+                            </li>
+                            
+                            <?php
+                            while ($row = mysqli_fetch_row($resultDislike)) {
+                                echo " <li class=\"list-group-item\">
+                                        <div class=\"row\">
+                                            <div class=\"col-xs-8\">
+                                                $row[0]
+                                            </div>
+                                            <div class=\"col-xs-4\">
+                                                $row[1]
+                                            </div>
+                                        </div>
+                                    </li>";
+                            }
+                            ?>
+                        </ul>
                     </div>
                 </div>
                 
                 <!-- Listing for allergies -->
                 <div class="foodContainer contentBox">
-                    <button data-toggle="collapse" data-target="#allergies" class="foodTabBtn">Allergies</button>
+                    <button type="button" class="btn btn-primary btn-block" data-toggle="collapse" data-target="#allergies">Foods we're allergic to</button>
                     <div class="collapse" id="allergies">
-                        <div class="table-responsive">
-                            <table class="table table-striped table-bordered">
-                                <colgroup>
-                                    <col class="colFood" />
-                                    <col class="colAmt" />
-                                </colgroup>
-                                <thread>
-                                    <tr>
-                                        <th>Food</th>
-                                        <th>People</th>
-                                    </tr>
-                                </thread>
-                                <tbody>
-                                <?php
-                                    while ($row = mysqli_fetch_row($resultAllergies)) {
-                                         echo " <tr>
-                                                    <td>$row[0]</td>
-                                                    <td>$row[1]</td>
-                                                </tr>";
-                                    }
-                                ?>
-                                </tbody>
-                            </table>
-                        </div>
+                       <ul id="likesList" class="list-group">
+                            
+                            <li class="list-group-item disabled">
+                                <div class="row">
+                                    <div class="col-xs-8 foodName">
+                                        Food Name
+                                    </div>
+                                    <div class="col-xs-4">
+                                        People
+                                    </div>
+                                </div>
+                            </li>
+                            
+                            <?php
+                            while ($row = mysqli_fetch_row($resultAllergies)) {
+                                echo " <li class=\"list-group-item\">
+                                        <div class=\"row\">
+                                            <div class=\"col-xs-8\">
+                                                $row[0]
+                                            </div>
+                                            <div class=\"col-xs-4\">
+                                                $row[1]
+                                            </div>
+                                        </div>
+                                    </li>";
+                            }
+                            ?>
+                        </ul>
                     </div>
                 </div>
             </section>
@@ -177,11 +208,6 @@ $resultAllergies = mysqli_query($db_link, $sql);
 		
         <?php include("include/footer.inc"); ?>
         
-		<script>
-			$(document).ready(function(){
-				$(".nav li:nth-child(2)").addClass("active");
-			});
-		</script>
     </body>
     <!-- END OF PROFILE CONTENT -->
 </html>
