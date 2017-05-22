@@ -4,29 +4,43 @@
 <html>
     <head>
         <?php include("include/head.inc"); ?>
+        <link rel="stylesheet" href="css/merge.css">
     </head>
     <body>
         <?php include("include/header.inc"); ?>
         <main class="container">
-            <div class="contentBox controls">
+            <div class="contentBox">
+                
+                <!-- user list form -->
                 <form name="form" method="get" action="grouplist.php">
                     <button type"submit">Go</button>
                     
+                    <!-- user list -->
                     <div class="entry input-group">
-                        <input class="form-control" name="users[]" type="text" placeholder="Input a user's ID" onkeyup="showResult(this.value)" />
-                        
-                    	<span class="input-group-btn">
-                            <button class="btn btn-success btn-add" type="button"><span class="glyphicon glyphicon-plus"></span></button>
-                        </span>
-                        
-                        
+                        <input class="form-control" name="users[]" type="text" id="userList" />
                     </div>
-                    
-                    
                 </form>
-                <div id="livesearch"></div>
-
                 
+                <!-- search -->
+                <form>
+                    <div class="panel panel-primary">
+                        <!-- search field -->
+                        <div class="panel-heading">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>   
+                                <input class="form-control" id="userSearch" type="text" onkeyup="showResult(this.value)"/>
+                            </div>
+                        </div>
+                        
+                        <!-- search results -->
+                        <div class="panel-body">
+                            <div class="list-group" id="livesearch">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
             </div>
         </main>
 
@@ -35,6 +49,29 @@
     </body>
 
     <!-- SCRIPTS -->
+    
+    
+    <script>
+        var names = [];
+        var ids = [];
+        
+        function addResult(ent) {
+            name = ent.getAttribute('username')
+            num = ent.getAttribute('userno')
+            
+            // no point doing a query for the same person
+            // more then once
+            if(!ids.includes(num)){
+                names.push(name);
+                ids.push(num);
+                
+                $("#userList").val(ids);
+            } 
+            
+            
+        };
+        
+    </script>
     
     
     <script>
@@ -66,30 +103,4 @@
     }
     </script>
     
-    
-    <script>
-    // see that page for src
-    // https://bootsnipp.com/snippets/featured/dynamic-form-fields-add-amp-remove-bs3
-    $(function() {
-        $(document).on('click', '.btn-add', function(e) {
-            e.preventDefault();
-
-            var controlForm = $('.controls form:first'),
-                currentEntry = $(this).parents('.entry:first'),
-                newEntry = $(currentEntry.clone()).appendTo(controlForm);
-
-            newEntry.find('input').val('');
-            
-            controlForm.find('.entry:not(:last) .btn-add')
-                .removeClass('btn-add').addClass('btn-remove')
-                .removeClass('btn-success').addClass('btn-danger')
-                .html('<span class="glyphicon glyphicon-minus"></span>');
-        }).on('click', '.btn-remove', function(e){
-            $(this).parents('.entry:first').remove();
-
-            e.preventDefault();
-            return false;
-        });
-    });
-    </script>
 </html>
