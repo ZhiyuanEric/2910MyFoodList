@@ -1,3 +1,4 @@
+/* from old
 a:link, a:visited, a:hover, a:active {
 	text-decoration: none;
 	color: black;
@@ -16,4 +17,11 @@ body .container form .contentBox {
 	width: 60%;
     min-height: 85px;
     margin: 5px auto 30px auto;
+}
+
+*/
+
+
+h1 {
+    display: block;
 }
