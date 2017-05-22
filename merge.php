@@ -13,33 +13,37 @@
                 
                 <!-- user list form -->
                 <form name="form" method="get" action="grouplist.php">
-                    <button type"submit">Go</button>
+                    <button type"submit" class="btn btn-primary btn-block">Create group list</button>
                     
                     <!-- user list -->
                     <div class="entry input-group">
                         <input class="form-control" name="users[]" type="text" id="userList" />
                     </div>
                 </form>
+                <div class="well" id="nameList">
+                    
+                </div>
                 
                 <!-- search -->
-                <form>
-                    <div class="panel panel-primary">
-                        <!-- search field -->
-                        <div class="panel-heading">
+                <div class="panel panel-primary">
+                    <!-- search field -->
+                    <div class="panel-heading">
+                        <form>
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>   
                                 <input class="form-control" id="userSearch" type="text" onkeyup="showResult(this.value)"/>
                             </div>
-                        </div>
-                        
-                        <!-- search results -->
-                        <div class="panel-body">
-                            <div class="list-group" id="livesearch">
-                                
-                            </div>
+                        </form>
+                    </div>
+
+                    <!-- search results -->
+                    <div class="panel-body">
+                        <div class="list-group" id="livesearch">
+
                         </div>
                     </div>
-                </form>
+                </div>
+                
 
             </div>
         </main>
@@ -56,26 +60,50 @@
         var ids = [];
         
         function addResult(ent) {
-            name = ent.getAttribute('username')
-            num = ent.getAttribute('userno')
+            name = ent.getAttribute('username');
+            num = ent.getAttribute('userno');
             
             // no point doing a query for the same person
             // more then once
             if(!ids.includes(num)){
+                // add to list
                 names.push(name);
                 ids.push(num);
                 
+                // add to name list
+                $("#nameList").append("<div class=\"nameBlock\" userno=\"" + num + "\" username=\"" + name + "\">" + name + "<a href=\"#\" class=\"delete\" aria-label=\"close\" onclick=\"removeResult(this)\">×</a></div>");
+                
+                // update search value
                 $("#userList").val(ids);
             } 
-            
-            
         };
         
+        function removeResult(ent) {
+            // get value from the nameblock
+            name = ent.parentElement.getAttribute('username')
+            num = ent.parentElement.getAttribute('userno')
+            
+            // remove from list (memory)
+            names.splice(names.indexOf(name), 1);
+            ids.splice(ids.indexOf(num), 1);
+            
+            // rerender name / remove div
+            nameBlock = ent.parentElement;
+            nameBlock.parentElement.removeChild(nameBlock);
+            
+            // update input values
+            $("#userList").val(ids);
+        }
+        
+        // clear the form because it doesn't match with memory on pressing back
+        // quick fix
+        $( document ).ready(function() {
+            $("#userList").val('');
+        });
     </script>
     
     
     <script>
-    
     function showResult(str) {
         if (str.length==0) { 
             document.getElementById("livesearch").innerHTML="";

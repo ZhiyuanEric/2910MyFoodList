@@ -7,23 +7,23 @@ $q = $_GET['q'];
 
 // db queries
 $sql = "SELECT accNo, name
-        FROM Details
+        FROM Details    
         WHERE name LIKE '%$q%';";
 $result = mysqli_query($db_link, $sql);
 
 // declaring vars
 $return = '';
-$resultC = 0;
+$count = 0;
 
 // proccessing the results
-while($row = mysqli_fetch_row($result)){
+while ($row = mysqli_fetch_row($result)) {
     $return .= "<button class=\"list-group-item result\" userno=\"$row[0]\" username=\"$row[1]\" onclick=\"addResult(this)\">$row[1]</button>";
-    $resultC++;
+    $count++;
 }
 
 // returning to the caller
-if($resultC == 0){
-    echo 'None';
+if ($count == 0) {
+    echo '<div class="list-group-item result"> No matching results. </div>';
 } else {
     echo $return;
 }
