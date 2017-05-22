@@ -55,6 +55,7 @@ $resultAllergies = mysqli_query($db_link, $sql);
         <?php include("include/head.inc"); ?>
         <link rel="stylesheet" href="css/profile.css" />
         <link rel="stylesheet" href="css/footerpush.css" />
+
     </head>
 
     <!-- body -->
@@ -85,7 +86,7 @@ $resultAllergies = mysqli_query($db_link, $sql);
                                 <p id="profileName">
                                     <?php echo "$pName"; ?>
                                 </p>
-                                
+
                             </div>
                         </div>
                         <div id="profileLower">
@@ -98,15 +99,15 @@ $resultAllergies = mysqli_query($db_link, $sql);
                     <!-- food listing -->
                     <section class="col-md-8">
                         <div class="contentBox">
-                            <div class="row foodListHeader">
-                                
-                                <h2> Food Preferences 
+                            <div class="foodListHeader">
+
+                                <h2> Food Preferences
                                 <?php if (isset($_SESSION['accNo']) && $_SESSION['accNo'] == $accNo) {
 									echo '<button onclick="editing()" class="btn editBtn btn-primary pull-right">Edit</button>';
 								}
-                                ?> 
+                                ?>
                                 </h2>
-                                
+
                             </div>
                             <div class="foodList">
 
@@ -179,8 +180,19 @@ $resultAllergies = mysqli_query($db_link, $sql);
                                 </div>
                                 </form>
                             </div>
+                            <?php
+                            echo '<a class="twitter-share-button"
+                                      href="https://twitter.com/share"
+                                      data-size="large"
+                                      data-text="Here\'s a link to my iPicky profile!"
+                                      data-url="https://ipicky.000webhostapp.com/profile?user=' . $accNo . '"
+                                      data-hashtags="iPicky, comp2910">
+                                Tweet
+                                </a>'
+                            ?>
                         </div>
                     </section>
+
                 </div>
             </div>
       </main>
@@ -190,6 +202,7 @@ $resultAllergies = mysqli_query($db_link, $sql);
 
         <!-- scripts -->
         <script src="js/profile.js"></script>
+        <script src="js/twitter.js"></script>
     </body>
     <!-- END OF PROFILE CONTENT -->
 </html>
