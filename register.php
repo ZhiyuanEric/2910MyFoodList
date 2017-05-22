@@ -14,10 +14,10 @@
 
 	<div class="container">
 
-        
+
 
     <form name="form" method="post">
-        
+
         <div class="contentBox row">
             <div class="page-header">
                     <h1>Register</h1>
@@ -174,12 +174,11 @@
 
             <div style="text-align:center" id="error" class="col-xs-12 row"></div>
             <div style="text-align:center" id="success" class="col-xs-12 row"></div>
-		</div>
-
+            
             <!-- buttons desktop -->
 			<div class="visible-lg visible-md row">
 				<div class="col-md-2 col-md-offset-3" >
-					<button id = "1" type="submit" class="btn btn-block btn-primary" onclick="EntryChecking()">Continue</button>
+					<button id = "1" type="submit" class="btn btn-block btn-primary">Continue</button>
 				</div>
 				<div class="col-md-2" >
 					<button type="reset" value="Reset" class="btn btn-block btn-primary">Reset</button>
@@ -192,7 +191,7 @@
 			<!-- mobile / tablet -->
 			<div class="hidden-lg hidden-md">
 				<div style="margin-top:20px" class="col-xs-8 col-xs-offset-2 row">
-					<button id="2" type="submit" onclick="EntryChecking()" class="btn btn-block btn-primary">Submit</button>
+					<button id="2" type="submit" class="btn btn-block btn-primary">Submit</button>
 				</div>
                 <div style="margin-top:20px" class="col-xs-8 col-xs-offset-2 row">
 					<button type="reset" value="Reset" class="btn btn-block btn-primary">Reset</button>
@@ -201,6 +200,9 @@
 					<a href="index.php"><button type="button" class="btn btn-block btn-primary">Cancel</button></a>
 				</div>
 			</div>
+		</div>
+
+
 		</form>
 
     </div>

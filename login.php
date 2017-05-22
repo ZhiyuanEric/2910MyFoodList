@@ -17,11 +17,9 @@
 	<?php include("include/header.inc"); ?>
 
 	<div class="container">
+        <div class="contentBox">
+            <form name="form" method="post">
 
-        
-
-		<form name="form" method="post">
-            <div class="contentBox">
                 <div class="page-header">
                     <h1>Login</h1>
                 </div>
@@ -96,12 +94,14 @@
                         <a href="register.php"><button type="button" class="btn btn-block btn-primary">Create Account</button></a>
                     </div>
                 </div>
-            </div>
-		</form>
 
-		<div id='gplus' style="text-align:center; margin: 20px 0px 0px 0px" class="col-xs-12 row">
+		</form>
+        <div id='gplus' style="text-align:center; margin: 20px 0px 0px 0px" class="col-xs-12 row">
 			<?php include("gplus.php"); ?>
         </div>
+        </div>
+
+
 
 	</div>
     <?php include("include/footer.inc") ?>
