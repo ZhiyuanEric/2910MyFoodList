@@ -15,14 +15,7 @@ echo '<meta http-equiv=REFRESH CONTENT=2;url=index.php>';
     </head>
     <body>
 		<?php include("include/header.inc"); ?>
-        <div>
-			<!--<div class="navbar navbar-default">-->
-				<div class="container-fluid">
-					<ul class="nav navbar-nav">
-					</ul>
-				</div>
-			<!--</div>-->
-        </div>
+  
         <main class="container">
             <div class="text-center contentBox">
                 <h2> Logged out</h2>
