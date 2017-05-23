@@ -1,14 +1,13 @@
 body {
-    background: url(../images/restaurant2.png) repeat;
+    background: url(../images/darkbg.png);
 }
-
 
 .contentBox{
     /*background-color: #e6f3ff;*/
-    background-color: rgba(204, 238, 255, 0.7);
+    background-color: rgb(245, 245, 245);
     padding: 10px;
     margin: 20px 0 0 0;
-    box-shadow: 6px 6px 0px rgba(204, 238, 255, 0.3);
+    box-shadow: 6px 6px 8px rgba(64, 64, 64, 0.6);
     border-radius: 5px;
 }
 

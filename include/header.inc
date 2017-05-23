@@ -25,9 +25,12 @@
                 if(isset($_SESSION['accNo'])) {
                     echo '<form class="navbar-form navbar-left" name="form" method="get" action="result.php">
                              <div class="form-group">
-                                 <input type="text" class="form-control" placeholder="Search" name="user">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+                                    <input type="text" class="form-control" placeholder="Search" name="user">
+                                </div>
+                                <!--<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>-->
                              </div>
-                             <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span>  </button>
                          </form>';
                 }
                 ?>

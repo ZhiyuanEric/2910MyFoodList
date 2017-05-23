@@ -71,7 +71,6 @@
 
             <section class="endBlock">
                 <div class="container">
-                    <canvas id="canvas" style="position : absolute; top : 0px; left : 0px;"></canvas>
                     <div class="aboutUs">
                         <h2>About Us</h2>
                         <br />
