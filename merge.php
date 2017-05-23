@@ -25,6 +25,18 @@
                     
                 </div>
                 
+                <!-- instructions for search -->
+                <div class="alert alert-info alert-dismissable">
+                    <a href="#" class="close" data-dismiss="alert" aria-labels="close">x</a>
+                    <h4>Instructions:</h4>
+                    <p>
+                        1. Type the names of your friends.
+                    </p>
+                    <p>
+                        2. Click on the desired result below.
+                    </p>
+                </div>
+                
                 <!-- search -->
                 <div class="panel panel-primary">
                     <!-- search field -->
