@@ -5,49 +5,48 @@
 <?php
 
 function test_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
+
+$name = $email = $comm = $successM = 'no input';
+
+if(isset($_POST['name'])){
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $comm = $_POST["comment"];
+    if(mail("cameraman03@hotmail.com", "test", "$email: $name: $comm")){
+        $successM = 'true';
+    } else {
+        $successM = 'false';
+    }
 }
 
 // define variables and set to empty values
-$nameErr = $emailErr = $websiteErr = $commentErr = "";
-$name = $email = $comment = $website = "";
+//$nameErr = $emailErr = $commentErr = "";
+//$name = $email = $comment = "";
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (empty($_POST["name"])) {
-        $nameErr = "Please enter your name.";
-    } else {
-        $name = test_input($_POST["name"]);
-    }
-  
-    if (empty($_POST["email"])) {
-        $emailErr = "Your email is required.";
-    } else {
-        $email = test_input($_POST["email"]);
-    }
-    
-    if (empty($_POST["website"])) {
-        $website = "";
-    } else {
-        $website = test_input($_POST["website"]);
-    }
-
-    if (empty($_POST["comment"])) {
-        $commentErr = "You must enter some comments.";
-    } else {
-        $comment = test_input($_POST["comment"]);
-    }
-
-    /*
-    if (empty($_POST["gender"])) {
-        $genderErr = "Gender is required";
-    } else {
-        $gender = test_input($_POST["gender"]);
-    }
-    */
-}
+//if ($_SERVER["REQUEST_METHOD"] == "POST") {
+//    if (empty($_POST["name"])) {
+//        $nameErr = "Please enter your name.";
+//    } else {
+//        $name = test_input($_POST["name"]);
+//    }
+//  
+//    if (empty($_POST["email"])) {
+//        $emailErr = "Your email is required.";
+//    } else {
+//        $email = test_input($_POST["email"]);
+//    }
+//
+//    if (empty($_POST["comment"])) {
+//        $commentErr = "You must enter some comments.";
+//    } else {
+//        $comment = test_input($_POST["comment"]);
+//    }
+//}
 
 ?>
 
@@ -74,7 +73,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <?php include("include/logged_in_header.inc"); ?>
     <div class="container">
         <div class="content-box">
-            <form action=" <?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?> " method="POST">
+            <form action="contactus.php" method="POST">
+                <?php 
+                    //echo htmlspecialchars($_SERVER["PHP_SELF"]); 
+                ?>
                 <!-- heading/title -->
                 <div class="page-header">
                     <h1>Contact Us</h1>
@@ -82,25 +84,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 
                 <p>Please use our contact us form to submit any comments, questions, or concerns. Entries marked with an <span class="error">asterisk (*) are required.</span></p>
 
+                <?php echo "<h2>$successM</h2>"; ?>
+                
                 <!-- NAME -->
                 <div class="form-group">
                     <label for="fullName">Your full name:<span class="error"> *</span></label>
                     <input class="form-control" type="text" name="name" id="fullName" placeholder="Enter your full name" />
-                    <span class="error"> <?php echo $nameErr; ?></span>
+                    <!--<span class="error"> <?php echo $nameErr; ?></span>-->
                 </div>
 
                 <!-- EMAIL -->
                 <div class="form-group">
                     <label for="email">Your email:<span class="error"> *</span></label>
                     <input class="form-control" type="email" name="email" id="email" placeholder="Enter your email" />
-                    <span class="error"> <?php echo $emailErr; ?></span>
+                    <!--<span class="error"> <?php echo $emailErr; ?></span>-->
                 </div>
 
                 <!-- COMMENTS -->
                 <div class="form-group">
                     <label for="comments"> Your comments:<span class="error"> *</span> </label>
                     <textarea class="form-control" name="comment" id="comments" rows="5"></textarea>
-                    <span class="error"> <?php echo $commentErr; ?></span>
+                    <!--<span class="error"> <?php echo $commentErr; ?></span>-->
                 </div>
 
                 <!-- SUBMIT -->
@@ -117,8 +121,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo $name;
         echo "<br>";
         echo $email;
-        echo "<br>";
-        echo $website;
         echo "<br>";
         echo $comment;
     ?>
