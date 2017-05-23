@@ -97,7 +97,7 @@ $resultAllergies = mysqli_query($db_link, $sql);
 
                     <!-- food listing -->
                     <section class="col-md-8">
-                        <div class="contentBox">
+                        <div style="margin-bottom:20px"  class="contentBox">
                             <div class="foodListHeader">
 
                                 <h2> Food Preferences
@@ -179,18 +179,31 @@ $resultAllergies = mysqli_query($db_link, $sql);
                                 </div>
                                 </form>
                             </div>
-                            <?php
-                            echo '<a class="twitter-share-button"
-                                      href="https://twitter.com/share"
-                                      data-size="large"
-                                      data-text="Check out my iPicky profile!"
-                                      data-url="https://ipicky.000webhostapp.com/profile?user=' . $accNo . '"
-                                      data-hashtags="iPicky, comp2910">
-                                Tweet
-                                </a>'
-                            ?>
-                            <div class="g-plus" data-action="share" data-height="24" data-href="https://ipicky.000webhostapp.com"></div>
                         </div>
+                        <div style="display:inline; margin-left:10px; float:right;">
+                        <!-- twitter button -->
+                        <?php
+                        echo '<a class="twitter-share-button"
+                                  href="https://twitter.com/share"
+                                  data-size="large"
+                                  data-text="Check out my iPicky profile!"
+                                  data-url="https://ipicky.000webhostapp.com/profile?user=' . $accNo . '"
+                                  data-hashtags="iPicky, comp2910">
+                            Tweet
+                            </a>'
+                        ?>
+                        </div>
+                        <div style="display:inline; margin-left:10px; float:right">
+                        <!-- gplus button -->
+                        <div class="g-plus" data-action="share" data-height="24" data-href="https://ipicky.000webhostapp.com"></div>
+                        </div>
+                        <div style="display:inline; float:right">
+                        <!--Facebook Button -->
+                        <div class="fb-share-button" data-href="ipicky.000webhostapp.com"
+                        data-layout="button_count" data-size="large"
+                        data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore"
+                        target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Share</a></div></div>
+
                     </section>
 
                 </div>
@@ -198,11 +211,12 @@ $resultAllergies = mysqli_query($db_link, $sql);
       </main>
         <!-- end of profile content -->
 
-            <?php include("include/footer.inc"); ?>
+        <?php include("include/footer.inc"); ?>
 
         <!-- scripts -->
         <script src="js/profile.js"></script>
         <script src="js/twitter.js"></script>
+        <script src="js/facebook.js"></script>
         <script src="https://apis.google.com/js/platform.js" async defer></script>
     </body>
     <!-- END OF PROFILE CONTENT -->
