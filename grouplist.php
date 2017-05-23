@@ -87,7 +87,7 @@ $resultAllergies = mysqli_query($db_link, $sql);
                                 <div class="panel-body">
                                 <?php
                                 while ($row = mysqli_fetch_row($resultName)) {
-                                    echo "<a href=\"profile.php?user=$row[0]\" class=\"btn btn-default btn-sm\">$row[1]</a>, ";
+                                    echo "<a href=\"profile.php?user=$row[0]\" class=\"btn btn-default btn-sm user\">$row[1]</a>";
                                 }
                                 ?>
                                 </div>
