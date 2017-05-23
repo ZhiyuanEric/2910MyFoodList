@@ -37,7 +37,7 @@
                     <h1>Our Mission</h1><br />
                     <p>
                         <br />
-                        We want to help you reduce food waste and ultimately save money.  We also aim to bring awareness to your everyday life style of what you need to buy and what you may not need to buy.
+                        We want to help you reduce food waste and ultimately save money by bring awareness to your everyday lifestyle.
                     </p>
                 </div>
             </section>
@@ -75,7 +75,7 @@
                         <h2>About Us</h2>
                         <br />
                         <p>
-                            This website was created by a team of 6 developers for our Comp 2910 Projects course.  Our main goal in this project is to bring awareness to how much food one can potentially waste in <span id="easterRain">Metro Vancouver</span>.  Through our web application, our intended idea is to combine several people's preferences together to see how a meal can be better prepared.
+                            This website was created by a team of 6 developers for our Comp 2910 Projects course.  Our main goal is to bring awareness to how much food one can potentially waste in <span id="easterRain">Metro Vancouver</span>.  In our web application, you will be able to combine several people's preferences together to see how a meal can be better prepared.
                         </p>
                         <br />
                         <p>
