@@ -97,6 +97,22 @@ $resultAllergies = mysqli_query($db_link, $sql);
 
                     <!-- food listing -->
                     <section class="col-md-8">
+                        
+                        <div class="alert alert-info alert-dismissable">
+                            <a href="#" class="close" data-dismiss="alert" aria-labels="close">x</a>
+                            <p>
+                                1. Click "Edit" button to make changes to your list.
+                            </p>
+                            <p>
+                                2. Click green "+" button to add an item after you type something.
+                            </p>
+                            <p>
+                                3. Click red "-" button to remove an item.
+                            </p>
+                            <p>
+                                4. Click "Submit" to update list.
+                            </p>
+                        </div>
                         <div style="margin-bottom:20px"  class="contentBox">
                             <div class="foodListHeader">
 
