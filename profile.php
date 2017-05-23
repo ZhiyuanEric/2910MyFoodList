@@ -55,7 +55,6 @@ $resultAllergies = mysqli_query($db_link, $sql);
         <?php include("include/head.inc"); ?>
         <link rel="stylesheet" href="css/profile.css" />
         <link rel="stylesheet" href="css/footerpush.css" />
-
     </head>
 
     <!-- body -->
@@ -184,12 +183,13 @@ $resultAllergies = mysqli_query($db_link, $sql);
                             echo '<a class="twitter-share-button"
                                       href="https://twitter.com/share"
                                       data-size="large"
-                                      data-text="Here\'s a link to my iPicky profile!"
+                                      data-text="Check out my iPicky profile!"
                                       data-url="https://ipicky.000webhostapp.com/profile?user=' . $accNo . '"
                                       data-hashtags="iPicky, comp2910">
                                 Tweet
                                 </a>'
                             ?>
+                            <div class="g-plus" data-action="share" data-height="24" data-href="https://ipicky.000webhostapp.com"></div>
                         </div>
                     </section>
 
@@ -203,6 +203,7 @@ $resultAllergies = mysqli_query($db_link, $sql);
         <!-- scripts -->
         <script src="js/profile.js"></script>
         <script src="js/twitter.js"></script>
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
     </body>
     <!-- END OF PROFILE CONTENT -->
 </html>
