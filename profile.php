@@ -97,7 +97,7 @@ $resultAllergies = mysqli_query($db_link, $sql);
 
                     <!-- food listing -->
                     <section class="col-md-8">
-                        
+
                         <div class="alert alert-info alert-dismissable">
                             <a href="#" class="close" data-dismiss="alert" aria-labels="close">x</a>
                             <p>
@@ -113,12 +113,13 @@ $resultAllergies = mysqli_query($db_link, $sql);
                                 4. Click "Submit" to update list.
                             </p>
                         </div>
+
                         <div style="margin-bottom:20px"  class="contentBox">
                             <div class="foodListHeader">
 
                                 <h2> Food Preferences
                                 <?php if (isset($_SESSION['accNo']) && $_SESSION['accNo'] == $accNo) {
-									echo '<button onclick="editing()" class="btn editBtn btn-primary pull-right">Edit</button>';
+									echo '<button id="editButton" style="float:right" onclick="editing()" class="btn editBtn btn-primary">Edit</button>';
 								}
                                 ?>
                                 </h2>
@@ -127,7 +128,7 @@ $resultAllergies = mysqli_query($db_link, $sql);
                             <div class="foodList">
 
                                 <!-- likes -->
-                                <form name="form" method="post">
+                                <form name="ListForm" method="post">
                                 <div class="foodListSection row">
                                     <button type="button" class="foodBtn btn btn-info" data-toggle="collapse" data-target="#like">Foods I like</button>
                                     <div id="like" class="collapse">
@@ -189,10 +190,6 @@ $resultAllergies = mysqli_query($db_link, $sql);
                                         </ul>
                                     </div>
                                 </div>
-
-                                <div class="hiddens" style="display:none;">
-                                  <button class="btn btn-primary" type="submit">Submit</button>
-                                </div>
                                 </form>
                             </div>
                         </div>
@@ -231,9 +228,9 @@ $resultAllergies = mysqli_query($db_link, $sql);
 
         <!-- scripts -->
         <script src="js/profile.js"></script>
-        <script src="js/twitter.js"></script>
-        <script src="js/facebook.js"></script>
-        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <script src="js/twitter.js" async></script>
+        <script src="js/facebook.js" async></script>
+        <script src="https://apis.google.com/js/platform.js" async defer ></script>
     </body>
     <!-- END OF PROFILE CONTENT -->
 </html>

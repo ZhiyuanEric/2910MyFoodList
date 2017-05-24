@@ -22,26 +22,27 @@ function editing() {
             $(this).append('<button type="button" id="allergiesDelete" class="btn btn-danger col-xs-2">-</button>')
         }
     });
-}
 
-$(document).ready(function(){
-    $(".nav li:nth-child(1)").addClass("active");
+    //profile name editing
+    var curName = $('#profileName').text();
+    curName = curName.trim(); //remove whitespace
+    $('#profileName').html('<form name="form" method="post"><input type="text" class="col-xs-12 list-group-item" id="newName" name="newName" placeholder="Change name"></form>');
+    $('#newName').val(curName);
 
-    //If the screen is 380px or smaller, reduce image size to 96x96
-    var mq = window.matchMedia( "(max-width: 380px)" );
-    if (mq.matches) {
-        $('.profileImg').width(96);
-        $('.profileImg').height(96);
-    } else {
-        $('.profileImg').width(128);
-        $('.profileImg').height(128);
-    }
-});
+    //profile description editing
+    var curDesc = $('.profileDesc').text();
+    curDesc = curDesc.trim();
+    $('.profileDesc').html('<textarea class="form-control" style="width:100%; resize:none;" rows="5" id="newDesc" placeholder="Change description"></textarea>')
+    $('#newDesc').val(curDesc);
 
-$(document).ready(function() {
+    //change edit button state
+    $('#editButton').html('Done Editing');
+    $('#editButton').attr("id","editingButton");
+    $('#editingButton').attr("onclick","document.forms['ListForm'].submit()");
 
-
-    $('form').submit(function() {
+    //add listener to edit button so it will run this function when clicked
+    $('#editingButton').click(function() {
+        alert('submitted');
         event.preventDefault();
 
         //likes added
@@ -99,10 +100,16 @@ $(document).ready(function() {
         }
         var deletedAllergies = JSON.stringify(deletedAllergies);
 
+        //new name
+        var newName = $('#newName').val();
+
+        //new description
+        var newDesc = $('#newDesc').val();
+
         $.ajax({
             url: "profile_edit.php",
             type: "POST",
-            data: {likes:likes, dislikes:dislikes, allergies:allergies, deletedLikes:deletedLikes, deletedDislikes:deletedDislikes, deletedAllergies:deletedAllergies},
+            data: {likes:likes, dislikes:dislikes, allergies:allergies, deletedLikes:deletedLikes, deletedDislikes:deletedDislikes, deletedAllergies:deletedAllergies, newName:newName, newDesc:newDesc},
             cache: false,
             success: function(data) {
                 window.location.href = 'profile.php';
@@ -110,6 +117,7 @@ $(document).ready(function() {
         });
     });
 
+    //Listener for add buttons
     $('#moreLikes, #moreDislikes, #moreAllergies').on('click', function() {
         if (this.id == 'moreLikes') {
             if ($('#likes').val() == '') {
@@ -141,6 +149,7 @@ $(document).ready(function() {
         }
     });
 
+    //Listener for delete buttons
     $(document).on('click', '#likesDelete, #dislikesDelete, #allergiesDelete', function(){
             if (this.id == 'likesDelete') {
                 $(this).parent().addClass('deletedLikes');
@@ -153,4 +162,18 @@ $(document).ready(function() {
                 $(this).parent().fadeOut();
             }
     });
+}
+
+$(document).ready(function(){
+    $(".nav li:nth-child(1)").addClass("active");
+
+    //If the screen is 380px or smaller, reduce image size to 96x96
+    var mq = window.matchMedia( "(max-width: 380px)" );
+    if (mq.matches) {
+        $('.profileImg').width(96);
+        $('.profileImg').height(96);
+    } else {
+        $('.profileImg').width(128);
+        $('.profileImg').height(128);
+    }
 });
