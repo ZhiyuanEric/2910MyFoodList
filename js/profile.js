@@ -42,7 +42,6 @@ function editing() {
 
     //add listener to edit button so it will run this function when clicked
     $('#editingButton').click(function() {
-        alert('submitted');
         event.preventDefault();
 
         //likes added
