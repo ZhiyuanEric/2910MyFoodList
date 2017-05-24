@@ -11,22 +11,6 @@ function test_input($data) {
     return $data;
 }
 
-/*
-$name = $email = $comm = $successM = 'no input';
-
-
-if(isset($_POST['name'])){
-    $name = $_POST["name"];
-    $email = $_POST["email"];
-    $comm = $_POST["comment"];
-    if(mail("cameraman03@hotmail.com", "test", "$email: $name: $comm")){
-        $successM = 'true';
-    } else {
-        $successM = 'false';
-    }
-}
-*/
-
 // define variables and set to empty values
 $nameErr = $emailErr = $commentErr = "";
 $name = $email = $comment = "";
