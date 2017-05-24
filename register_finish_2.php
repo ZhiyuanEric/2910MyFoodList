@@ -23,7 +23,7 @@ $allergies = $_POST['allergies'];
         }
 
         // add the details
-        $sql = "INSERT INTO Details VALUES ($userID, '$name', '$bio', 'unknown');";
+        $sql = "INSERT INTO Details VALUES ($userID, '$name', '$bio', 'unknown', NULL);";
         mysqli_query($db_link, $sql);
 
         // add the food

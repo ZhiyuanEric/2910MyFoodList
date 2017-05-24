@@ -55,8 +55,13 @@
         mysqli_query($db_link, $sql);
     }
 	if (isset($_POST['newDesc'])) {
-        $newName = $_POST['newDesc'];
-        $sql = "UPDATE Details SET bio = '$newName' WHERE accNo = $accNo;";
+        $newDesc = $_POST['newDesc'];
+        $sql = "UPDATE Details SET bio = '$newDesc' WHERE accNo = $accNo;";
+        mysqli_query($db_link, $sql);
+    }
+	if (isset($_POST['newImage'])) {
+        $newImage = $_POST['newImage'];
+        $sql = "UPDATE Details SET image = '$newImage' WHERE accNo = $accNo;";
         mysqli_query($db_link, $sql);
     }
 	echo 'success';

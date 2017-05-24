@@ -13,17 +13,19 @@ if($_GET){
 // DB QUERIES
 
 // profile name and bio
-$sql = "SELECT d.name, d.bio
+$sql = "SELECT d.name, d.bio, d.image
         FROM Details d
         WHERE d.accNo = $accNo;";
 
 $pName = 'n/a';
 $pBio = 'n/a';
+$pImg = '';
 
 $result = mysqli_query($db_link, $sql);
 while ($row = mysqli_fetch_row($result)) {
     $pName = $row[0];
     $pBio = $row[1];
+    $pImg = $row[2];
 }
 
 // food listing - like
@@ -75,11 +77,31 @@ $resultAllergies = mysqli_query($db_link, $sql);
         <main>
             <div class="container">
                 <div class="row">
+
+                    <!-- The Modal -->
+                    <div id="myModal" class="modal">
+
+                      <!-- Modal content -->
+                      <div class="modal-content">
+                          <input type="text" class="form-control" id="newImage" name="newImage" placeholder="Paste the link to your new image here">
+                        <span class="close">&times;</span>
+
+                      </div>
+
+                    </div>
+
                     <!-- profile details -->
                     <section class="contentBox col-md-4" id="profileOuter">
                         <div class="row" id="profileUpper">
                             <div id="imgdiv" class="col-xs-5 col-sm-3 col-md-6 col-lg-5">
-                                <img class="profileImg" src="images/default.jpg" width="128" height="128">
+                                <?php
+                                if ($pImg != '') {
+                                    echo '<img class="profileImg" src="' . $pImg . '"width="128" height="128">';
+                                }
+                                else {
+                                    echo '<img class="profileImg" src="images/default.jpg" width="128" height="128">';
+                                }
+                                ?>
                             </div>
                             <div id="namediv" class="col-xs-7 col-sm-9 col-md-6 col-lg-7">
                                 <p id="profileName">
@@ -211,11 +233,12 @@ $resultAllergies = mysqli_query($db_link, $sql);
                         <div class="g-plus" data-action="share" data-height="24" data-href="https://ipicky.000webhostapp.com"></div>
                         </div>
                         <div style="display:inline; float:right">
-                        <!--Facebook Button -->
+                        <!--Facebook Button
+
                         <div class="fb-share-button" data-href="ipicky.000webhostapp.com"
                         data-layout="button_count" data-size="large"
                         data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore"
-                        target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Share</a></div></div>
+                        target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Share</a></div></div> -->
 
                     </section>
 
@@ -229,7 +252,7 @@ $resultAllergies = mysqli_query($db_link, $sql);
         <!-- scripts -->
         <script src="js/profile.js"></script>
         <script src="js/twitter.js" async></script>
-        <script src="js/facebook.js" async></script>
+        <!-- <script src="js/facebook.js" async></script> -->
         <script src="https://apis.google.com/js/platform.js" async defer ></script>
     </body>
     <!-- END OF PROFILE CONTENT -->
