@@ -46,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Contact Us </title>
+    <title>iPicky | Contact Us </title>
     <?php include("include/head.inc"); ?>
     <link rel="stylesheet" href="css/contact.css" />
     
