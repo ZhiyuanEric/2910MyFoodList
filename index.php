@@ -25,7 +25,7 @@
                         </h1>
                         <div>
                             <p class="foodText">
-                                To better determine your food preferences so that you will be more aware of what you need and what you don't need.
+                                To better determine others food preferences so you will be more aware of what others need and don't need.
                             </p>
                         </div>
                     </div>
@@ -37,7 +37,7 @@
                     <h1>Our Mission</h1><br />
                     <p>
                         <br />
-                        We want to help you reduce food waste and ultimately save you money by bringing awareness to your everyday lifestyle.
+                        We want to help you reduce food waste and ultimately save you money by bringing awareness to your everyday food needs.
                     </p>
                 </div>
             </section>
@@ -62,7 +62,7 @@
                         <div class="col-md-4"></div>
                         <div class="col-md-4">
                             <button class="btn btn-primary btn-lg btn-block registerBtn" type="button" onclick="location.href='register.php';">Register</button>
-                            <button class="btn btn-secondary btn-sm btn-block haveAccBtn" type="button" onclick="location.href='index.php';">Already have an account?</button>
+                            <button class="btn btn-secondary btn-sm btn-block haveAccBtn" type="button" onclick="location.href='login.php';">Already have an account?</button>
                         </div>
                         <div class="col-md-4"></div>
                     </div>
