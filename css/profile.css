@@ -6,6 +6,7 @@
 
 #profileOuter{
     padding: 20px;
+    margin-bottom: 20px;
 }
 
 #profileLower{
@@ -44,6 +45,8 @@
     font-size: 24px;
     margin: 0;
     padding: 0;
+    padding-left: 79px;
+    text-indent: 25px;
 }
 
 .foodListEdit{
@@ -56,7 +59,21 @@
 
 .foodBtn{
     width: 100%;
-    background-color: #00ccff;
     font-weight: 600;
 }
 
+.btn .btn-primary .btn-warning {
+    padding: 12px 12px;
+}
+
+.editBtn {
+    margin-right: 35px;
+}
+
+li {
+    list-style: none;
+}
+
+ul div .btn, li .btn{
+    padding-bottom: 12px;
+}

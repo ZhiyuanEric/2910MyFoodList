@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background: url(../images/strawberry.jpg) repeat;
+    background: url(../images/strawberryBlur.jpg) repeat;
 }
 
 main section{
@@ -24,14 +24,13 @@ p {
 }
 
 .stepBG {
-    background-image: url("http://bgfons.com/upload/strawberry_texture2589.jpg");
     border-top: 3px solid white;
     border-bottom: 3px solid white;
-    padding: 200px 0;
+    padding: 90px 0;
 }
 
 .foodbg {
-    background-image: url("https://ak6.picdn.net/shutterstock/videos/18546728/thumb/9.jpg");
+    background-image: url("../images/veggieBlur.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     
@@ -48,7 +47,7 @@ footer a:hover{
 }
 
 .textBox{
-    background: rgba(255, 255, 255, .8);
+    background: rgba(255, 255, 255, .65);
     text-align: center;
     padding: 30px 15px;
     min-height: 300px;
@@ -131,7 +130,7 @@ footer a:hover{
 }
 
 main{
-    padding-bottom: 125px;
+    padding-bottom: 53px;
 }
 
 /* Easter egg for rain on home page css3 */

@@ -1,98 +1,101 @@
+
+<?php session_start(); ?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <?php include("include/head.inc"); ?>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="css/home.css">
     </head>
 
+    <body class="rain">
 
-<body>
-	<?php include("include/logged_in_header.inc"); ?>
+        <?php include("include/header.inc"); ?>
 
-	<div class="container">
+        <main>
+            <section class="foodbg">
+                <div class="container">
+                    <div class="textBox col-md-offset-8 col-md-4">
+                        <h1 class="easterEggBox">
+                            <span class="easterEgg">
+                                <span class="easterEggFade">Waste Less</span>
+                                <span class="easterEggAppear">More</span>
+                            </span>
+                            <span>Food</span>
+                        </h1>
+                        <div>
+                            <p class="foodText">
+                                To better determine your food preferences so that you will be more aware of what you need and what you don't need.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-        <h2 style="text-align:center">Login</h2>
+            <section class="dark-section">
+                <div class="container">
+                    <h1>Our Mission</h1><br />
+                    <p>
+                        <br />
+                        We want to help you reduce food waste and ultimately save you money by bringing awareness to your everyday lifestyle.
+                    </p>
+                </div>
+            </section>
 
-		<form name="form" method="post">
-            <div class="contentBox row">
-            	<div class="form-group col-md-12 row">
+            <section class="stepBG">
+                <div class="container">
+                    <div class="textBox">
+                        <h1>What can I do?</h1>
+                        <div class="stepText">
+                            <p>
+                                1. Create your very own lists of food preferences based on likes, dislikes, and food allergies.
+                            </p>
+                            <p>
+                                2. Combine your list with your friends list so you can see what everyone's preferences are.
+                            </p>
+                            <p>
+                                3. Log in or register an account to start preparing for when you want to plan meals for a group of people.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row endButton">
+                        <div class="col-md-4"></div>
+                        <div class="col-md-4">
+                            <button class="btn btn-primary btn-lg btn-block registerBtn" type="button" onclick="location.href='register.php';">Register</button>
+                            <button class="btn btn-secondary btn-sm btn-block haveAccBtn" type="button" onclick="location.href='index.php';">Already have an account?</button>
+                        </div>
+                        <div class="col-md-4"></div>
+                    </div>
+                </div>
+            </section>
 
-					<!--mobile / tablet view-->
-					<div class="visible-sm visible-xs">
-					<label class="col-xs-12" for="username">Username:</label>
-					</div>
+            <section class="endBlock">
+                <div class="container">
+                    <div class="aboutUs">
+                        <h2>About Us</h2>
+                        <br />
+                        <p>
+                            This website was created by a team of 6 developers for our Comp 2910 Projects course.  Our main goal is to bring awareness to how much food one can potentially waste in <span id="easterRain">Metro Vancouver</span>.  In our web application, you will be able to combine several people's preferences together to see how a meal can be better prepared.
+                        </p>
+                        <br />
+                        <p>
+                            If you have any questions or comments regarding our website, please use our "Contact Us" form located at the bottom of the page to reach us.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
 
-					<!--desktop view-->
-					<div class="hidden-sm hidden-xs">
-					<label style="text-align:right" class="col-md-4" for="username">Username:</label>
-					</div>
+        <?php include("include/footer.inc") ?>
 
-					<div class="col-md-6 col-xs-12">
-					<input type="text" class="form-control" id="user" name="user" placeholder="Enter username"></div>
-
-            	</div>
-
-            	<div class="form-group col-md-12 row">
-
-					<!--mobile / tablet view-->
-					<div class="visible-sm visible-xs">
-					<label class="col-xs-12" for="password">Password:</label>
-					</div>
-
-					<!--desktop view-->
-					<div class="hidden-sm hidden-xs">
-					<label style="text-align:right" class="col-md-4" for="password">Password:</label>
-					</div>
-
-					<div class="col-md-6 col-xs-12">
-					<input type="password" class="form-control" id="pw" name="pw" placeholder="Enter password"></div>
-
-            	</div>
-
-				<div style="text-align:center" id="error" class="col-xs-12 row"></div>
-
-				<?php
-				if (isset($_GET['error'])) {
-					echo '<p class="red row col-xs-11 col-xs-offset-1">Please do not leave fields blank.</p>';
-				}
-				?>
-
-            </div>
-
-			<!-- desktop -->
-			<div class="visible-lg visible-md row">
-				<div class="col-md-2 col-md-offset-3" >
-					<button id="submit" type="submit" class="btn btn-block btn-primary">Login</button>
-				</div>
-				<div class="col-md-2" >
-					<button type="reset" value="Reset" class="btn btn-block btn-primary">Reset</button>
-				</div>
-				<div class="col-md-2" >
-					<a href="register.php"><button type="button" class="btn btn-block btn-primary">Create Account</button></a>
-				</div>
-			</div>
+        <script src="js/rain.js"></script>
 
 
-			<!-- mobile / tablet -->
-			<div class="hidden-lg hidden-md">
-				<div style="margin-top:20px" class="col-xs-8 col-xs-offset-2 row" >
-					<button id="submit" type="submit" class="btn btn-block btn-primary">Login</button>
-				</div>
-				<div style="margin-top:20px" class="col-xs-8 col-xs-offset-2 row" >
-					<button type="reset" value="Reset" class="btn btn-block btn-primary">Reset</button>
-				</div>
-				<div style="margin-top:20px" class="col-xs-8 col-xs-offset-2 row" >
-					<a href="register.php"><button type="button" class="btn btn-block btn-primary">Create Account</button></a>
-				</div>
-			</div>
-
-		</form>
-
-		<div id='gplus' style="text-align:center; margin: 20px 0px 0px 0px" class="col-xs-12 row">
-			<?php include("gplus.php"); ?>
-        </div>
-
-	</div>
-    <?php include("include/footer.inc") ?>
-</body>
-<script src="js/login.js"></script>
+        <script>
+            $("#easterRain").click(function(){
+                $("#easterRain").text("Metro Raincouver");
+                createRain();
+            });
+        </script>
+    </body>
+</html>

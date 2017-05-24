@@ -10,7 +10,7 @@
 
     <body class="rain">
 
-        <?php include("include/logged_in_header.inc"); ?>
+        <?php include("include/header.inc"); ?>
         
         <main>
             <section class="foodbg">
@@ -71,8 +71,6 @@
 
             <section class="endBlock">
                 <div class="container">
-                    <canvas id="canvas" style="position : absolute; top : 0px; left : 0px;"></canvas>
-                    <div class="aboutUs">
                         <h2>About Us</h2>
                         <br />
                         <p>

@@ -1,15 +1,7 @@
-.colFood{
-    width: 75%;
+.foodName{
+    border-right: 1px solid white;
 }
 
-.colAmt{
-    width: 25%;
-}
-
-.foodcontainer{
-    width: 100%;
-}
-
-.foodListHeader{
-    border: none;
+.user{
+    margin-right: 5px;
 }
