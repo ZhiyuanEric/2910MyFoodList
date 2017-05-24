@@ -6,7 +6,7 @@
             <p>
                 <a href="contactus.php">Contact Us</a> | 
                 <a href="affiliated.php">Affiliate Sites</a> | 
-                <a href="index.php">Members Login</a> | 
+                <a href="login.php">Members Login</a> | 
                 <a href="register.php">Register</a>
             </p>
         </div>
