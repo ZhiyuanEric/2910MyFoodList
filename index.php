@@ -37,7 +37,7 @@
                     <h1>Our Mission</h1><br />
                     <p>
                         <br />
-                        We want to help you reduce food waste and ultimately save money by bring awareness to your everyday lifestyle.
+                        We want to help you reduce food waste and ultimately save you money by bringing awareness to your everyday lifestyle.
                     </p>
                 </div>
             </section>
@@ -45,16 +45,16 @@
             <section class="stepBG">
                 <div class="container">
                     <div class="textBox">
-                        <h1>What do I need to do?</h1>
+                        <h1>What can I do?</h1>
                         <div class="stepText">
                             <p>
-                                1. Create your very own lists of food preferences based on likes, dislikes, and any food allergies.
+                                1. Create your very own lists of food preferences based on likes, dislikes, and food allergies.
                             </p>
                             <p>
                                 2. Combine your list with your friends list so you can see what everyone's preferences are.
                             </p>
                             <p>
-                                3. Log in or Create an account to know exactly what to parepare for when you want to cook for a group of people.
+                                3. Log in or register an account to start preparing for when you want to plan meals for a group of people.
                             </p>
                         </div>
                     </div>
