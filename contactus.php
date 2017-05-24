@@ -53,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
     
 <body>
-    <?php include("include/logged_in_header.inc"); ?>
+    <?php include("include/header.inc"); ?>
     <div class="container">
         
         <!-- Success confirmation of sent msg -->
