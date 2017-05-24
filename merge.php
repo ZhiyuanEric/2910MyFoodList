@@ -35,6 +35,9 @@
                     <p>
                         2. Click on the desired result below.
                     </p>
+                    <p>
+                        3. When done, click on "Create group list" at the top to compare!
+                    </p>
                 </div>
                 
                 <!-- search -->
