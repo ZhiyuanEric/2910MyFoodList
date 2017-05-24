@@ -47,16 +47,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html>
 <head>
     <title>Contact Us </title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    
-    <link rel="stylesheet" type="text/css" href="css/contact.css">
-    <link rel="stylesheet" type="text/css" href="css/header.css" />
-	<link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link rel="stylesheet" type="text/css" href="css/footer.css" />
+    <?php include("include/head.inc"); ?>
+    <link rel="stylesheet" href="css/contact.css" />
     
 </head>
     
@@ -74,7 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
         ?>
         
-        <div class="content-box">
+        <div class="contentBox">
             <form action=" <?php echo htmlspecialchars($_SERVER["PHP_SELF"]) ?> " method="POST">
                 
                 <!-- heading/title -->
