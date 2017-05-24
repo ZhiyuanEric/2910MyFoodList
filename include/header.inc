@@ -18,7 +18,11 @@
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
                     <li><a href="index.php">Home</a></li>
-                    <li><a href="merge.php">Group Listing</a></li>
+                    <?php
+                        if(isset($_SESSION['accNo'])) {
+                            echo '<li><a href="merge.php">Group Listing</a></li>';
+                        }
+                    ?>
                 </ul>
                 <?php
 
