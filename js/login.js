@@ -1,23 +1,22 @@
-$(document).ready(function() {
-
-    $('form').submit(function() {
+$(document).ready(function(){
+    $('#submit').click(function (event) {
         event.preventDefault();
-
         var user = $('#user').val();
         var pw = $('#pw').val();
 
-        if (user != '' && pw != '') {
+        if (user !== '' && pw !== '') {
             $.ajax({
                 url: "connect.php?reg=1",
                 type: "POST",
-                data: {user:user, pw:pw},
+                data: {user : user, pw : pw},
                 cache: false,
-                beforeSend:function() {
+                async: false,
+                beforeSend : function () {
                     $('#submit').html("Connecting...");
                 },
-                success: function(data) {
-                    if (data == user) {
-                        window.location.href = 'profile.php';
+                success: function (data) {
+                    if (data === user) {
+                        window.location.href = 'profile.php'
                     } else {
                         $('#submit').html("Login");
                         $('#error').html('<span class="red">Username or Password is incorrect</span>');
