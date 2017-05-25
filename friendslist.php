@@ -8,7 +8,7 @@ $sql = "SELECT d.accNo, d.name, d.bio, d.image
         FROM Details d
 	    JOIN Friends f
         ON d.accNo = f.accNo2
-        WHERE f.status = 1 AND f.accNo1 = $accNo;";
+        WHERE f.status = '1' AND f.accNo1 = $accNo;";
 
 $friendAccNos = array();
 $friendNames = array();
@@ -23,6 +23,7 @@ while ($row = mysqli_fetch_row($result)) {
     array_push($friendImgs, $row[3]);
 }
 ?>
+
 
  <!DOCTYPE HTML>
  <html>

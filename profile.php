@@ -108,28 +108,28 @@ $resultAllergies = mysqli_query($db_link, $sql);
                             </div>
                             <?php
 
+                                if (isset($_SESSION['accNo'])) {
+                                    $curNo = $_SESSION['accNo'];
+                                    if ($curNo != $accNo) {
+                                        $sql = "SELECT status
+                                                FROM Friends
+                                                WHERE accNo1 = $curNo
+                                                    AND accNo2 = $accNo;";
 
-                                $curNo = $_SESSION['accNo'];
-                                if ($curNo != $accNo) {
-                                    $sql = "SELECT status
-                                            FROM Friends
-                                            WHERE accNo1 = $curNo
-                                                AND accNo2 = $accNo;";
+                                        $status = -2;
+                                        $result = mysqli_query($db_link, $sql);
 
-                                    $status = -2;
-                                    $result = mysqli_query($db_link, $sql);
-
-                                    while ($row = mysqli_fetch_row($result)) {
-                                        $status = $row[0];
-                                    }
-
-                                    if($status == 0) { // with invite
-                                        echo '<button type="button" class="btn btn-default friendBtn">Revoke Friend Request</button>';
-                                    } else if ($status == 1) { // friends
-                                        echo '<button type="button" class="btn btn-danger friendBtn">Unfriend</button>';
-                                    } else { // feelsbadman
-                                        echo '<button type="button" class="btn btn-primary friendBtn">Add as friend</button>';
-                                    }
+                                        while ($row = mysqli_fetch_row($result)) {
+                                            $status = $row[0];
+                                        }
+                                        if ($status == 1) { // friends
+                                            echo '<button id="deleteFriend" type="button" class="btn btn-danger">Unfriend</button>';
+                                            echo '<input id="userNo" type="hidden" name="userNo" value="'. $accNo . '">';
+                                        } else { // feelsbadman
+                                            echo '<button id="addFriend" type="button" class="btn btn-primary">Add as friend</button>';
+                                            echo '<input id="userNo" type="hidden" name="userNo" value="'. $accNo . '">';
+                                        }
+                                }
                             }
                             ?>
                         </div>
@@ -239,30 +239,29 @@ $resultAllergies = mysqli_query($db_link, $sql);
                                 </form>
                             </div>
                         </div>
-                        <div style="display:inline; margin-left:10px; float:right;">
+                        <div class="twitterButton">
                         <!-- twitter button -->
                         <?php
                         echo '<a class="twitter-share-button"
                                   href="https://twitter.com/share"
                                   data-size="large"
                                   data-text="Check out my iPicky profile!"
-                                  data-url="https://ipicky.000webhostapp.com/profile?user=' . $accNo . '"
+                                  data-url="https://ipicky.me/profile?user=' . $accNo . '"
                                   data-hashtags="iPicky, comp2910">
                             Tweet
                             </a>'
                         ?>
                         </div>
-                        <div style="display:inline; margin-left:10px; float:right">
+                        <div class="gplusButton">
                         <!-- gplus button -->
-                        <div class="g-plus" data-action="share" data-height="24" data-href="https://ipicky.000webhostapp.com"></div>
+                        <div class="g-plus" data-action="share" data-height="24" data-href="https://ipicky.me"></div>
                         </div>
-                        <div style="display:inline; float:right">
                         <!--Facebook Button
 
                         <div class="fb-share-button" data-href="ipicky.000webhostapp.com"
                         data-layout="button_count" data-size="large"
                         data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore"
-                        target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Share</a></div></div> -->
+                        target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Share</a></div> -->
 
                     </section>
 
@@ -278,12 +277,6 @@ $resultAllergies = mysqli_query($db_link, $sql);
         <script src="js/twitter.js" async></script>
         <!-- <script src="js/facebook.js" async></script> -->
         <script src="https://apis.google.com/js/platform.js" async defer ></script>
-        <script>
-        if (jQuery.browser.safari) {
-            setTimeout("window.location.href= '"+this.href+"'",500);
-            return false;
-        }
-        </script>
     </body>
     <!-- END OF PROFILE CONTENT -->
 </html>

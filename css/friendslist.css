@@ -1,11 +1,11 @@
-.friend {
+.friend, .friendReq {
     margin-top: 20px;
 }
-.friend .col-xs-2 {
+.friend .col-xs-2, .friendReq .col-xs-2 {
     margin-left: -10px;
 }
 
-.friendName{
+.friendName, .friendReqName{
     font-size: 20px;
     font-weight: 800;
     overflow: hidden;
