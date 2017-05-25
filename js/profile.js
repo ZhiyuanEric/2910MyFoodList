@@ -1,4 +1,5 @@
 function editing() {
+    $('#editButton').attr("onclick", "");
     var hid = document.getElementsByClassName("hiddens");
     for (var i = 0; i < hid.length; i++) {
         hid[i].style = "";
@@ -122,8 +123,18 @@ function editing() {
             type: "POST",
             data: {likes:likes, dislikes:dislikes, allergies:allergies, deletedLikes:deletedLikes, deletedDislikes:deletedDislikes, deletedAllergies:deletedAllergies, newName:newName, newDesc:newDesc, newImage:newImage},
             cache: false,
+            async: false, //possibly does nothing
             success: function(data) {
-                window.location.href = 'profile.php';
+                if (data == 'success') {
+                    if (jQuery.browser.safari) {
+                        setTimeout("window.location.href= '"+this.href+"'",500);
+                        return false;
+                    } else {
+        				setTimeout(function() {
+        					window.location.href = "profile.php";
+        				}, 1000);
+                    }
+                }
             }
         });
     });
