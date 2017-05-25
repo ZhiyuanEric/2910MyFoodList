@@ -62,7 +62,7 @@
                         <div class="col-md-4"></div>
                         <div class="col-md-4">
                             <button class="btn btn-primary btn-lg btn-block registerBtn" type="button" onclick="location.href='register.php';">Register</button>
-                            <button class="btn btn-secondary btn-sm btn-block haveAccBtn" type="button" onclick="location.href='login.php';">Already have an account?</button>
+                            <button class="btn btn-secondary btn-sm btn-block haveAccBtn" style="background-color: rgb(221, 221, 221);" type="button" onclick="location.href='login.php';">Already have an account?</button>
                         </div>
                         <div class="col-md-4"></div>
                     </div>
