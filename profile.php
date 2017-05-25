@@ -278,12 +278,6 @@ $resultAllergies = mysqli_query($db_link, $sql);
         <script src="js/twitter.js" async></script>
         <!-- <script src="js/facebook.js" async></script> -->
         <script src="https://apis.google.com/js/platform.js" async defer ></script>
-        <script>
-        if (jQuery.browser.safari) {
-            setTimeout("window.location.href= '"+this.href+"'",500);
-            return false;
-        }
-        </script>
     </body>
     <!-- END OF PROFILE CONTENT -->
 </html>
