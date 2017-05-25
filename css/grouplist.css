@@ -5,3 +5,15 @@
 .user{
     margin-right: 5px;
 }
+
+.showMore{
+    border: 2px solid #438ac7;
+}
+
+.foodList{
+    margin-bottom: 0;
+}
+
+ul li:nth-child(n+7) {
+    display:none;
+}
