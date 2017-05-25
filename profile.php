@@ -101,7 +101,7 @@ $resultAllergies = mysqli_query($db_link, $sql);
                         <div class="alert alert-info alert-dismissable">
                             <a href="#" class="close" data-dismiss="alert" aria-labels="close">x</a>
                             <p>
-                                1. Click the edit icon to make changes to your list.
+                                1. Click the EDIT icon to make changes to your list.
                             </p>
                             <p>
                                 2. Click green "+" button to add an item after you type something.
@@ -110,7 +110,7 @@ $resultAllergies = mysqli_query($db_link, $sql);
                                 3. Click red "-" button to remove an item.
                             </p>
                             <p>
-                                4. Click "Submit" to update list.
+                                4. Click SAVE icon to update your list.
                             </p>
                         </div>
 
