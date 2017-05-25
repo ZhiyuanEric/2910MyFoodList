@@ -74,7 +74,7 @@ $resultAllergies = mysqli_query($db_link, $sql);
             <!-- FOOD LISTING -->
             <section class="foodListing">
                 <div class="contentBox">
-                    <div class="page-header">
+                    <div class="page-header titleBox">
                         <h2> Group List </h2>
                     </div>
                     
