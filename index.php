@@ -6,6 +6,17 @@
     <head>
         <?php include("include/head.inc"); ?>
         <link rel="stylesheet" href="css/home.css">
+        <script>
+            function easterEggOver() {
+                var egg = document.getElementById("egg"); 
+                egg.innerHTML = "More";
+            }
+            
+            function easterEggOut() {
+                var egg = document.getElementById("egg");
+                egg.innerHTML = "Waste Less";
+            }
+        </script>
     </head>
 
     <body class="rain">
@@ -18,8 +29,7 @@
                     <div class="textBox col-md-offset-8 col-md-4">
                         <h1 class="easterEggBox">
                             <span class="easterEgg">
-                                <span class="easterEggFade">Waste Less</span>
-                                <span class="easterEggAppear">More</span>
+                                <span id="egg" onMouseOver="easterEggOver()" onMouseOut="easterEggOut()">Waste Less</span>
                             </span>
                             <span>Food</span>
                         </h1>
