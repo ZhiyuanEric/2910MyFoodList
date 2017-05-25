@@ -130,7 +130,7 @@ $resultAllergies = mysqli_query($db_link, $sql);
                                 <!-- likes -->
                                 <form name="ListForm" method="post">
                                 <div class="foodListSection row">
-                                    <button type="button" class="foodBtn btn btn-info" data-toggle="collapse" data-target="#like">Foods I like</button>
+                                    <button type="button" class="foodBtn btn btn-primary" data-toggle="collapse" data-target="#like">Foods I like</button>
                                     <div id="like" class="collapse">
                                         <ul id="likesList" class="list-group">
                                             <?php
@@ -151,7 +151,7 @@ $resultAllergies = mysqli_query($db_link, $sql);
 
                                 <!-- dislikes -->
                                 <div class="foodListSection row">
-                                    <button type="button" class="foodBtn btn btn-info" data-toggle="collapse" data-target="#dislike">Foods I don't like</button>
+                                    <button type="button" class="foodBtn btn btn-primary" data-toggle="collapse" data-target="#dislike">Foods I don't like</button>
                                     <div id="dislike" class="collapse">
                                         <ul id="dislikesList" class="list-group">
                                             <?php
@@ -172,7 +172,7 @@ $resultAllergies = mysqli_query($db_link, $sql);
 
                                 <!-- allergies -->
                                 <div class="foodListSection row">
-                                    <button type="button" class="foodBtn btn btn-info" data-toggle="collapse" data-target="#allergy">Foods I'm allergic to</button>
+                                    <button type="button" class="foodBtn btn btn-primary" data-toggle="collapse" data-target="#allergy">Foods I'm allergic to</button>
                                     <div id="allergy" class="collapse">
                                         <ul id="allergiesList" class="list-group">
                                             <?php

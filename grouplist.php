@@ -102,7 +102,7 @@ $resultAllergies = mysqli_query($db_link, $sql);
                 <div class="foodContainer contentBox">
                     <button type="button" class="btn btn-primary btn-block" data-toggle="collapse" data-target="#like">Foods we like</button>
                     <div id="like" class="collapse">
-                        <ul id="likesList" class="list-group">
+                        <ul id="likesList" class="list-group foodList">
                             
                             <li class="list-group-item disabled">
                                 <div class="row">
@@ -130,6 +130,7 @@ $resultAllergies = mysqli_query($db_link, $sql);
                             }
                             ?>
                         </ul>
+                        <button class="btn btn-block showMore showMoreLike">Show More..</button>
                    </div>
                 </div>
                 
@@ -137,7 +138,7 @@ $resultAllergies = mysqli_query($db_link, $sql);
                 <div class="foodContainer contentBox">
                     <button type="button" class="btn btn-primary btn-block" data-toggle="collapse" data-target="#dislike">Foods we dislike</button>
                     <div class="collapse" id="dislike">
-                        <ul id="likesList" class="list-group">
+                        <ul id="dislikesList" class="list-group foodList">
                             
                             <li class="list-group-item disabled">
                                 <div class="row">
@@ -165,6 +166,7 @@ $resultAllergies = mysqli_query($db_link, $sql);
                             }
                             ?>
                         </ul>
+                        <button class="btn btn-block showMore showMoreDislike">Show More..</button>
                     </div>
                 </div>
                 
@@ -172,7 +174,7 @@ $resultAllergies = mysqli_query($db_link, $sql);
                 <div class="foodContainer contentBox">
                     <button type="button" class="btn btn-primary btn-block" data-toggle="collapse" data-target="#allergies">Foods we're allergic to</button>
                     <div class="collapse" id="allergies">
-                       <ul id="likesList" class="list-group">
+                       <ul id="allergiesList" class="list-group foodList">
                             
                             <li class="list-group-item disabled">
                                 <div class="row">
@@ -200,6 +202,7 @@ $resultAllergies = mysqli_query($db_link, $sql);
                             }
                             ?>
                         </ul>
+                        <button class="btn btn-block showMore showMoreAller">Show More..</button>
                     </div>
                 </div>
             </section>
@@ -210,4 +213,70 @@ $resultAllergies = mysqli_query($db_link, $sql);
         
     </body>
     <!-- END OF PROFILE CONTENT -->
+    
+    <!-- SCRIPTS -->
+    <script>
+        // show more animation for likes
+        $(function () {
+            $('.showMoreLike').click(function () {    
+                
+                // show some
+                $('#likesList li:hidden').slice(0, 5).css({'visibility':'visible', 'display':'block'});
+                
+                // check if theres any more list items
+                if ($('#likesList li').length <= $('#likesList li:visible').length) {
+                    $('.showMoreLike').hide();
+                }
+            });
+        });
+        
+        // show more animation for dislikes
+        $(function () {
+            $('.showMoreDislike').click(function () {    
+                
+                // show some
+                $('#dislikesList li:hidden').slice(0, 5).css({'visibility':'visible', 'display':'block'});
+                
+                // check if theres any more list items
+                if ($('#dislikesList li').length <= $('#dislikesList li:visible').length) {
+                    $('.showMoreDislike').hide();
+                }
+            });
+        });
+        
+        // show more animation for allergies
+        $(function () {
+            $('.showMoreAller').click(function () {    
+                
+                // show some
+                $('#allergiesList li:hidden').slice(0, 5).css({'visibility':'visible', 'display':'block'});
+                
+                // check if theres any more list items
+                if ($('#allergiesList li').length <= $('#allergiesList li:visible').length) {
+                    $('.showMoreAller').hide();
+                }
+            });
+        });
+        
+        // hide the list that are too short
+        $(document).ready(function(){
+            
+            // for likes
+            if ($('#likesList li').length <= 6) {
+                    $('.showMoreLike').hide();
+            }
+            
+            // for dislikes
+            if ($('#dislikesList li').length <= 6) {
+                    $('.showMoreDislike').hide();
+            }
+            
+            // for allergies
+            if ($('#allergiesList li').length <= 6) {
+                    $('.showMoreAller').hide();
+            }
+        });
+        
+    </script>
+    
 </html>

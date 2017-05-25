@@ -147,4 +147,12 @@
     }
     </script>
     
+    <!-- preventt enter on search -->
+    <script>
+    $('#userSearch').keypress(function(e){
+        if ( e.which == 13 ) e.preventDefault();
+    });
+        
+    </script>
+    
 </html>
