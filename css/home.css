@@ -9,7 +9,7 @@ main section{
 }
 
 .dark-section{
-    background: black;
+    background-color: #1a1a1a;
     color: white;
     border-top: 3px solid white;
 }
@@ -61,7 +61,7 @@ footer a:hover{
 }
 
 .endBlock{
-    background: black;
+    background-color: #1a1a1a;
     border-bottom: 3px solid white;
 }
 
