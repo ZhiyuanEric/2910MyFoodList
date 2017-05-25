@@ -35,6 +35,9 @@
                     <p>
                         2. Click on the desired result below.
                     </p>
+                    <p>
+                        3. When done, click on "Create group list" at the top to compare!
+                    </p>
                 </div>
                 
                 <!-- search -->
@@ -142,6 +145,14 @@
         xmlhttp.open("GET","getuser.php?q="+str, true);
         xmlhttp.send();
     }
+    </script>
+    
+    <!-- preventt enter on search -->
+    <script>
+    $('#userSearch').keypress(function(e){
+        if ( e.which == 13 ) e.preventDefault();
+    });
+        
     </script>
     
 </html>

@@ -102,7 +102,7 @@ $resultAllergies = mysqli_query($db_link, $sql);
                 <div class="foodContainer contentBox">
                     <button type="button" class="btn btn-primary btn-block" data-toggle="collapse" data-target="#like">Foods we like</button>
                     <div id="like" class="collapse">
-                        <ul id="likesList" class="list-group">
+                        <ul id="likesList" class="list-group foodList">
                             
                             <li class="list-group-item disabled">
                                 <div class="row">
@@ -130,6 +130,7 @@ $resultAllergies = mysqli_query($db_link, $sql);
                             }
                             ?>
                         </ul>
+                        <button class="btn btn-block showMore showMoreLike">Show More..</button>
                    </div>
                 </div>
                 
@@ -137,7 +138,7 @@ $resultAllergies = mysqli_query($db_link, $sql);
                 <div class="foodContainer contentBox">
                     <button type="button" class="btn btn-primary btn-block" data-toggle="collapse" data-target="#dislike">Foods we dislike</button>
                     <div class="collapse" id="dislike">
-                        <ul id="likesList" class="list-group">
+                        <ul id="dislikesList" class="list-group foodList">
                             
                             <li class="list-group-item disabled">
                                 <div class="row">
@@ -165,6 +166,7 @@ $resultAllergies = mysqli_query($db_link, $sql);
                             }
                             ?>
                         </ul>
+                        <button class="btn btn-block showMore showMoreDislike">Show More..</button>
                     </div>
                 </div>
                 
@@ -172,7 +174,7 @@ $resultAllergies = mysqli_query($db_link, $sql);
                 <div class="foodContainer contentBox">
                     <button type="button" class="btn btn-primary btn-block" data-toggle="collapse" data-target="#allergies">Foods we're allergic to</button>
                     <div class="collapse" id="allergies">
-                       <ul id="likesList" class="list-group">
+                       <ul id="allergiesList" class="list-group foodList">
                             
                             <li class="list-group-item disabled">
                                 <div class="row">
@@ -200,6 +202,7 @@ $resultAllergies = mysqli_query($db_link, $sql);
                             }
                             ?>
                         </ul>
+                        <button class="btn btn-block showMore showMoreAller">Show More..</button>
                     </div>
                 </div>
             </section>
@@ -210,4 +213,8 @@ $resultAllergies = mysqli_query($db_link, $sql);
         
     </body>
     <!-- END OF PROFILE CONTENT -->
+    
+    <script src="js/grouplist.js"></script>
+    
+    
 </html>

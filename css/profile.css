@@ -42,7 +42,7 @@
 }
 
 .foodListHeader h2{
-    font-size: 24px;
+    font-size: 20px;
     margin: 0;
     padding: 0;
     /*padding-left: 79px;*/
@@ -67,7 +67,9 @@
 }
 
 .editBtn {
-        margin-right: 21px;
+    margin-right: 21px;
+    margin-bottom: 6px;
+    font-size: 12px;
 }
 
 /*
