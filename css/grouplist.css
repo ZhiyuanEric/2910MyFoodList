@@ -28,14 +28,17 @@ ul li:nth-child(even) {
 }
 
 .titleBox { 
-    border: #3c5a86 5px solid; 
     width: 220px;
     margin: 0 auto;
     margin-bottom: 9px;
     padding: 0;
     margin-top: 20px;
     margin-bottom: 27px;
-    box-shadow: 10px 10px 5px #888888;
+    box-shadow: 4px 4px 9px #aaa;
+    background-color: #337ab7;
+    color: white;
+    border-radius: 5px;
+    padding-bottom: 7px;
 }
 
 h2 {
