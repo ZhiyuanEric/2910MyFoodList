@@ -72,8 +72,6 @@ $resultAllergies = mysqli_query($db_link, $sql);
         ?>
 
         <!-- PROFILE CONTENT -->
-
-
         <main>
             <div class="container">
                 <div class="row">
@@ -86,9 +84,9 @@ $resultAllergies = mysqli_query($db_link, $sql);
                           <input type="text" class="form-control" id="newImage" name="newImage" placeholder="Paste the link to your new image here">
                         <span class="close">&times;</span>
 
-                      </div>
+                     </div>
 
-                    </div>
+                 </div>
 
                     <!-- profile details -->
                     <section class="contentBox col-md-4" id="profileOuter">
@@ -107,9 +105,35 @@ $resultAllergies = mysqli_query($db_link, $sql);
                                 <p id="profileName">
                                     <?php echo "$pName"; ?>
                                 </p>
-
                             </div>
+                            <?php
+
+
+                                $curNo = $_SESSION['accNo'];
+                                if ($curNo != $accNo) {
+                                    $sql = "SELECT status
+                                            FROM Friends
+                                            WHERE accNo1 = $curNo
+                                                AND accNo2 = $accNo;";
+
+                                    $status = -2;
+                                    $result = mysqli_query($db_link, $sql);
+
+                                    while ($row = mysqli_fetch_row($result)) {
+                                        $status = $row[0];
+                                    }
+
+                                    if($status == 0) { // with invite
+                                        echo '<button type="button" class="btn btn-default">Revoke Friend Request</button>';
+                                    } else if ($status == 1) { // friends
+                                        echo '<button type="button" class="btn btn-danger">Unfriend</button>';
+                                    } else { // feelsbadman
+                                        echo '<button type="button" class="btn btn-primary">Add as friend</button>';
+                                    }
+                            }
+                            ?>
                         </div>
+
                         <div id="profileLower">
                             <p class="profileDesc">
                                 <?php echo "$pBio"; ?>

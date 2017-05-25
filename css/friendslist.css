@@ -1,0 +1,13 @@
+.friend {
+    margin-top: 20px;
+}
+.friend .col-xs-2 {
+    margin-left: -10px;
+}
+
+.friendName{
+    font-size: 20px;
+    font-weight: 800;
+    overflow: hidden;
+    text-align: left;
+}
