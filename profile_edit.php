@@ -64,5 +64,7 @@
         $sql = "UPDATE Details SET image = '$newImage' WHERE accNo = $accNo;";
         mysqli_query($db_link, $sql);
     }
+
+	sleep(1);
 	echo 'success';
 ?>
