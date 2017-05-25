@@ -124,11 +124,11 @@ $resultAllergies = mysqli_query($db_link, $sql);
                                     }
 
                                     if($status == 0) { // with invite
-                                        echo '<button type="button" class="btn btn-default">Revoke Friend Request</button>';
+                                        echo '<button type="button" class="btn btn-default friendBtn">Revoke Friend Request</button>';
                                     } else if ($status == 1) { // friends
-                                        echo '<button type="button" class="btn btn-danger">Unfriend</button>';
+                                        echo '<button type="button" class="btn btn-danger friendBtn">Unfriend</button>';
                                     } else { // feelsbadman
-                                        echo '<button type="button" class="btn btn-primary">Add as friend</button>';
+                                        echo '<button type="button" class="btn btn-primary friendBtn">Add as friend</button>';
                                     }
                             }
                             ?>

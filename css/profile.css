@@ -119,3 +119,7 @@ ul div .btn, li .btn{
     text-decoration: none;
     cursor: pointer;
 }
+
+.friendBtn {
+    margin-left: 15px;
+}
