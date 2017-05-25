@@ -36,7 +36,7 @@ function editing() {
     $('#newDesc').val(curDesc);
 
     //change edit button state
-    $('#editButton').html('Done Editing');
+    $('#editButton').html('<span class="glyphicon glyphicon-floppy-disk"><\span>');
     $('#editButton').attr("id","editingButton");
     $('#editingButton').attr("onclick","document.forms['ListForm'].submit()");
 
