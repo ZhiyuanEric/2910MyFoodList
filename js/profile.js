@@ -40,6 +40,9 @@ function editing() {
     $('#editButton').attr("id","editingButton");
     $('#editingButton').attr("onclick","document.forms['ListForm'].submit()");
 
+    //Reduce image opacity
+    $('.profileImg').css("opacity", "0.5");
+
     //add listener to edit button so it will run this function when clicked
     $('#editingButton').click(function() {
         event.preventDefault();
@@ -105,10 +108,19 @@ function editing() {
         //new description
         var newDesc = $('#newDesc').val();
 
+        var imgRegex = /(https?:\/\/.*\.(?:png|jpg))/i;
+
+        var tempImg = $('#newImage').val();
+
+        //image validation
+        if (tempImg != '' && imgRegex.test(tempImg) == true && getSize(tempImg) == true) {
+            var newImage = $('#newImage').val();
+        }
+
         $.ajax({
             url: "profile_edit.php",
             type: "POST",
-            data: {likes:likes, dislikes:dislikes, allergies:allergies, deletedLikes:deletedLikes, deletedDislikes:deletedDislikes, deletedAllergies:deletedAllergies, newName:newName, newDesc:newDesc},
+            data: {likes:likes, dislikes:dislikes, allergies:allergies, deletedLikes:deletedLikes, deletedDislikes:deletedDislikes, deletedAllergies:deletedAllergies, newName:newName, newDesc:newDesc, newImage:newImage},
             cache: false,
             success: function(data) {
                 window.location.href = 'profile.php';
@@ -138,7 +150,7 @@ function editing() {
             }
         } else if (this.id == 'moreAllergies') {
             if ($('#allergies').val() == '') {
-                $('#allergiesError').html('<span class="red">Field is empty</span>');      //Always goes to this line no matter the input
+                $('#allergiesError').html('<span class="red">Field is empty</span>');
             } else {
                 $('#allergiesError').html('');
                 $('<div class="allergiesDiv"><li class="list-group-item col-xs-10 newAllergies">' + $('#allergies').val() +
@@ -161,6 +173,57 @@ function editing() {
                 $(this).parent().fadeOut();
             }
     });
+
+    // Get the modal
+    var modal = document.getElementById('myModal');
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on the image, open the modal
+    $('.profileImg').click(function() {
+        modal.style.display = "block";
+    });
+
+
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    //When the img url is entered while editing
+    $("#newImage").on('keyup', function (e) {
+    if (e.keyCode == 13) {
+        var newImage = $('#newImage').val(); //store image link in variable
+        if (newImage != '' && getSize(newImage) == true) { //possibly redundant
+            $('.profileImg').attr("src", newImage); //change image
+        }
+        modal.style.display = "none"; //hide modal
+    }
+});
+}
+
+//get image size
+function getSize(url){
+    var img = new Image();
+    img.addEventListener("load", function(){
+        if (this.naturalWidth >= 2048 || this.naturalHeight >= 2048 || this.naturalWidth < 64 || this.naturalHeight < 64) {
+            return false;
+        }
+    });
+    img.src = url;
+    return true;
 }
 
 $(document).ready(function(){

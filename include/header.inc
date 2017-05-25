@@ -44,7 +44,8 @@
                         echo '<li><a href="register.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
                               <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>';
                     } else {
-                        echo '<li><a href="profile.php"><span class="glyphicon glyphicon-user"></span> My Profile</a></li>
+                        echo '<li><a id="friendsButton" href="friendslist.php">My Friends</a></li>
+                              <li><a href="profile.php"><span class="glyphicon glyphicon-user"></span> My Profile</a></li>
                               <li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>';
                     }
                     ?>
