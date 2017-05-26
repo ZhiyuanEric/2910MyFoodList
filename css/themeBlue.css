@@ -1,0 +1,15 @@
+nav, .navbar, .navbar li:nth-child(1), footer .row, .footerBox, footer{
+    background-color: #4c91cd;
+}
+ 
+.navbar-inverse .navbar-nav > li > a, footer a{
+    color: white;
+}
+
+body{
+    background: url("https://www.toptal.com/designers/subtlepatterns/patterns/topography.png");
+}
+
+.navbar-inverse{
+    border-color: transparent;
+}

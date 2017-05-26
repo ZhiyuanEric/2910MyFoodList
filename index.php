@@ -6,6 +6,7 @@
     <head>
         <?php include("include/head.inc"); ?>
         <link rel="stylesheet" href="css/home.css">
+        <link rel="stylesheet" href="css/themeBlack.css" />
     </head>
 
     <body class="rain">

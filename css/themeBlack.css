@@ -1,0 +1,19 @@
+nav, .navbar, .navbar li:nth-child(1), footer .row, .footerBox, footer{
+    background-color: #101010;
+}
+ 
+.navbar-inverse .navbar-nav > li > a, footer a{
+    color: #eee;
+}
+
+footer a{
+    color: #337ab7;
+}
+
+body{
+    background: url(../images/darkbg.png);
+}
+
+.navbar-inverse{
+    border-color: transparent;
+}
