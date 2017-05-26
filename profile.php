@@ -81,9 +81,8 @@ $resultAllergies = mysqli_query($db_link, $sql);
 
                       <!-- Modal content -->
                       <div class="modal-content">
+                          <button type="button" class="close">&times;</button>
                           <input type="text" class="form-control" id="newImage" name="newImage" placeholder="Paste the link to your new image here">
-                        <span class="close">&times;</span>
-
                      </div>
 
                  </div>
