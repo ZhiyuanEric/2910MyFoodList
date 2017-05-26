@@ -103,18 +103,6 @@ footer a:hover{
     transition: all 0.4s;
 }
 
-.easterEggFade{
-    opacity: 1;
-    font-size: inherit;
-    transition: all 0.4s;
-}
-
-.easterEggAppear{
-    opacity: 0;
-    font-size: 1px;
-    transition: all 0.4s;
-}
-
 .easterEggBox:hover .easterEgg .easterEggFade{
     font-size: 1px;
     opacity: 0;

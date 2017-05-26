@@ -12,7 +12,7 @@
                 <div class="row contentBox">
 
                     <div class="col-xs-2 pull-left">
-                        <img class="img-responsive profileImg" src="images/grocery.png" width=128 height=128/>
+                        <a target="_blank" href="http://ecoders-grocerybuddy.firebaseapp.com/"><img class="img-responsive profileImg" src="images/grocery.png" width=128 height=128/></a>
                     </div>
                     <div class="col-xs-10">
                         <h2>Grocery Buddy</h2>
@@ -27,7 +27,7 @@
                 <div class="row contentBox">
 
                     <div class="col-xs-2 pull-left">
-                        <img class="img-responsive profileImg" src="images/waste.png" width=128 height=128/>
+                        <a target="_blank" href="http://wnwn.herokuapp.com/"><img class="img-responsive profileImg" src="images/waste.png" width=128 height=128/></a>
                     </div>
                     <div class="col-xs-10">
                         <h2>WasteNot WantNot</h2>
