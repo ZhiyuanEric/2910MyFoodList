@@ -2,9 +2,9 @@
 session_start();
 
 include("mysql_connect.inc.php");
-$user = $_POST['user'];
-$pw = $_POST['pw'];
-$pw2 = $_POST['pw2'];
+$user = htmlspecialchars($_POST['user']);
+$pw = htmlspecialchars($_POST['pw']);
+$pw2 = htmlspecialchars($_POST['pw2']);
 
 $pw = md5($pw);
 $pw2 = md5($pw2);

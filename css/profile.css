@@ -120,6 +120,12 @@ ul div .btn, li .btn{
     cursor: pointer;
 }
 
+.twitterButton, .gplusButton {
+    display:inline;
+    margin-left:10px;
+    float:right;
+}
+
 .friendBtn {
-    margin-left: 15px;
+    margin-left: 15px; 
 }

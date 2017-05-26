@@ -33,7 +33,7 @@ function editing() {
     //profile description editing
     var curDesc = $('.profileDesc').text();
     curDesc = curDesc.trim();
-    $('.profileDesc').html('<textarea class="form-control" style="width:100%; resize:none;" rows="5" id="newDesc" placeholder="Change description"></textarea>')
+    $('.profileDesc').html('<textarea class="form-control" style="width:100%; resize:none;" rows="5" id="newDesc" placeholder="Change description"></textarea>');
     $('#newDesc').val(curDesc);
 
     //change edit button state
@@ -131,7 +131,7 @@ function editing() {
                         return false;
                     } else {
         				setTimeout(function() {
-        					window.location.href = "profile.php";
+        					location.reload();
         				}, 1000);
                     }
                 }
@@ -199,8 +199,6 @@ function editing() {
         modal.style.display = "block";
     });
 
-
-
     // When the user clicks on <span> (x), close the modal
     span.onclick = function() {
         modal.style.display = "none";
@@ -237,8 +235,7 @@ function getSize(url){
     return true;
 }
 
-$(document).ready(function(){
-    $(".nav li:nth-child(1)").addClass("active");
+$(document).ready(function(){ 
 
     //If the screen is 380px or smaller, reduce image size to 96x96
     var mq = window.matchMedia( "(max-width: 380px)" );
@@ -249,4 +246,22 @@ $(document).ready(function(){
         $('.profileImg').width(128);
         $('.profileImg').height(128);
     }
+
+    //friend stuff
+    $('#deleteFriend, #addFriend').click(function(){
+        event.preventDefault();
+        var $userNo = $('#userNo').val();
+        var $button = $(this);
+
+        $.ajax({
+            url: "friendFunctions.php",
+            type: "POST",
+            data: {userNo:$userNo},
+            cache: false,
+            async: false,
+            success: function(data) {
+                location.reload();
+            }
+        });
+    });
 });

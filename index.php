@@ -6,6 +6,7 @@
     <head>
         <?php include("include/head.inc"); ?>
         <link rel="stylesheet" href="css/home.css">
+
         <script>
             function easterEggOver() {
                 $("#egg").fadeOut(function() {
@@ -23,6 +24,7 @@
 //                egg.innerHTML = "Waste Less";
             }
         </script>
+
     </head>
 
     <body class="rain">
@@ -33,15 +35,17 @@
             <section class="foodbg">
                 <div class="container">
                     <div class="textBox col-md-offset-8 col-md-4">
+
                         <div onMouseOver="easterEggOver()" onMouseOut="easterEggOut()" class="row">
                             <h1>
                                 <span id="egg">Waste Less</span>
                                 <span>Food</span>
                             </h1>
                         </div>
+
                         <div>
                             <p class="foodText">
-                                To better determine others food preferences so you will be more aware of what others need and don't need.
+                                To better determine yours and others' food preferences so you will be more aware of what others need and don't need.
                             </p>
                         </div>
                     </div>
@@ -53,7 +57,7 @@
                     <h1>Our Mission</h1><br />
                     <p>
                         <br />
-                        We want to help you reduce food waste and ultimately save you money by bringing awareness to your everyday food needs.
+                        We want to provide a way for you to know what to buy for when you are cooking for more than just yourself.
                     </p>
                 </div>
             </section>
@@ -64,13 +68,13 @@
                         <h1>What can I do?</h1>
                         <div class="stepText">
                             <p>
-                                1. Create your very own lists of food preferences based on likes, dislikes, and food allergies.
+                                1. Create your own lists of food preferences based on likes, dislikes, and food allergies by registering an account with us.
                             </p>
                             <p>
-                                2. Combine your list with your friends list so you can see what everyone's preferences are.
+                                2. Combine your list with your friends' list so you can see what everyone's preferences are.
                             </p>
                             <p>
-                                3. Log in or register an account to start preparing for when you want to plan meals for a group of people.
+                                3. Log in to start preparing!
                             </p>
                         </div>
                     </div>
@@ -78,7 +82,7 @@
                         <div class="col-md-4"></div>
                         <div class="col-md-4">
                             <button class="btn btn-primary btn-lg btn-block registerBtn" type="button" onclick="location.href='register.php';">Register</button>
-                            <button class="btn btn-secondary btn-sm btn-block haveAccBtn" style="background-color: rgb(221, 221, 221);" type="button" onclick="location.href='login.php';">Already have an account?</button>
+                            <button class="btn btn-secondary btn-sm btn-block haveAccBtn" style="background-color: #e3e3e3;" type="button" onclick="location.href='login.php';">Already have an account?</button>
                         </div>
                         <div class="col-md-4"></div>
                     </div>
@@ -91,7 +95,7 @@
                         <h2>About Us</h2>
                         <br />
                         <p>
-                            This website was created by a team of 6 developers for our Comp 2910 Projects course.  Our main goal is to bring awareness to how much food one can potentially waste in <span id="easterRain">Metro Vancouver</span>.  In our web application, you will be able to combine several people's preferences together to see how a meal can be better prepared.
+                            We are a team of 6 developers based in <span id="easterRain">Metro Vancouver</span>. Our overall project goal is to reduce food waste. The target is reducing unwanted leftovers which makes up 20% of all food waste.
                         </p>
                         <br />
                         <p>
