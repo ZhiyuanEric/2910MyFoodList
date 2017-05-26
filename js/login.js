@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $('#submit').click(function (event) {
+    $('form').submit(function (event) {
         event.preventDefault();
         var user = $('#user').val();
         var pw = $('#pw').val();

@@ -18,7 +18,7 @@
 
 	<div class="container">
         <div class="contentBox">
-            <form name="form" method="post">
+            <form name="form">
 
                 <div class="page-header">
                     <h1>Login</h1>
@@ -71,7 +71,7 @@
                 <!-- desktop -->
                 <div class="visible-lg visible-md row">
                     <div class="col-md-2 col-md-offset-3" >
-                        <button id="submit" type="submit" class="btn btn-block btn-primary">Login</button>
+                        <button type="submit" class="btn btn-block btn-primary">Login</button>
                     </div>
                     <div class="col-md-2" >
                         <button type="reset" value="Reset" class="btn btn-block btn-primary">Reset</button>
@@ -85,7 +85,7 @@
                 <!-- mobile / tablet -->
                 <div class="hidden-lg hidden-md">
                     <div style="margin-top:20px" class="col-xs-8 col-xs-offset-2 row" >
-                        <button id="submit" type="submit" class="btn btn-block btn-primary">Login</button>
+                        <button type="submit" class="btn btn-block btn-primary">Login</button>
                     </div>
                     <div style="margin-top:20px" class="col-xs-8 col-xs-offset-2 row" >
                         <button type="reset" value="Reset" class="btn btn-block btn-primary">Reset</button>
