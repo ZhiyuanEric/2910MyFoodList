@@ -100,18 +100,18 @@
 
                     <!--mobile / tablet view-->
                 <div class="visible-sm visible-xs">
-                    <label class="col-xs-12" for="intro">Introduce yourself:</label>
+                    <label class="col-xs-12" for="intro">Write a short summary:</label>
                 </div>
 
                     <!--desktop view-->
                 <div class="hidden-sm hidden-xs">
                     <label style="text-align:right" class="col-md-4" for="intro">
-                        Introduce yourself:
+                        Your summary:
                     </label>
                 </div>
 
                 <div class="col-md-6 col-xs-12">
-                    <input type="text" class="form-control" id="bio" name="bio" placeholder="Introduce your self"></div>
+                    <input type="text" class="form-control" id="bio" name="bio" placeholder="Start writing here.."></div>
             </div>
 
             <div class="form-group col-md-12 row">
