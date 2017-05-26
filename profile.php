@@ -123,10 +123,10 @@ $resultAllergies = mysqli_query($db_link, $sql);
                                             $status = $row[0];
                                         }
                                         if ($status == 1) { // friends
-                                            echo '<button id="deleteFriend" type="button" class="btn btn-danger">Unfriend</button>';
+                                            echo '<button id="deleteFriend" type="button" class="btn btn-danger friendBtn">Unfriend</button>';
                                             echo '<input id="userNo" type="hidden" name="userNo" value="'. $accNo . '">';
                                         } else { // feelsbadman
-                                            echo '<button id="addFriend" type="button" class="btn btn-primary">Add as friend</button>';
+                                            echo '<button id="addFriend" type="button" class="btn btn-primary friendBtn">Add as friend</button>';
                                             echo '<input id="userNo" type="hidden" name="userNo" value="'. $accNo . '">';
                                         }
                                 }
