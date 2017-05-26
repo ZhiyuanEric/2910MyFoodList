@@ -23,11 +23,11 @@ ul li:nth-child(n+7) {
     display:none;
 }
 
-ul li:nth-child(even) {
+.foodList li:nth-child(even) {
     background-color: #f5f5f5;
 }
 
-.titleBox { 
+.titleBox {
     width: 220px;
     margin: 0 auto;
     margin-bottom: 9px;
@@ -45,10 +45,10 @@ h2 {
     margin: 0;
 }
 /*
-.titleBox #title { 
-    position: relative; 
+.titleBox #title {
+    position: relative;
     top : -0.5em;
     margin-left: 1em;
-    display: inline; 
-    background-color: white; 
+    display: inline;
+    background-color: white;
 }*/

@@ -1,5 +1,7 @@
 /* Nav bar related */
-
+.navbar li:nth-child(1) {
+    background-color: #101010;
+}
 
 /* screen related */
 
@@ -7,7 +9,7 @@
     .nav li{
         border-right: 1px solid white;
     }
-    
+
     .nav li:last-child{
         border-right: none;
         border-left: 1px solid white;

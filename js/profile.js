@@ -235,8 +235,7 @@ function getSize(url){
     return true;
 }
 
-$(document).ready(function(){
-    $(".nav li:nth-child(1)").addClass("active");
+$(document).ready(function(){ 
 
     //If the screen is 380px or smaller, reduce image size to 96x96
     var mq = window.matchMedia( "(max-width: 380px)" );

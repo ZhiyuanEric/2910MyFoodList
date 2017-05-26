@@ -144,7 +144,8 @@ $resultAllergies = mysqli_query($db_link, $sql);
                     <!-- food listing -->
                     <section class="col-md-8">
 
-                        <div class="alert alert-info alert-dismissable">
+                        <?php if ($_SESSION['accNo'] == $accNo) {
+                        echo '<div class="alert alert-info alert-dismissable">
                             <a href="#" class="close" data-dismiss="alert" aria-labels="close">x</a>
                             <p>
                                 1. Click the EDIT icon to make changes to your list.
@@ -158,7 +159,8 @@ $resultAllergies = mysqli_query($db_link, $sql);
                             <p>
                                 4. Click SAVE icon to update your list.
                             </p>
-                        </div>
+                        </div>';
+                        }?>
 
                         <div style="margin-bottom:20px"  class="contentBox">
                             <div class="foodListHeader">
