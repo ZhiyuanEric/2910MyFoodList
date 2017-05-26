@@ -125,3 +125,7 @@ ul div .btn, li .btn{
     margin-left:10px;
     float:right;
 }
+
+.friendBtn {
+    margin-left: 15px; 
+}
