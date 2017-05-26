@@ -1,6 +1,6 @@
 h2 {
-    font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
-    font-size: 45px;
+    font-family: "arial", serif;
+    font-size: 40px;
 }
 
 .foodName{
@@ -34,9 +34,9 @@ ul li:nth-child(n+7) {
     padding: 0;
     margin-top: 20px;
     margin-bottom: 27px;
-    box-shadow: 4px 4px 9px #aaa;
-    background-color: #337ab7;
-    color: white;
+    /*box-shadow: 4px 4px 9px #aaa;*/
+    background-color: #efefef;
+    color: black;
     border-radius: 5px;
     padding-bottom: 7px;
 }
@@ -44,11 +44,3 @@ ul li:nth-child(n+7) {
 h2 {
     margin: 0;
 }
-/*
-.titleBox #title {
-    position: relative;
-    top : -0.5em;
-    margin-left: 1em;
-    display: inline;
-    background-color: white;
-}*/
