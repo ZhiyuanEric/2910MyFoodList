@@ -6,6 +6,8 @@
     <head>
         <?php include("include/head.inc"); ?>
         <link rel="stylesheet" href="css/home.css">
+        
+        <!-- JQuery script for disappearing / reappearing text (easter egg) -->
         <script>
             function easterEggOver() {
                 $("#egg").fadeOut(function() {
@@ -23,6 +25,8 @@
 //                egg.innerHTML = "Waste Less";
             }
         </script>
+        <!-- End of JQuery -->
+        
     </head>
 
     <body class="rain">
