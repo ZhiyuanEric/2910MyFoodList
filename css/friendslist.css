@@ -11,3 +11,8 @@
     overflow: hidden;
     text-align: left;
 }
+
+h2 {
+    color: white; 
+    text-align: center;
+}
