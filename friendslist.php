@@ -33,24 +33,33 @@ while ($row = mysqli_fetch_row($result)) {
          <link rel="stylesheet" href="css/friendslist.css"/>
          <link rel="stylesheet" href="css/footerpush.css"/>
      </head>
+     
+     <body>
 
-     <?php include("include/header.inc"); ?>
+        <?php include("include/header.inc"); ?>
+         
+         
+        <h2> Buddy List </h2>
+         
 
-     <div class="container">
-            <?php
-                for ($i = 0; $i < count($friendNames); $i++) {
-                    echo
-                    '<div class="friend contentBox col-xs-12">
-                        <div class="col-xs-2">
-                            <img id="' . $friendAccNos[$i] . '" class="friendImg" src="' . $friendImgs[$i] . '" width="128" height="128"/>
-                        </div>
-                        <div class="col-xs-10">
-                            <div id="' . $friendAccNos[$i] . '" class="friendName col-xs-12">' . $friendNames[$i] . '</div>
-                            <div class="friendBio col-xs-12">' . $friendBios[$i] . '</div>
-                        </div>
-                    </div>';
-                }
-            ?>
-     </div>
-<script src=js/friendslist.js></script>
+         <div class="container">
+                <?php
+                    for ($i = 0; $i < count($friendNames); $i++) {
+                        echo
+                        '<div class="friend contentBox col-xs-12">
+                            <div class="col-xs-2">
+                                <img id="' . $friendAccNos[$i] . '" class="friendImg" src="' . $friendImgs[$i] . '" width="128" height="128"/>
+                            </div>
+                            <div class="col-xs-10">
+                                <div id="' . $friendAccNos[$i] . '" class="friendName col-xs-12">' . $friendNames[$i] . '</div>
+                                <div class="friendBio col-xs-12">' . $friendBios[$i] . '</div>
+                            </div>
+                        </div>';
+                    }
+                ?>
+         </div>
+     
+         <script src=js/friendslist.js></script>
+         <?php include("include/footer.inc"); ?>
+     </body>
 </html>
