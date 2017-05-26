@@ -39,7 +39,7 @@ while ($row = mysqli_fetch_row($result)) {
         <?php include("include/header.inc"); ?>
          
          
-        <h2> Friend List </h2>
+        <h2> Friends List </h2>
          
 
          <div class="container">
