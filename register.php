@@ -4,20 +4,24 @@
 <html lang="en">
     <head>
         <?php include("include/head.inc"); ?>
+        <link rel="stylesheet" href="css/footerpush.css" />
+        <link rel="stylesheet" href="css/register.css" />
     </head>
 
 <body>
 
-    <?php include("include/logged_in_header.inc"); ?>
+    <?php include("include/header.inc"); ?>
 
 	<div class="container">
 
-        <h2 id="title" style="text-align:center">Registration</h2>
+
 
     <form name="form" method="post">
 
         <div class="contentBox row">
-
+            <div class="page-header">
+                    <h1>Register</h1>
+                </div>
             <div id="part1">
 
             <div class="form-group col-md-12 row">
@@ -96,18 +100,18 @@
 
                     <!--mobile / tablet view-->
                 <div class="visible-sm visible-xs">
-                    <label class="col-xs-12" for="intro">Introduce yourself:</label>
+                    <label class="col-xs-12" for="intro">Write a short summary:</label>
                 </div>
 
                     <!--desktop view-->
                 <div class="hidden-sm hidden-xs">
                     <label style="text-align:right" class="col-md-4" for="intro">
-                        Introduce yourself:
+                        Your summary:
                     </label>
                 </div>
 
                 <div class="col-md-6 col-xs-12">
-                    <input type="text" class="form-control" id="bio" name="bio" placeholder="Introduce your self"></div>
+                    <input type="text" class="form-control" id="bio" name="bio" placeholder="Start writing here.."></div>
             </div>
 
             <div class="form-group col-md-12 row">
@@ -170,12 +174,11 @@
 
             <div style="text-align:center" id="error" class="col-xs-12 row"></div>
             <div style="text-align:center" id="success" class="col-xs-12 row"></div>
-		</div>
-
+            
             <!-- buttons desktop -->
 			<div class="visible-lg visible-md row">
 				<div class="col-md-2 col-md-offset-3" >
-					<button id = "1" type="submit" class="btn btn-block btn-primary" onclick="EntryChecking()">Continue</button>
+					<button id = "1" type="submit" class="btn btn-block btn-primary">Continue</button>
 				</div>
 				<div class="col-md-2" >
 					<button type="reset" value="Reset" class="btn btn-block btn-primary">Reset</button>
@@ -188,7 +191,7 @@
 			<!-- mobile / tablet -->
 			<div class="hidden-lg hidden-md">
 				<div style="margin-top:20px" class="col-xs-8 col-xs-offset-2 row">
-					<button id="2" type="submit" onclick="EntryChecking()" class="btn btn-block btn-primary">Submit</button>
+					<button id="2" type="submit" class="btn btn-block btn-primary">Submit</button>
 				</div>
                 <div style="margin-top:20px" class="col-xs-8 col-xs-offset-2 row">
 					<button type="reset" value="Reset" class="btn btn-block btn-primary">Reset</button>
@@ -197,6 +200,9 @@
 					<a href="index.php"><button type="button" class="btn btn-block btn-primary">Cancel</button></a>
 				</div>
 			</div>
+		</div>
+
+
 		</form>
 
     </div>

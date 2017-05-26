@@ -1,0 +1,18 @@
+/* footer fix */
+html, body {
+    height: 100%;
+}
+
+body > div, body > main{
+    min-height: 100%;
+    padding-bottom: 125px;
+}
+
+
+footer{
+    position: relative;
+    margin-top: -125px;
+    height: 125px;
+    clear:both;
+    padding-top:20px;
+}

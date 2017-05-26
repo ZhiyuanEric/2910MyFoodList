@@ -4,56 +4,155 @@
 <html>
     <head>
         <?php include("include/head.inc"); ?>
+        <link rel="stylesheet" href="css/merge.css">
+        <link rel="stylesheet" href="css/footerpush.css" />
     </head>
     <body>
-        <?php include("include/logged_in_header.inc"); ?>
+        <?php include("include/header.inc"); ?>
         <main class="container">
-            <div class="contentBox controls">
+            <div class="contentBox">
+                
+                <!-- user list form -->
                 <form name="form" method="get" action="grouplist.php">
-                    <button type"submit">Go</button>
-                    <div class="entry input-group">
-                        <input class="form-control" name="users[]" type="text" placeholder="Input a user's ID" />
-                    	<span class="input-group-btn">
-                            <button class="btn btn-success btn-add" type="button"><span class="glyphicon glyphicon-plus"></span></button>
-                        </span>
-                    </div>
+                    <button type"submit" class="btn btn-primary btn-block">Create group list</button>
                     
+                    <!-- user list -->
+                    <div class="entry input-group">
+                        <input class="form-control" name="users[]" type="text" id="userList" />
+                    </div>
                 </form>
+                <div class="well" id="nameList">
+                    
+                </div>
+                
+                <!-- instructions for search -->
+                <div class="alert alert-info alert-dismissable">
+                    <a href="#" class="close" data-dismiss="alert" aria-labels="close">x</a>
+                    <h4>Instructions:</h4>
+                    <p>
+                        1. Type the names of your friends.
+                    </p>
+                    <p>
+                        2. Click on the desired result below.
+                    </p>
+                    <p>
+                        3. When done, click on "Create group list" at the top to compare!
+                    </p>
+                </div>
+                
+                <!-- search -->
+                <div class="panel panel-primary">
+                    <!-- search field -->
+                    <div class="panel-heading">
+                        <form>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>   
+                                <input class="form-control" id="userSearch" type="text" onkeyup="showResult(this.value)"/>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- search results -->
+                    <div class="panel-body">
+                        <div class="list-group" id="livesearch">
+
+                        </div>
+                    </div>
+                </div>
+                
+
             </div>
         </main>
-        
+
         <?php include("include/footer.inc"); ?>
-        
+
     </body>
+
+    <!-- SCRIPTS -->
+    
     
     <script>
-    // see that page for src
-    // https://bootsnipp.com/snippets/featured/dynamic-form-fields-add-amp-remove-bs3
-    $(function() {
-        $(document).on('click', '.btn-add', function(e) {
-            e.preventDefault();
-
-            var controlForm = $('.controls form:first'),
-                currentEntry = $(this).parents('.entry:first'),
-                newEntry = $(currentEntry.clone()).appendTo(controlForm);
-
-            newEntry.find('input').val('');
-            controlForm.find('.entry:not(:last) .btn-add')
-                .removeClass('btn-add').addClass('btn-remove')
-                .removeClass('btn-success').addClass('btn-danger')
-                .html('<span class="glyphicon glyphicon-minus"></span>');
-        }).on('click', '.btn-remove', function(e){
-            $(this).parents('.entry:first').remove();
-
-            e.preventDefault();
-            return false;
+        var names = [];
+        var ids = [];
+        
+        function addResult(ent) {
+            name = ent.getAttribute('username');
+            num = ent.getAttribute('userno');
+            
+            // no point doing a query for the same person
+            // more then once
+            if(!ids.includes(num)){
+                // add to list
+                names.push(name);
+                ids.push(num);
+                
+                // add to name list
+                $("#nameList").append("<div class=\"nameBlock\" userno=\"" + num + "\" username=\"" + name + "\">" + name + "<a href=\"#\" class=\"delete\" aria-label=\"close\" onclick=\"removeResult(this)\">×</a></div>");
+                
+                // update search value
+                $("#userList").val(ids);
+            } 
+        };
+        
+        function removeResult(ent) {
+            // get value from the nameblock
+            name = ent.parentElement.getAttribute('username')
+            num = ent.parentElement.getAttribute('userno')
+            
+            // remove from list (memory)
+            names.splice(names.indexOf(name), 1);
+            ids.splice(ids.indexOf(num), 1);
+            
+            // rerender name / remove div
+            nameBlock = ent.parentElement;
+            nameBlock.parentElement.removeChild(nameBlock);
+            
+            // update input values
+            $("#userList").val(ids);
+        }
+        
+        // clear the form because it doesn't match with memory on pressing back
+        // quick fix
+        $( document ).ready(function() {
+            $("#userList").val('');
         });
+    </script>
+    
+    
+    <script>
+    function showResult(str) {
+        if (str.length==0) { 
+            document.getElementById("livesearch").innerHTML="";
+            document.getElementById("livesearch").display="none";
+            return;
+        }
+
+        if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp=new XMLHttpRequest();
+        }  else {  
+            // code for IE6, IE5
+            xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        xmlhttp.onreadystatechange=function() {
+            if (this.readyState==4 && this.status==200) {
+                document.getElementById("livesearch").innerHTML=this.responseText;
+                document.getElementById("livesearch").display="block";
+            }
+        }
+        
+        xmlhttp.open("GET","getuser.php?q="+str, true);
+        xmlhttp.send();
+    }
+    </script>
+    
+    <!-- preventt enter on search -->
+    <script>
+    $('#userSearch').keypress(function(e){
+        if ( e.which == 13 ) e.preventDefault();
     });
+        
     </script>
     
-    <script>
-        $(document).ready(function(){
-            $(".nav li:nth-child(2)").addClass("active");
-        });
-    </script>
 </html>

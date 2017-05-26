@@ -2,11 +2,11 @@
 session_start();
 
 include("mysql_connect.inc.php");
-$name = $_POST['name'];
-$bio = $_POST['bio'];
-$likes = $_POST['likes'];
-$dislikes = $_POST['dislikes'];
-$allergies = $_POST['allergies'];
+$name = htmlspecialchars($_POST['name']);
+$bio = htmlspecialchars($_POST['bio']);
+$likes = htmlspecialchars($_POST['likes']);
+$dislikes = htmlspecialchars($_POST['dislikes']);
+$allergies = htmlspecialchars($_POST['allergies']);
 
     $sql = "INSERT INTO Account (username, accPass) VALUES ('$_SESSION[user]', '$_SESSION[pw]');";
 
@@ -23,7 +23,7 @@ $allergies = $_POST['allergies'];
         }
 
         // add the details
-        $sql = "INSERT INTO Details VALUES ($userID, '$name', '$bio', 'unknown');";
+        $sql = "INSERT INTO Details VALUES ($userID, '$name', '$bio', 'unknown', 'images/default.jpg');";
         mysqli_query($db_link, $sql);
 
         // add the food
