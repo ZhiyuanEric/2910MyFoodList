@@ -16,12 +16,7 @@
             <section class="foodbg">
                 <div class="container">
                     <div class="textBox col-md-offset-8 col-md-4">
-                        <h1 class="easterEggBox">
-                            <span class="easterEgg">
-                                <span class="easterEggFade">Waste Less</span>
-                                <span class="easterEggAppear">More</span>
-                            </span>
-                            <span>Food</span>
+                        <h1 class="easterEggBox">Waste Less Food
                         </h1>
                         <div>
                             <p class="foodText">
